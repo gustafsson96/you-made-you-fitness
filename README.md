@@ -50,6 +50,17 @@ Table of contents.
 
 ### Strategy
 
+**Project Goals:**
+
+* The goal is to create an online fitness community that inspires and helps people take control over their own fitness journey. The name "You Made You Fitness Community" is a further indication of this.
+
+* The community offers different science based meal plans and workout plans for all levels of fitness, in addition to community specific merchandise. Quality is key and all plans are proven to work. The community site needs to reflect a business that values high quality.
+
+**Target Audience:**
+
+**User Expectations:**
+
+
 ### Scope
 
 ### Structure
