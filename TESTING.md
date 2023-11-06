@@ -32,6 +32,7 @@ Table of Contents
 |  | #2D Web Shop: As a site user, I can open the web shop, so that I can scroll through the products the fitness community offer. |    |
 |  | #2E Blog Page: As a registered user, I can view the blog page, so that I can take part of other member’s posts |    |
 |  | #2F Social Media Links: As a site user, I can find the fitness community’s social media links, so that I can learn more about their business. |    |
+|  | #2G Wish List: As a site user, I can add products to a wish list, so that I can save my favorites for later.  |    |
 |  | #3A Create Account: As an unregistered user, I can create an account, so that I can make purchases and take part of blog posts.  |    |
 |  | #3B Login: As a registered user, I can easily login to my account, so that I can access my profile and the content for registered users.  |    |
 |  | #3C Logout: As a registered user, I can easily logout from my account, so that I can protect my personal information |    |
@@ -46,6 +47,7 @@ Table of Contents
 |  | #5A Make Blog Post: As a registered user, I can make a blog post, so that I can share content with the community. |    |
 |  | #5B Edit/Delete Blog Post: As a registered user, I can edit or delete my blog post, so that it is possible to make changes if needed. |    |
 |  | #5C Like Blog Post: As a registered user, I can like or unlike other user’s blog posts, so that I can interact with their content. |    |
+|  | #5D Search for Blog Posts: As a registered user, I can search for blog posts using key words, so that I can find specific content. |    |
 |  | #6A Add Products: As a site admin, I can add, edit, and delete products to/in/from the web shop, so that I can ensure it is up to date with the latest news. |    |
 |  | #6B Manage Blog Posts: As a site admin, I can delete blog posts made by users, so that I can ensure that available content is appropriate and following community guidelines. |    |
 
