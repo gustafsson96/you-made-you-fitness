@@ -52,16 +52,38 @@ Table of contents.
 
 **Project Goals:**
 
-* The goal is to create an online fitness community that inspires and helps people take control over their own fitness journey. The name "You Made You Fitness Community" is a further indication of this.
+* The goal is to create an online fitness community that inspires and helps people take control over their own fitness journey. The name "You Made You Fitness Community" is meant to reflect this.
 
-* The community offers different science based meal plans and workout plans for all levels of fitness, in addition to community specific merchandise. Quality is key and all plans are proven to work. The community site needs to reflect a business that values high quality.
+* The community will offer different science based meal plans and workout plans for all levels of fitness, in addition to community specific merchandise. Quality is key and all plans have to be proven to work. The community site needs to reflect a business that values high quality.
 
-**Target Audience:**
+* The target audicence is people who are looking for tools to take charge of their fitness journey while also sharing the experience with a community. Previous fitness level does not matter as different plans for different goals are offered. Everyone is welcome.
 
 **User Expectations:**
 
+* Accessibility for all users.
+* Easy navigation throughout the site.
+* The purpose of the site is clear.
+* A webshop where the products are relevant, clearly displayed and easy to browse through.
+* A simple and safe checkout process.
+* A visually pleasing design with pleasing color contrasts.
+
 
 ### Scope
+
+**Contet Requirements and Functional Specification:**
+
+Requirements:
+
+* Authentication: Functionality to register and manage an account. 
+* Web Shop: Functionality to complete a purchase.
+* Products: Images and descriptions.
+* Functional Design: Responsiveness throughout the site.
+
+Initially Not Included:
+
+* The blog and its functionality will only be implemented if the time limit allows it, and is therefore not a priority. User stories related to the blog are therefore labeled "could have". The developer's lack of experience with ecommerce projects makes it difficult to ensure that the time will be enough.
+
+**Content Requirements:**
 
 ### Structure
 
