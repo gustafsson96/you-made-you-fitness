@@ -87,6 +87,36 @@ Initially Not Included:
 
 ### Structure
 
+**Pages:**
+
+Pages marked with ** are the same for unregistered and registered users.
+
+View for Unregistered Users:
+
+* Home Page**:
+* Community Page: 
+* Webshop Page**:
+* Product Detail Page**:
+* Sign In Page
+* Sign Up Page
+
+View for Registered Users:
+
+* Home Page**: 
+* Community Page (blog):
+* Webshop Page**:
+* Product Detail Page**:
+* Checkout Page:
+* Profile Page:
+* Logout Page:
+
+Additional Pages:
+
+* 404 Page
+
+**Elements of Navigation:**
+
+
 ### Skeleton
 
 ### Surface
@@ -115,3 +145,8 @@ Initially Not Included:
 ### Content
 
 ### Media
+
+### Other 
+
+* Find an article to improve my commit messages. Insert here together with date. 
+  (Article from previously submitted project?)
