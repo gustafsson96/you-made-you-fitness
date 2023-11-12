@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-gustafsson96-you-made-yo-8dg1dwfxwf.us2.codeanyapp.com',
-                 'https://you-made-you-fitness-e606c79e6b9a.herokuapp.com/', 'localhost']
+                 'you-made-you-fitness-e606c79e6b9a.herokuapp.com', 'localhost']
 
 
 # Application definition
