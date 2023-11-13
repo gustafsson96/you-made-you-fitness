@@ -124,6 +124,8 @@ Additional Pages:
 - Color Scheme
 - Fonts
 
+## Business Model
+
 ## Data Model
 
 ## Agile Methodology
