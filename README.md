@@ -94,7 +94,7 @@ Pages marked with ** are the same for unregistered and registered users.
 View for Unregistered Users:
 
 * Home Page**:
-* Community Page: 
+* Community Page:
 * Webshop Page**:
 * Product Detail Page**:
 * Sign In Page
@@ -102,7 +102,7 @@ View for Unregistered Users:
 
 View for Registered Users:
 
-* Home Page**: 
+* Home Page**:
 * Community Page (blog):
 * Webshop Page**:
 * Product Detail Page**:
