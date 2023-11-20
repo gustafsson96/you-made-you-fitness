@@ -1,3 +1,12 @@
 body {
     background: grey;
 }
+
+.hero-container {
+    position: relative;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+}
