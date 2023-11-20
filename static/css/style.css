@@ -2,6 +2,9 @@ body {
     background: grey;
 }
 
+
+/* home page css */
+
 .hero-container {
     position: relative;
 }
@@ -10,3 +13,47 @@ body {
     max-width: 100%;
     height: auto;
 }
+
+.hero-text-container {
+    color: white;
+    background-color: red;
+    opacity: 0.88;
+    min-width: 60%;
+    max-height: 80%;
+    padding: 2rem;
+    border-radius: 3px;
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+
+
+ /* home page media quries for screens smaller than 600px */
+ @media screen and (max-width: 600px) {
+    
+    .hero-text-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text-container h3 {
+        font-size: 1rem;
+    }
+ }
+
+  @media screen and (max-width: 430px) {
+
+      .hero-text-container {
+        padding: 1.5rem;
+      }
+      
+      .hero-text-container h1 {
+          font-size: 1.2rem;
+      }
+
+      .hero-text-container h3 {
+          font-size: 0.85rem;
+      }
+
+  }
