@@ -33,33 +33,29 @@
 
                 <div class="container-fluid">
                   <div class="button-box justify-content-end">
-                    <a class="navbar-brand" href="{% url 'home' %}"><i class="fa-solid fa-house"></i></a>
+                    <a class="navbar-brand" href="{% url 'home' %}">You Made You Fitness <i class="fa-solid fa-house"></i></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                         aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                   </div>
-                    <div class="collapse navbar-collapse justify-content-center" id="navbarText">
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarText">
                         <ul class="navbar-nav mb-2 mb-lg-0">
                             <li class="nav-item">
                                 <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Menu <i
-                                        class="fa-solid fa-utensils"></i></a>
+                                <a class="nav-link" href="#">Community</a>
                             </li>
                             {% if user.is_authenticated %}
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    Make Reservation <i class="fa-solid fa-calendar-plus"></i></a>
+                                <a class="nav-link" href="#">Community</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    My Reservations <i class="fa-solid fa-calendar-days"></i></a>
+                                <a class="nav-link" href="#">Webshop</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">Contact <i
-                                        class="fa-solid fa-phone"></i></a>
+                                <a class="nav-link" aria-current="page" href="#">Contact</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'account_logout' %}">Logout <i
@@ -67,20 +63,16 @@
                             </li>
                             {% else %}
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Make Reservation <i
-                                        class="fa-solid fa-calendar-plus"></i></a>
+                                <a class="nav-link" href="#">Webshop</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'account_login' %}">Login <i
-                                        class="fa-solid fa-arrow-right-to-bracket"></i></a>
+                                <a class="nav-link" href="{% url 'account_login' %}">Log In</a>
                             </li>
                             <li>
-                                <a class="nav-link" href="{% url 'account_signup' %}">Register <i
-                                        class="fa-solid fa-user-plus"></i></a>
+                                <a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">Contact <i
-                                        class="fa-solid fa-phone"></i></a>
+                                <a class="nav-link" aria-current="page" href="#">Contact</a>
                             </li>
                             {% endif %}
                         </ul>

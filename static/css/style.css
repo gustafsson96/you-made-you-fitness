@@ -1,5 +1,19 @@
-body {
-    background: grey;
+/* relative page container for footer positioning */
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 3.5rem;
+}
+
+/* navbar css */
+
+#navbar {
+    background-color: white;
+    border-bottom: orange solid 3px;
 }
 
 
