@@ -148,6 +148,8 @@ Additional Pages:
 
 ### Media
 
+- I used https://new.express.adobe.com/ to design the covers for the workout guides.
+
 ### Other 
 
 * Find an article to improve my commit messages. Insert here together with date. 
