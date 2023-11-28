@@ -44,9 +44,6 @@
                             <li class="nav-item">
                                 <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Community</a>
-                            </li>
                             {% if user.is_authenticated %}
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Community</a>
@@ -63,7 +60,10 @@
                             </li>
                             {% else %}
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Webshop</a>
+                                <a class="nav-link" href="#">Community</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'products_guides' %}">Webshop</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'account_login' %}">Log In</a>
