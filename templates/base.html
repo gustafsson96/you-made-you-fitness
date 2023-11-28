@@ -33,7 +33,7 @@
 
                 <div class="container-fluid">
                   <div class="button-box justify-content-end">
-                    <a class="navbar-brand" href="{% url 'home' %}">You Made You Fitness <i class="fa-solid fa-house"></i></a>
+                    <a class="navbar-brand" href="{% url 'home' %}">You Made You Fitness</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                         aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -42,17 +42,37 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navbarText">
                         <ul class="navbar-nav mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
+                                <a class="nav-link" href="{% url 'home' %}">
+                                    <div class="text-center">
+                                        <div><i class="fas fa-regular fa-house"></i></div>
+                                        <p class="my-0">Home</p>
+                                    </div>
+                                </a>
                             </li>
                             {% if user.is_authenticated %}
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Community</a>
+                                <a class="nav-link" href="#">
+                                    <div class="text-center">
+                                        <div><i class="fas fa-regular fa-people-group"></i></div>
+                                        <p class="my-0">Community</p>
+                                    </div>
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'products_guides' %}">Webshop</a>
+                                <a class="nav-link" href="{% url 'products_guides' %}">
+                                    <div class="text-center">
+                                        <div><i class="fas fa-regular fa-store"></i></div>
+                                        <p class="my-0">Webshop</p>
+                                    </div>
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">Contact</a>
+                                <a class="nav-link" href="#">
+                                    <div class="text-center">
+                                        <div><i class="fas fa-regular fa-phone"></i></div>
+                                        <p class="my-0">Contact</p>
+                                    </div>
+                                </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'account_logout' %}">
@@ -64,7 +84,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
-                                    <div class="text-center">
+                                    <div class="text-center text-success">
                                         <div><i class="fas fa-regular fa-cart-shopping"></i></div>
                                         <p class="my-0">
                                             {% if grand_total %}
@@ -78,19 +98,44 @@
                             </li>
                             {% else %}
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Community</a>
+                                <a class="nav-link" href="#">
+                                    <div class="text-center">
+                                        <div><i class="fas fa-regular fa-people-group"></i></div>
+                                        <p class="my-0">Community</p>
+                                    </div>
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'products_guides' %}">Webshop</a>
+                                <a class="nav-link" href="{% url 'products_guides' %}">
+                                    <div class="text-center">
+                                        <div><i class="fas fa-regular fa-store"></i></div>
+                                        <p class="my-0">Webshop</p>
+                                    </div>
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'account_login' %}">Log In</a>
-                            </li>
-                            <li>
-                                <a class="nav-link" href="{% url 'account_signup' %}">Join Us</a>
+                                <a class="nav-link" href="{% url 'account_login' %}">
+                                    <div class="text-center">
+                                        <div><i class="fas fa-regular fa-right-to-bracket"></i></div>
+                                        <p class="my-0">Login</p>
+                                    </div>
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">Contact</a>
+                                <a class="nav-link" href="{% url 'account_signup' %}">
+                                    <div class="text-center">
+                                        <div><i class="fas fa-regular fa-user-plus"></i></div>
+                                        <p class="my-0">Join Us</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <div class="text-center">
+                                        <div><i class="fas fa-regular fa-phone"></i></div>
+                                        <p class="my-0">Contact</p>
+                                    </div>
+                                </a>
                             </li>
                             {% endif %}
                         </ul>
