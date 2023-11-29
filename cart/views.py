@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
+from products.models import Guide
 
 
 def view_cart(request):
-    """A view to show the shopping cart page"""
+    """ A view to show the shopping cart page """
 
     return render(request, 'cart/cart.html')
 
