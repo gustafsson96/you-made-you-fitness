@@ -8,7 +8,7 @@ def view_cart(request):
 
 
 def add_to_cart(request, item_id):
-    """ Add a product to the shopping cart"""
+    """ Add a product to the shopping cart """
 
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
@@ -20,4 +20,12 @@ def add_to_cart(request, item_id):
         cart[item_id] = quantity
 
     request.session['cart'] = cart
+    return redirect(redirect_url)
+
+
+def delete_item(request, item_id):
+    """ Delete a product from the shopping cart """
+
+    item_id.delete()
+
     return redirect(redirect_url)
