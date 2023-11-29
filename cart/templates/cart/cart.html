@@ -21,6 +21,7 @@
                                     <th scope="col">Price</th>
                                     <th scope="col">Qty</th>
                                     <th scope="col">Subtotal</th>
+                                    <th scope="col"></th>
                                 </tr>
                             </thead>
                             {% for item in cart_items %}
@@ -41,26 +42,41 @@
                                 <td class="py-3">
                                     <p class="my-0">${{ item.guide.price }}</p>
                                 </td>
+                                <td class="py-3">
+                                    <a class="btn remove-item" id="remove_{{ item.item_id }}">
+                                        <span class="icon">
+                                            <i class="fas fa-solid fa-trash"></i>
+                                        </span>
+                                    </a>
+                                </td>
                             </tr>
                             {% endfor %}
                             <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                                 <td colspan="5" class="pt-5 text-right">
                                     <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
                                 </td>
                             </tr>
                             <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                                 <td colspan="5" class="text-right">
-                                    <a href="{% url 'products_guides' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                                        <span class="icon">
-                                            <i class="fas fa-chevron-left"></i>
-                                        </span>
-                                        <span class="text-uppercase">Keep Shopping</span>
-                                    </a>
                                     <a href="" class="btn btn-black rounded-0 btn-lg">
                                         <span class="text-uppercase">Secure Checkout</span>
                                         <span class="icon">
                                             <i class="fas fa-lock"></i>
                                         </span>
+                                    </a>
+                                    <a href="{% url 'products_guides' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </span>
+                                        <span class="text-uppercase">Keep Shopping</span>
                                     </a>
                                 </td>
                             </tr>
