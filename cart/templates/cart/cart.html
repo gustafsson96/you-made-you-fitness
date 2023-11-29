@@ -1,4 +1,6 @@
-{% extends "base.html" %} {% load static %} {% block content %}
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
 
     <div class="overlay"></div>
     <div class="container mb-2">
@@ -43,10 +45,8 @@
                                     <p class="my-0">${{ item.guide.price }}</p>
                                 </td>
                                 <td class="py-3">
-                                    <a href="#" class="btn remove-item">
-                                        <span class="icon">
-                                            <i class="fas fa-solid fa-trash"></i>
-                                        </span>
+                                    <a class="btn remove-button" data-item-id="{{ guide.id }}">
+                                        <i class="fas fa-solid fa-trash"></i>
                                     </a>
                                 </td>
                             </tr>
@@ -96,13 +96,37 @@
         </div>
     </div>
 
-{%endblock%}
-
 {% block postloadjs %}
 
 <!-- js code to remove an item from the shopping cart-->
 
+<script>
+    console.log("HEJ")
+    document.addEventListener('DOMContentLoaded', function () {
+        const removeButtons = document.querySelectorAll('.remove-button');
+        removeButtons.forEach(function (button) {
+            button.addEventListener('click', function (event) {
+                event.preventDefault(); 
 
+                const itemId = button.getAttribute('data-item-id');
 
+                deleteItem(itemId, button);
+            });
+        });
+
+        function deleteItem(itemId, button) {
+            console.log('Deleting item with ID:', itemId);
+
+            const row = button.closest('tr');
+            if (row) {
+                row.remove();
+            } else {
+                console.error('Row not found for item with ID:', itemId);
+            }
+        }
+    });
 </script>
+
 {% endblock %}
+
+{%endblock%}
