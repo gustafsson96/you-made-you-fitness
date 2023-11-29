@@ -27,7 +27,7 @@
                             {% for item in cart_items %}
                             <tr>
                                 <td class="p-3 w-25">
-                                    <img class="img-fluid rounded" src="{{ item.guide.image.url }}">
+                                    <img class="img-fluid rounded" src="{{ item.guide.image.url }}" width="100" height="140">
                                 </td>
                                 <td class="py-3">
                                     <p class="my-0"><strong>{{ item.guide.name }}</strong></p>
@@ -97,3 +97,12 @@
     </div>
 
 {%endblock%}
+
+{% block postloadjs %}
+
+<!-- js code to remove an item from the shopping cart-->
+
+
+
+</script>
+{% endblock %}

@@ -21,11 +21,3 @@ def add_to_cart(request, item_id):
 
     request.session['cart'] = cart
     return redirect(redirect_url)
-
-
-def delete_item(request, item_id):
-    """ Delete a product from the shopping cart """
-
-    item_id.delete()
-
-    return redirect(redirect_url)
