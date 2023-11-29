@@ -57,6 +57,8 @@ Table of Contents
 
 ### Bugs
 
+- I did not manage to create a view for deleting items from the shopping cart in views.py. Fixed by adding js code instead.
+
 ### Unsolved Bugs
 
 Link back to README documentation **here**
