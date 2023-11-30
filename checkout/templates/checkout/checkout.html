@@ -57,10 +57,10 @@
                     </div>
                 </div>
             </div>
-        <div class="col-12 col-lg-6">
+        <div class="col-12 col-lg-6 border border-success">
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
-                <fieldset class="rounded mb-4 px-3">
+                <fieldset class="rounded mb-3 px-3">
                     <legend class="mb-3">Fill out the information to complete your order:</legend>
                     {{ order_form.first_name | as_crispy_field }}
                     <br>
@@ -72,23 +72,22 @@
                 </fieldset>
             <p><i>Your order will be sent to your email address.</i></p>
             </form>
-    </div>
-</div>
-
-<div class="form-check form-check-inline float-right mr-0">
-    {% if user.is_authenticated %}
-            <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
+            <div class="form-check form-check-inline mr-0 border border-success">
+                {% if user.is_authenticated %}
+                <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
                 <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
-     {% else %}
-             <label class="form-check-label" for="id-save-info">
-                        <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or
-                        <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                {% else %}
+                <label class="form-check-label" for="id-save-info">
+                    <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or
+                    <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
                 </label>
-                            {% endif %}
-                        </div>
-                        </fieldset>
+                {% endif %}
+            </div>
+    </div>
+    
+</div>
                         <fieldset class="px-3">
-                            <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+                            <legend class="fieldset-label text-black px-2 w-auto">Payment</legend>
                             <!-- A Stripe card element will go here -->
                             <div class="mb-3" id="card-element"></div>
                         
@@ -120,5 +119,12 @@
                         </div>
                         </div>
                         </div>
+
+{% block postloadjs %}
+{{ block.super }}
+{{ stripe_public_key|json_script:"id_stripe_public_key" }}
+{{ client_secret|json_script:"id_client_secret" }}
+<script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+{% endblock %}
 
 {%endblock%}
