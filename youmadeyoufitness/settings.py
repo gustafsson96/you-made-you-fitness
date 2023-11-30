@@ -54,6 +54,9 @@ INSTALLED_APPS = [
     'products',
     'cart',
     'checkout',
+    
+    # Other
+    'crispy_forms',
 ]
 
 SITE_ID = 1
@@ -91,6 +94,10 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'cart.contexts.cart_contents',
             ],
+            'builtins': [
+                'cripsy_forms.templatetags.cripsy_forms_tags',
+                'crispy_forms.templatetags.crispy_form_fields',
+            ]
         },
     },
 ]
