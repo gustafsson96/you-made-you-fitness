@@ -16,9 +16,8 @@
             <hr>
         </div>
     </div>
-
         <div class="row">
-            <div class="col-12 col-lg-6 order-lg-last mb-5">
+            <div class="col-12 col-lg-6 order-lg-last mb-5 border border-warning">
                 <p class="text-muted">Order Summary ({{ product_count }})</p>
                 <div class="row">
                     <div class="col-7 offset-2">
@@ -57,7 +56,7 @@
                     </div>
                 </div>
             </div>
-        <div class="col-12 col-lg-6 border border-success">
+        <div class="col-12 col-lg-6 mb-5 border border-danger">
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
                 <fieldset class="rounded mb-3 px-3">
@@ -72,7 +71,7 @@
                 </fieldset>
             <p><i>Your order will be sent to your email address.</i></p>
             </form>
-            <div class="form-check form-check-inline mr-0 border border-success">
+            <div class="form-check form-check-inline mr-0 border border-info">
                 {% if user.is_authenticated %}
                 <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
                 <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
@@ -86,15 +85,19 @@
     </div>
     
 </div>
-                        <fieldset class="px-3">
-                            <legend class="fieldset-label text-black px-2 w-auto">Payment</legend>
-                            <!-- A Stripe card element will go here -->
-                            <div class="mb-3" id="card-element"></div>
+    <div class="row">
+        <div class="col-12 col-lg-6 border border-success">
+    <fieldset class="px-3">
+        <legend class="fieldset-label text-black px-2 w-auto">Payment</legend>
+        <!-- A Stripe card element will go here -->
+        <div class="mb-3" id="card-element"></div>
                         
-                            <!-- Used to display form errors -->
-                            <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
-                        </fieldset>
-                        
+        <!-- Used to display form errors -->
+         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+            </fieldset>
+</div>
+</div>
+</div>            
                         <div class="submit-button text-right mt-5 mb-2">
                             <a href="{% url 'view_cart' %}" class="btn btn-outline-black rounded-0">
                                 <span class="icon">
@@ -112,7 +115,7 @@
                                 <span class="icon">
                                     <i class="fas fa-exclamation-circle"></i>
                                 </span>
-                                <span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
+                                <span>Your card will be charged <strong>${{ total|floatformat:2 }}</strong></span>
                             </p>
                         </div>
                         </form>
