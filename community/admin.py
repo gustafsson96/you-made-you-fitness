@@ -1,6 +1,21 @@
 from django.contrib import admin
 from .models import Recipe, Workout, OtherPost
+from django_summernote.admin import SummernoteModelAdmin
 
-admin.site.register(Recipe)
-admin.site.register(Workout)
-admin.site.register(OtherPost)
+
+@admin.register(Recipe)
+class PostAdminRecipe(SummernoteModelAdmin):
+
+    summernote_fields = ('instructions')
+
+
+@admin.register(Workout)
+class PostAdminWorkout(SummernoteModelAdmin):
+
+    summernote_fields = ('instructions')
+
+
+@admin.register(OtherPost)
+class PostAdminOther(SummernoteModelAdmin):
+
+    summernote_fields = ('content')
