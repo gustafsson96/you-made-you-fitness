@@ -1,5 +1,9 @@
 {% extends "base.html" %} {% load static %} {% block content %}
 
+{% block extracss %}
+<link rel="stylesheet" href="{% static 'community/css/community.css' %}">
+{% endblock %}
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 mt-3 left">

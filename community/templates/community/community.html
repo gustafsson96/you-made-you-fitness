@@ -1,5 +1,9 @@
 {% extends "base.html" %} {% load static %} {% block content %}
 
+{% block extracss %}
+<link rel="stylesheet" href="{% static 'community/css/community.css' %}">
+{% endblock %}
+
 <a href="{% url 'recipes' %}" class="btn btn-black rounded-0 btn-lg">Link to recipe page</a>
 <a href="{% url 'workouts' %}" class="btn btn-black rounded-0 btn-lg">Link to workouts page</a>
 <a href="{% url 'other_posts' %}" class="btn btn-black rounded-0 btn-lg">Link to other posts page</a>
