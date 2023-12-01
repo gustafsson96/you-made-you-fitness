@@ -8,7 +8,7 @@ def community(request):
 
 
 def recipe_list(request):
-    """ A view to show all workout guides """
+    """ A view to show recipe posts """
 
     recipes = Recipe.objects.all()
 
@@ -19,15 +19,25 @@ def recipe_list(request):
     return render(request, "community/recipe_post_page.html", context)
 
 
-## class WorkoutList(generic.ListView):
-##    model = Workout
-##    queryset = Workout.objects.filter(status=1).order_by('-created_on')
-##    template_name = 'workout_post_page.html'
-##    paginate_by = 5
+def workout_list(request):
+    """ A view to show workout posts """
+
+    workouts = Workout.objects.all()
+
+    context = {
+        'workouts': workouts,
+    }
+
+    return render(request, "community/workout_post_page.html", context)
 
 
-## class OtherPostList(generic.ListView):
-##     model = OtherPost
-##    queryset = OtherPost.objects.filter(status=1).order_by('-created_on')
-##    template_name = 'other_post_page.html'
-##   paginate_by = 5
+def other_post_list(request):
+    """ A view to show other posts """
+
+    other_posts = OtherPost.objects.all()
+
+    context = {
+        'other_posts': other_posts,
+    }
+
+    return render(request, "community/other_post_page.html", context)
