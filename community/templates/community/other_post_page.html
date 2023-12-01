@@ -9,11 +9,11 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                {% if "placeholder" in other_post.featured_image.url %}
+                                {% if "placeholder" in other_post.image.url %}
                                 <img class="card-img-top"
-                                    src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                                    src="https://res.cloudinary.com/dlbny6lhn/image/upload/v1701465538/no_image_other_goasol.jpg">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ other_post.featured_image.url }}">
+                                <img class="card-img-top" src=" {{ other_post.image.url }}">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author: {{ other_post.author }}</p>
@@ -26,7 +26,6 @@
                                 {{ other_post.content }}
                                 <hr>
                             </div>
-                            <hr/>
                             <p class="card-text text-muted h6">{{ other_post.created_on}} <i class="far fa-heart"></i>
                                 {{ other_post.number_of_likes }}</p>
                         </div>
