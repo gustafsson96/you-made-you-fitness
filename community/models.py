@@ -57,7 +57,8 @@ class Workout(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='workout_post')
     updated_on = models.DateTimeField(auto_now=True)
-    excercies = models.CharField(max_length=500, null=True, blank=True)
+    equipment = models.CharField(max_length=500, null=True, blank=True)
+    exercises = models.TextField(null=True, blank=True)
     instructions = models.TextField(null=False, blank=False)
     workout_type = models.CharField(
         max_length=50, choices=TYPE_OF_WORKOUT, default='cardio')
