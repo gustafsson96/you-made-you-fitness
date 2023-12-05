@@ -89,3 +89,19 @@ def other_post_detail(request, slug, *args, **kwargs):
     }
 
     return render(request, "community/other_post_detail_page.html", context)
+
+
+def user_posts(request):
+    """ view user post page """
+    return render(request, 'community/logged_in_user_posts.html')
+
+
+def get_user_recipes(request):
+    """
+    Get recipe posts specific to logged in user
+    """
+    user_recipes = Recipe.objects.filter(author=request.user)
+    context = {
+        'user_recipes': user_recipes
+    }
+    return render(request, 'community/logged_in_user_posts.html', context)

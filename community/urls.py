@@ -11,4 +11,8 @@ urlpatterns = [
     path('other_posts/', views.other_post_list, name='other_posts'),
     path('other_posts/<slug:slug>/',
          views.other_post_detail, name='other_post_detail'),
+    path('user_posts', views.user_posts, name='user_posts'),
+    path('user_recipes', views.get_user_recipes, name='user_recipes'),
+
+         
 ]
