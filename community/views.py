@@ -8,7 +8,7 @@ def community(request):
 
 
 def recipe_list(request):
-    """ A view to show recipe posts """
+    """ view to show recipe posts """
 
     recipes = Recipe.objects.all()
 
@@ -20,7 +20,7 @@ def recipe_list(request):
 
 
 def workout_list(request):
-    """ A view to show workout posts """
+    """ view to show workout posts """
 
     workouts = Workout.objects.all()
 
@@ -32,7 +32,7 @@ def workout_list(request):
 
 
 def other_post_list(request):
-    """ A view to show other posts """
+    """ view to show 'other' posts """
 
     other_posts = OtherPost.objects.all()
 
