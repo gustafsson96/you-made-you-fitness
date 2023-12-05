@@ -23,7 +23,7 @@
                                     <p class="author">Author: {{ workout.author }}</p>
                                 </div>
                             </div>
-                            <a href="#" class="post-link text-decoration-none">
+                            <a href="{% url 'workout_detail' workout.slug %}" class="post-link text-decoration-none">
                                 <h2 class="card-title">{{ workout.title }}</h2>
                             </a>
                             <div>

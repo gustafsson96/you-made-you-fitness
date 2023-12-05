@@ -47,6 +47,22 @@ def workout_list(request):
     return render(request, "community/workout_post_page.html", context)
 
 
+def workout_detail(request, slug, *args, **kwargs):
+    if request.method == 'GET':
+        queryset = Workout.objects.filter(status=1)
+        workout = get_object_or_404(queryset, slug=slug)
+        liked = False
+        if workout.likes.filter(id=request.user.id).exists():
+            liked = True
+
+    context = {
+            "workout": workout,
+            "liked": liked,
+    }
+
+    return render(request, "community/workout_post_detail_page.html", context)
+
+
 def other_post_list(request):
     """ view to show 'other' posts """
 
