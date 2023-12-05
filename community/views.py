@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Recipe, Workout, OtherPost
 
 
@@ -17,6 +17,22 @@ def recipe_list(request):
     }
 
     return render(request, "community/recipe_post_page.html", context)
+
+
+def recipe_detail(request, slug, *args, **kwargs):
+    if request.method == 'GET':
+        queryset = Recipe.objects.filter(status=1)
+        recipe = get_object_or_404(queryset, slug=slug)
+        liked = False
+        if recipe.likes.filter(id=request.user.id).exists():
+            liked = True
+
+    context = {
+            "recipe": recipe,
+            "liked": liked,
+    }
+
+    return render(request, "community/recipe_post_detail_page.html", context)
 
 
 def workout_list(request):
