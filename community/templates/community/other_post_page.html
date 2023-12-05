@@ -27,7 +27,7 @@
                                 <h2 class="card-title">{{ other_post.title }}</h2>
                             </a>
                             <div>
-                                {{ other_post.content }}
+                                {{ other_post.content | safe }}
                                 <hr>
                             </div>
                             <p class="card-text text-muted h6">{{ other_post.created_on}} <i class="far fa-heart"></i>

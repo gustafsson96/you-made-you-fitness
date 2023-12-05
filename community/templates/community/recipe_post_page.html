@@ -33,7 +33,7 @@
                                 <hr>
                                 <p>{{ recipe.ingredients }}</p>
                                 <hr>
-                                <p>{{ recipe.instructions }}</p>
+                                <p>{{ recipe.instructions | safe }}</p>
                                 </div>
                                 <hr>
                             <p class="card-text text-muted h6">{{ recipe.created_on}} <i class="far fa-heart"></i>
