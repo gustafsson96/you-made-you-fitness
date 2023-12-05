@@ -73,3 +73,19 @@ def other_post_list(request):
     }
 
     return render(request, "community/other_post_page.html", context)
+
+
+def other_post_detail(request, slug, *args, **kwargs):
+    if request.method == 'GET':
+        queryset = OtherPost.objects.filter(status=1)
+        other_post = get_object_or_404(queryset, slug=slug)
+        liked = False
+        if other_post.likes.filter(id=request.user.id).exists():
+            liked = True
+
+    context = {
+            "other_post": other_post,
+            "liked": liked,
+    }
+
+    return render(request, "community/other_post_detail_page.html", context)

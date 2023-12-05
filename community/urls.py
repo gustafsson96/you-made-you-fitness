@@ -9,4 +9,6 @@ urlpatterns = [
     path('workout_posts/', views.workout_list, name='workouts'),
     path('workout_posts/<slug:slug>/', views.workout_detail, name='workout_detail'),
     path('other_posts/', views.other_post_list, name='other_posts'),
+    path('other_posts/<slug:slug>/',
+         views.other_post_detail, name='other_post_detail'),
 ]

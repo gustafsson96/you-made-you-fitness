@@ -23,7 +23,7 @@
                                     <p class="author">Author: {{ other_post.author }}</p>
                                 </div>
                             </div>
-                            <a href="#" class="post-link text-decoration-none">
+                            <a href="{% url 'other_post_detail' other_post.slug %}" class="post-link text-decoration-none">
                                 <h2 class="card-title">{{ other_post.title }}</h2>
                             </a>
                             <div>
