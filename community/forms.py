@@ -21,3 +21,24 @@ class RecipeForm(forms.ModelForm):
 
 
 form = RecipeForm()
+
+
+class WorkoutForm(forms.ModelForm):
+    """
+    Class to make a new workout post
+    """
+    class Meta:
+        model = Workout
+        fields = ['title', 'slug', 'equipment', 'exercises',
+                  'instructions', 'workout_type', 'image']
+        labels = {
+            'title': ('Title'),
+            'equipment': ('Equipment'),
+            'exercises': ('Exercises'),
+            'instructions': ('Instructions'),
+            'workout_type': ('Type'),
+            'image': ('Image'),
+        }
+
+
+form = WorkoutForm()

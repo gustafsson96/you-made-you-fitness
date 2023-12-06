@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.utils.text import slugify
 from .models import Recipe, Workout, OtherPost
-from .forms import RecipeForm
+from .forms import RecipeForm, WorkoutForm
 
 
 def community(request):
@@ -23,7 +23,7 @@ def recipe_list(request):
 
 def recipe_detail(request, slug, *args, **kwargs):
     if request.method == 'GET':
-        queryset = Recipe.objects.filter(status=1)
+        queryset = Recipe.objects.all()
         recipe = get_object_or_404(queryset, slug=slug)
         liked = False
         if recipe.likes.filter(id=request.user.id).exists():
@@ -51,7 +51,7 @@ def workout_list(request):
 
 def workout_detail(request, slug, *args, **kwargs):
     if request.method == 'GET':
-        queryset = Workout.objects.filter(status=1)
+        queryset = Workout.objects.all()
         workout = get_object_or_404(queryset, slug=slug)
         liked = False
         if workout.likes.filter(id=request.user.id).exists():
@@ -79,7 +79,7 @@ def other_post_list(request):
 
 def other_post_detail(request, slug, *args, **kwargs):
     if request.method == 'GET':
-        queryset = OtherPost.objects.filter(status=1)
+        queryset = OtherPost.objects.all()
         other_post = get_object_or_404(queryset, slug=slug)
         liked = False
         if other_post.likes.filter(id=request.user.id).exists():
@@ -134,3 +134,29 @@ def add_recipe_post(request):
     }
 
     return render(request, 'community/add_recipe_post.html', context)
+
+
+def add_workout_post(request):
+    """
+    Create and validate a new workout post
+    """
+    if request.method == 'POST':
+        workout_form = WorkoutForm(request.POST)
+        if workout_form.is_valid():
+            workout = workout_form.save(commit=False)
+            workout.author = request.user
+            workout.slug = slugify(workout.title)
+            workout_form.save()
+            print("Workout saved!")
+            return redirect('user_posts')
+        else:
+            print("Error", workout_form.errors)
+    else:
+
+        workout_form = WorkoutForm()
+
+    context = {
+        'workout_form': workout_form,
+    }
+
+    return render(request, 'community/add_workout_post.html', context)
