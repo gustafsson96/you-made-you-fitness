@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Recipe, Workout, OtherPost
+from .forms import RecipeForm
 
 
 def community(request):
@@ -106,3 +107,20 @@ def get_user_posts(request):
     }
 
     return render(request, 'community/logged_in_user_posts.html', context)
+
+
+def add_recipe_post(request):
+    """
+    Create and validate a new recipe post
+    """
+    if request.method == 'POST':
+        recipe_form = RecipeForm(request.POST)
+        if recipe_form.is_valid():
+            recipe_form.instance.user = request.user
+            recipe_form.save()
+            return redirect('reservations')
+    recipe_form = RecipeForm()
+    context = {
+        'recipe_form': recipe_form
+    }
+    return render(request, 'add_recipe_post.html', context)
