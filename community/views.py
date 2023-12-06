@@ -118,7 +118,7 @@ def add_recipe_post(request):
         recipe_form = RecipeForm(request.POST)
         if recipe_form.is_valid():
             recipe = recipe_form.save(commit=False)
-            recipe.instance.author = request.user
+            recipe.author = request.user
             recipe.slug = slugify(recipe.title)
             recipe_form.save()
             print("Recipe saved!")

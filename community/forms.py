@@ -10,9 +10,6 @@ class RecipeForm(forms.ModelForm):
         model = Recipe
         fields = ['title', 'slug', 'description', 'ingredients',
                   'instructions', 'recipe_type', 'image']
-        widgets = {
-            'slug': forms.HiddenInput(),
-        }
         labels = {
             'title': ('Title'),
             'description': ('Description'),
