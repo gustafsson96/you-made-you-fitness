@@ -42,3 +42,20 @@ class WorkoutForm(forms.ModelForm):
 
 
 form = WorkoutForm()
+
+
+class OtherPostForm(forms.ModelForm):
+    """
+    Class to make a new other post
+    """
+    class Meta:
+        model = OtherPost
+        fields = ['title', 'slug', 'content', 'image']
+        labels = {
+            'title': ('Title'),
+            'content': ('Content'),
+            'image': ('Image'),
+        }
+
+
+form = OtherPostForm()

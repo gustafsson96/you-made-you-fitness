@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+{% load crispy_forms_tags %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 p-4 text-center">
+            <h1 class="page-heading-no-border">Add a Post</h1>
+            <div class="box-border">
+
+                {% if user.is_authenticated %}
+                <form method="POST" action="add_other">
+                    {{ other_post_form|crispy }}
+                    {% csrf_token %}
+                    <div>
+                        <button class="styled-btn" type="submit">Create Post</button>
+                    </div>
+                </form>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{%endblock%}

@@ -14,4 +14,5 @@ urlpatterns = [
     path('user_posts', views.get_user_posts, name='user_posts'),
     path("add_recipe", views.add_recipe_post, name="add_recipe"),
     path("add_workout", views.add_workout_post, name="add_workout"),
+    path("add_other", views.add_other_post, name="add_other"),
 ]

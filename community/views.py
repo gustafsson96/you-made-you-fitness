@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.utils.text import slugify
 from .models import Recipe, Workout, OtherPost
-from .forms import RecipeForm, WorkoutForm
+from .forms import RecipeForm, WorkoutForm, OtherPostForm
 
 
 def community(request):
@@ -160,3 +160,29 @@ def add_workout_post(request):
     }
 
     return render(request, 'community/add_workout_post.html', context)
+
+
+def add_other_post(request):
+    """
+    Create and validate a new other post
+    """
+    if request.method == 'POST':
+        other_post_form = OtherPostForm(request.POST)
+        if other_post_form.is_valid():
+            other_post = other_post_form.save(commit=False)
+            other_post.author = request.user
+            other_post.slug = slugify(other_post.title)
+            other_post_form.save()
+            print("Post saved!")
+            return redirect('user_posts')
+        else:
+            print("Error", other_post_form.errors)
+    else:
+
+        other_post_form = OtherPostForm()
+
+    context = {
+        'other_post_form': other_post_form,
+    }
+
+    return render(request, 'community/add_other_post.html', context)
