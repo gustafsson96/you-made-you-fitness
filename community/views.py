@@ -91,17 +91,18 @@ def other_post_detail(request, slug, *args, **kwargs):
     return render(request, "community/other_post_detail_page.html", context)
 
 
-def user_posts(request):
-    """ view user post page """
-    return render(request, 'community/logged_in_user_posts.html')
-
-
-def get_user_recipes(request):
+def get_user_posts(request):
     """
     Get recipe posts specific to logged in user
     """
     user_recipes = Recipe.objects.filter(author=request.user)
+    user_workouts = Workout.objects.filter(author=request.user)
+    user_other_posts = OtherPost.objects.filter(author=request.user)
+
     context = {
-        'user_recipes': user_recipes
+        'user_recipes': user_recipes,
+        'user_workouts': user_workouts,
+        'user_other_posts': user_other_posts,
     }
+
     return render(request, 'community/logged_in_user_posts.html', context)
