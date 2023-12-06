@@ -93,7 +93,7 @@ def other_post_detail(request, slug, *args, **kwargs):
 
 def get_user_posts(request):
     """
-    Get recipe posts specific to logged in user
+    get posts specific to logged in user
     """
     user_recipes = Recipe.objects.filter(author=request.user)
     user_workouts = Workout.objects.filter(author=request.user)
