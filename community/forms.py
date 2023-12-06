@@ -8,14 +8,18 @@ class RecipeForm(forms.ModelForm):
     """
     class Meta:
         model = Recipe
-        fields = ['title', 'description', 'ingredients',
-                  'instructions', 'recipe_type']
+        fields = ['title', 'slug', 'description', 'ingredients',
+                  'instructions', 'recipe_type', 'image']
+        widgets = {
+            'slug': forms.HiddenInput(),
+        }
         labels = {
             'title': ('Title'),
             'description': ('Description'),
             'ingredients': ('Ingredients'),
             'instructions': ('Instructions'),
             'recipe_type': ('Type'),
+            'image': ('Image'),
         }
 
 

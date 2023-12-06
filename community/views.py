@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.utils.text import slugify
 from .models import Recipe, Workout, OtherPost
 from .forms import RecipeForm
 
@@ -29,8 +30,8 @@ def recipe_detail(request, slug, *args, **kwargs):
             liked = True
 
     context = {
-            "recipe": recipe,
-            "liked": liked,
+        "recipe": recipe,
+        "liked": liked,
     }
 
     return render(request, "community/recipe_post_detail_page.html", context)
@@ -57,8 +58,8 @@ def workout_detail(request, slug, *args, **kwargs):
             liked = True
 
     context = {
-            "workout": workout,
-            "liked": liked,
+        "workout": workout,
+        "liked": liked,
     }
 
     return render(request, "community/workout_post_detail_page.html", context)
@@ -85,8 +86,8 @@ def other_post_detail(request, slug, *args, **kwargs):
             liked = True
 
     context = {
-            "other_post": other_post,
-            "liked": liked,
+        "other_post": other_post,
+        "liked": liked,
     }
 
     return render(request, "community/other_post_detail_page.html", context)
@@ -116,11 +117,20 @@ def add_recipe_post(request):
     if request.method == 'POST':
         recipe_form = RecipeForm(request.POST)
         if recipe_form.is_valid():
-            recipe_form.instance.user = request.user
+            recipe = recipe_form.save(commit=False)
+            recipe.instance.author = request.user
+            recipe.slug = slugify(recipe.title)
             recipe_form.save()
-            return redirect('reservations')
-    recipe_form = RecipeForm()
+            print("Recipe saved!")
+            return redirect('user_posts')
+        else:
+            print("Error", recipe_form.errors)
+    else:
+
+        recipe_form = RecipeForm()
+
     context = {
-        'recipe_form': recipe_form
+        'recipe_form': recipe_form,
     }
-    return render(request, 'add_recipe_post.html', context)
+
+    return render(request, 'community/add_recipe_post.html', context)
