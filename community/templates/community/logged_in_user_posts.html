@@ -37,6 +37,8 @@
                                 <p>{{ recipe.instructions | safe }}</p>
                                 <hr>
                                 <a href="{% url 'edit_recipe' slug=recipe.slug %}" class="edit-cancel-btn">Edit Recipe</a>
+                                <hr>
+                                <a href="{% url 'delete_recipe' slug=recipe.slug %}" class="edit-cancel-btn">Delete Recipe</a>
                             </div>
                             <hr>
                             <p class="card-text text-muted h6">{{ recipe.created_on}} <i class="far fa-heart"></i>

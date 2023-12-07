@@ -18,4 +18,6 @@ urlpatterns = [
     path('edit_recipe/<slug:slug>/', views.edit_recipe_post, name="edit_recipe"),
     path('edit_workout/<slug:slug>/', views.edit_workout_post, name="edit_workout"),
     path('edit_other_post/<slug:slug>/', views.edit_other_post, name="edit_other_post"),
+    path('delete_recipe/<slug:slug>/',
+         views.delete_recipe, name="delete_recipe"),
 ]

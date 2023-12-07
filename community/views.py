@@ -252,3 +252,12 @@ def edit_other_post(request, slug, *args, **kwargs):
     }
 
     return render(request, 'community/edit_other_post.html', context)
+
+
+def delete_recipe(request, slug):
+    """
+    Delete an existing recipe post
+    """
+    recipe = get_object_or_404(Recipe, slug=slug)
+    recipe.delete()
+    return redirect('user_posts')
