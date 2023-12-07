@@ -125,6 +125,7 @@ There are no workout posts to show right now
                             <div>
                                 {{ other_post.content | safe }}
                                 <hr>
+                            <a href="{% url 'edit_other_post' slug=other_post.slug %}" class="edit-cancel-btn">Edit Post</a>
                             </div>
                             <p class="card-text text-muted h6">{{ other_post.created_on}} <i class="far fa-heart"></i>
                                 {{ other_post.number_of_likes }}</p>

@@ -189,6 +189,8 @@ def add_other_post(request):
 
 
 def edit_recipe_post(request, slug, *args, **kwargs):
+    """ view to edit a recipe post """
+
     recipe = get_object_or_404(Recipe, slug=slug)
 
     if request.method == 'POST':
@@ -209,6 +211,8 @@ def edit_recipe_post(request, slug, *args, **kwargs):
 
 
 def edit_workout_post(request, slug, *args, **kwargs):
+    """ view to edit a workout post """
+
     workout = get_object_or_404(Workout, slug=slug)
 
     if request.method == 'POST':
@@ -226,3 +230,25 @@ def edit_workout_post(request, slug, *args, **kwargs):
     }
 
     return render(request, 'community/edit_workout_post.html', context)
+
+
+def edit_other_post(request, slug, *args, **kwargs):
+    """ view to edit other posts """
+
+    other_post = get_object_or_404(OtherPost, slug=slug)
+
+    if request.method == 'POST':
+        other_post_form = OtherPostForm(request.POST, instance=other_post)
+        if other_post_form.is_valid():
+            other_post_form.save()
+            print('Hello')
+            return redirect('user_posts')
+    else:
+        other_post_form = OtherPostForm(instance=other_post)
+
+    context = {
+        'other_post_form': other_post_form,
+        'other_post_form': other_post_form,
+    }
+
+    return render(request, 'community/edit_other_post.html', context)

@@ -1,6 +1,4 @@
-{% extends 'base.html' %}
-
-{% block content %}
+{% extends "base.html" %} {% load static %} {% block content %}
 
 {% load crispy_forms_tags %}
 
@@ -8,20 +6,22 @@
     <div class="row">
         <div class="col-md-6 offset-md-3 p-4 text-center">
             <h1 class="page-heading-no-border">Edit Post</h1>
-
-            {% if user.is_authenticated %}
             <div class="box-border">
+
+                {% if user.is_authenticated %}
                 <form method="POST">
-                    {% csrf_token %}
                     {{ other_post_form|crispy }}
+                    {% csrf_token %}
                     <div>
-                        <button class="styled-btn" type="submit">Update Reservation</button>
+                        <hr>
+                        <button class="styled-btn" type="submit">Edit Post</button>
                     </div>
                 </form>
                 {% endif %}
+
             </div>
         </div>
     </div>
 </div>
 
-{% endblock %}
+{%endblock%}
