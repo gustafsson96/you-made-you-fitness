@@ -186,3 +186,23 @@ def add_other_post(request):
     }
 
     return render(request, 'community/add_other_post.html', context)
+
+
+def edit_recipe_post(request, slug, *args, **kwargs):
+    recipe = get_object_or_404(Recipe, slug=slug)
+
+    if request.method == 'POST':
+        recipe_form = RecipeForm(request.POST, instance=recipe)
+        if recipe_form.is_valid():
+            recipe_form.save()
+            print('Hello')
+            return redirect('user_posts')
+    else:
+        recipe_form = RecipeForm(instance=recipe)
+
+    context = {
+        'recipe_form': recipe_form,
+        'recipe': recipe,
+    }
+
+    return render(request, 'community/edit_recipe_post.html', context)
