@@ -82,6 +82,8 @@ There are no recipe posts to show right now
                                 {{ workout.exercises }}
                                 <hr>
                                 {{ workout.instructions | safe }}
+                                <hr>
+                            <a href="{% url 'edit_workout' slug=workout.slug %}" class="edit-cancel-btn">Edit Workout</a>
                             </div>
                             <hr />
                             <p class="card-text text-muted h6">{{ workout.created_on}} <i class="far fa-heart"></i>

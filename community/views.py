@@ -206,3 +206,23 @@ def edit_recipe_post(request, slug, *args, **kwargs):
     }
 
     return render(request, 'community/edit_recipe_post.html', context)
+
+
+def edit_workout_post(request, slug, *args, **kwargs):
+    workout = get_object_or_404(Workout, slug=slug)
+
+    if request.method == 'POST':
+        workout_form = WorkoutForm(request.POST, instance=workout)
+        if workout_form.is_valid():
+            workout_form.save()
+            print('Hello')
+            return redirect('user_posts')
+    else:
+        workout_form = WorkoutForm(instance=workout)
+
+    context = {
+        'workout_form': workout_form,
+        'workout': workout,
+    }
+
+    return render(request, 'community/edit_workout_post.html', context)

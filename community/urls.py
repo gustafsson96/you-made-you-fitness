@@ -16,4 +16,5 @@ urlpatterns = [
     path("add_workout", views.add_workout_post, name="add_workout"),
     path("add_other", views.add_other_post, name="add_other"),
     path('edit_recipe/<slug:slug>/', views.edit_recipe_post, name="edit_recipe"),
+    path('edit_workout/<slug:slug>/', views.edit_workout_post, name="edit_workout"),
 ]

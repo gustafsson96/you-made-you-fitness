@@ -1,6 +1,4 @@
-{% extends 'base.html' %}
-
-{% block content %}
+{% extends "base.html" %} {% load static %} {% block content %}
 
 {% load crispy_forms_tags %}
 
@@ -12,16 +10,18 @@
 
                 {% if user.is_authenticated %}
                 <form method="POST">
-                    {% csrf_token %}
                     {{ workout_form|crispy }}
+                    {% csrf_token %}
                     <div>
-                        <button class="styled-btn" type="submit">Update Reservation</button>
+                        <hr>
+                        <button class="styled-btn" type="submit">Edit Workout</button>
                     </div>
                 </form>
                 {% endif %}
+
             </div>
         </div>
     </div>
 </div>
 
-{% endblock %}
+{%endblock%}
