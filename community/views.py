@@ -261,3 +261,12 @@ def delete_recipe(request, slug):
     recipe = get_object_or_404(Recipe, slug=slug)
     recipe.delete()
     return redirect('user_posts')
+
+
+def delete_workout(workout, slug):
+    """
+    Delete an existing workout post
+    """
+    workout = get_object_or_404(Workout, slug=slug)
+    workout.delete()
+    return redirect('user_posts')
