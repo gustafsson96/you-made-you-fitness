@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 p-4 text-center">
+            <h1 class="page-heading-no-border">Edit Workout</h1>
+            <div class="box-border">
+
+                {% if user.is_authenticated %}
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ workout_form|crispy }}
+                    <div>
+                        <button class="styled-btn" type="submit">Update Reservation</button>
+                    </div>
+                </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
