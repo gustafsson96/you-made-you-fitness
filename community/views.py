@@ -270,3 +270,12 @@ def delete_workout(workout, slug):
     workout = get_object_or_404(Workout, slug=slug)
     workout.delete()
     return redirect('user_posts')
+
+
+def delete_other_post(request, slug):
+    """
+    Delete an existing other post
+    """
+    other_post = get_object_or_404(OtherPost, slug=slug)
+    other_post.delete()
+    return redirect('user_posts')

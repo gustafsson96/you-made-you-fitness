@@ -22,4 +22,6 @@ urlpatterns = [
          views.delete_recipe, name="delete_recipe"),
     path('delete_workout/<slug:slug>/',
          views.delete_workout, name="delete_workout"),
+    path('delete_other_post/<slug:slug>/',
+         views.delete_other_post, name="delete_other_post"),
 ]
