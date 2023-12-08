@@ -6,7 +6,7 @@
 
                 
                 <div class="col-md-4">
-                    {% for item in profile %}
+                    {{ profile }}
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
@@ -18,11 +18,8 @@
                                 {% endif %}
                             </div>
                             <div>
-                                <p><i>{{ profile.user }}</i></p>
-                                <hr>
-                                <p>{{ profile.bio }}</p>
-                                <hr>
-                                {% endfor %}
+                                
+
                             </div>
 
 
