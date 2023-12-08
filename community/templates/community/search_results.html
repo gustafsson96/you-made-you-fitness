@@ -4,20 +4,36 @@
 
 <h3>Recipes</h3>
 {% for recipe in recipes %}
+<ul>
+    <li>
+        <a href="{% url 'recipe_detail' recipe.slug %}" class="post-link text-decoration-none">
+        {{ recipe.title }}
+        </a>
+    </li>
+</ul>
 
-{{ recipe.title }}
 {% endfor %}
 
 <h3>Workouts</h3>
 {% for workout in workouts %}
-
-{{ workout.title }}
+<ul>
+    <li>
+        <a href="{% url 'workout_detail' workout.slug %}" class="post-link text-decoration-none">
+         {{ workout.title }}
+        </a>
+    </li>
+</ul>
 {% endfor %}
 
 <h3>Other Posts</h3>
 {% for other_post in other_posts %}
-
-{{ other_post.title }}
+<ul>
+    <li>
+        <a href="{% url 'other_post_detail' other_post.slug %}" class="post-link text-decoration-none">
+        {{ other_post.title }}
+        </a>
+    </li>
+</ul>
 {% endfor %}
 
 {% endblock %}
