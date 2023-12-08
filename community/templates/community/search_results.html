@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<h2>Search Results for "{{ query }}"</h2>
+
+<h3>Recipes</h3>
+{% for recipe in recipes %}
+
+{{ recipe.title }}
+{% endfor %}
+
+<h3>Workouts</h3>
+{% for workout in workouts %}
+
+{{ workout.title }}
+{% endfor %}
+
+<h3>Other Posts</h3>
+{% for other_post in other_posts %}
+
+{{ other_post.title }}
+{% endfor %}
+
+{% endblock %}
+
+

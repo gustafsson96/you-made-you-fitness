@@ -280,3 +280,29 @@ def delete_other_post(request, slug):
     other_post = get_object_or_404(OtherPost, slug=slug)
     other_post.delete()
     return redirect('user_posts')
+
+
+def community_search_result(request):
+    """ a view for searching posts """
+    if request.GET:
+        if 'q' in request.GET:
+            query = request.GET.get('q', '')
+
+        recipes = Recipe.objects.filter(
+            title__icontains=query) | Recipe.objects.filter(
+                ingredients__icontains=query)
+        workouts = Workout.objects.filter(
+            title__icontains=query) | Workout.objects.filter(
+                instructions__icontains=query)
+        other_posts = OtherPost.objects.filter(
+            title__icontains=query) | OtherPost.objects.filter(
+                content__icontains=query)
+
+    context = {
+        'query': query,
+        'recipes': recipes,
+        'workouts': workouts,
+        'other_posts': other_posts,
+    }
+
+    return render(request, 'community/search_results.html', context)

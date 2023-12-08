@@ -24,4 +24,5 @@ urlpatterns = [
          views.delete_workout, name="delete_workout"),
     path('delete_other_post/<slug:slug>/',
          views.delete_other_post, name="delete_other_post"),
+    path('search_results/', views.community_search_result, name="search_results"),
 ]

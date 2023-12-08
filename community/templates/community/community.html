@@ -18,9 +18,9 @@
 </div>
 
 <div class="col-sm-5 col-md-6 border border-success">
-<form method="GET" action="m-auto">
+<form method="GET" action="{% url 'search_results' %}">
     <div class="input-group w-100">
-     <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
+     <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search posts">
         <div class="input-group-append">
             <button class="form-control btn btn-black border border-black rounded-0" type="submit">
                     <span class="icon">
