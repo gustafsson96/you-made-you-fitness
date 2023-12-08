@@ -98,8 +98,8 @@ def get_user_posts(request):
     """
     get posts specific to logged in user
     """
-    user_recipes = Recipe.objects.filter(author=request.user)
-    user_workouts = Workout.objects.filter(author=request.user)
+    user_recipes = Recipe.objects.filter(author__user=request.user)
+    user_workouts = Workout.objects.filter(author__user=request.user)
     user_other_posts = OtherPost.objects.filter(author__user=request.user)
 
     context = {
@@ -119,7 +119,7 @@ def add_recipe_post(request):
         recipe_form = RecipeForm(request.POST)
         if recipe_form.is_valid():
             recipe = recipe_form.save(commit=False)
-            recipe.author = request.user
+            other_post.author = UserProfile.objects.get(user=request.user)
             recipe.slug = slugify(recipe.title)
             recipe_form.save()
             print("Recipe saved!")
@@ -145,7 +145,7 @@ def add_workout_post(request):
         workout_form = WorkoutForm(request.POST)
         if workout_form.is_valid():
             workout = workout_form.save(commit=False)
-            workout.author = request.user
+            other_post.author = UserProfile.objects.get(user=request.user)
             workout.slug = slugify(workout.title)
             workout_form.save()
             print("Workout saved!")

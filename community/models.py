@@ -27,8 +27,7 @@ class Recipe(models.Model):
     """ Model to post recipes """
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name='recipe_post')
+    author = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     updated_on = models.DateTimeField(auto_now=True)
     description = models.CharField(max_length=500, null=False, blank=False)
     ingredients = models.TextField(null=False, blank=False)
@@ -55,8 +54,7 @@ class Workout(models.Model):
     """ Model to post workouts """
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name='workout_post')
+    author = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     updated_on = models.DateTimeField(auto_now=True)
     equipment = models.CharField(max_length=500, null=True, blank=True)
     exercises = models.TextField(null=True, blank=True)
