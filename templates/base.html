@@ -29,19 +29,29 @@
             <nav class="navbar sticky-top navbar-expand-lg navbar-light" id="navbar">
 
                 <div class="container-fluid">
-                  <div class="button-box justify-content-end">
                     <a class="navbar-brand" href="{% url 'home' %}">You Made You Fitness</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                         aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                  </div>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarText">
-                        <ul class="navbar-nav mb-2 mb-lg-0">
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <form method="GET" action="" class="ms-auto d-lg-none">
+                            <div class="input-group w-100">
+                                <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
+                                <div class="input-group-append">
+                                    <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                                        <span class="icon">
+                                            <i class="fas fa-search"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'home' %}">
                                     <div class="text-center">
-                                        <div><i class="fas fa-regular fa-house"></i></div>
+                                        <div class="d-none d-lg-block"><i class="fas fa-regular fa-house"></i></div>
                                         <p class="my-0">Home</p>
                                     </div>
                                 </a>
@@ -50,7 +60,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'community' %}">
                                     <div class="text-center">
-                                        <div><i class="fas fa-regular fa-people-group"></i></div>
+                                        <div class="d-none d-lg-block"><i class="fas fa-regular fa-people-group"></i></div>
                                         <p class="my-0">Community</p>
                                     </div>
                                 </a>
@@ -58,7 +68,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'products_guides' %}">
                                     <div class="text-center">
-                                        <div><i class="fas fa-regular fa-store"></i></div>
+                                        <div class="d-none d-lg-block"><i class="fas fa-regular fa-store"></i></div>
                                         <p class="my-0">Webshop</p>
                                     </div>
                                 </a>
@@ -66,7 +76,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'contact' %}">
                                     <div class="text-center">
-                                        <div><i class="fas fa-regular fa-phone"></i></div>
+                                        <div class="d-none d-lg-block"><i class="fas fa-regular fa-phone"></i></div>
                                         <p class="my-0">Contact</p>
                                     </div>
                                 </a>
@@ -74,7 +84,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'profile' %}">
                                     <div class="text-center">
-                                        <div><i class="fa-solid fa-user"></i></div>
+                                        <div class="d-none d-lg-block"><i class="fa-solid fa-user"></i></div>
                                         <p class="my-0">Profile</p>
                                     </div>
                                 </a>
@@ -82,7 +92,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'account_logout' %}">
                                     <div class="text-center">
-                                        <div><i class="fa-solid fa-arrow-right-from-bracket"></i></div>
+                                        <div class="d-none d-lg-block"><i class="fa-solid fa-arrow-right-from-bracket"></i></div>
                                         <p class="my-0">Logout</p>
                                     </div>
                                 </a>
@@ -91,7 +101,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#">
                                     <div class="text-center">
-                                        <div><i class="fas fa-regular fa-people-group"></i></div>
+                                        <div class="d-none d-lg-block"><i class="fas fa-regular fa-people-group"></i></div>
                                         <p class="my-0">Community</p>
                                     </div>
                                 </a>
@@ -99,7 +109,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'products_guides' %}">
                                     <div class="text-center">
-                                        <div><i class="fas fa-regular fa-store"></i></div>
+                                        <div class="d-none d-lg-block"><i class="fas fa-regular fa-store"></i></div>
                                         <p class="my-0">Webshop</p>
                                     </div>
                                 </a>
@@ -107,7 +117,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'account_login' %}">
                                     <div class="text-center">
-                                        <div><i class="fas fa-regular fa-right-to-bracket"></i></div>
+                                        <div class="d-none d-lg-block"><i class="fas fa-regular fa-right-to-bracket"></i></div>
                                         <p class="my-0">Login</p>
                                     </div>
                                 </a>
@@ -115,7 +125,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'account_signup' %}">
                                     <div class="text-center">
-                                        <div><i class="fas fa-regular fa-user-plus"></i></div>
+                                        <div class="d-none d-lg-block"><i class="fas fa-regular fa-user-plus"></i></div>
                                         <p class="my-0">Join Us</p>
                                     </div>
                                 </a>
@@ -123,7 +133,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'contact' %}">
                                     <div class="text-center">
-                                        <div><i class="fas fa-regular fa-phone"></i></div>
+                                        <div class="d-none d-lg-block"><i class="fas fa-regular fa-phone"></i></div>
                                         <p class="my-0">Contact</p>
                                     </div>
                                 </a>
@@ -144,8 +154,20 @@
                                 </a>
                             </li>
                         </ul>
+                        <form method="GET" action="" class="d-none d-lg-flex ms-auto">
+                            <div class="input-group w-100">
+                                <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
+                                <div class="input-group-append">
+                                    <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                                        <span class="icon">
+                                            <i class="fas fa-search"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        </div>
                     </div>
-                </div>
             </nav>
 
             <!-- message functionality from walkthrough
