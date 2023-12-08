@@ -1,27 +1,30 @@
-{% extends "base.html" %} {% load static %} {% block content %}
+{% extends "base.html" %} {% load static %} {% block content %} 
 
 {% block extracss %}
-
 {% endblock %}
 
-                
-                <div class="col-md-4">
-                    {{ profile }}
-                    {{ profile.fun_fact }}
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="image-container">
-                                {% if "placeholder" in profile.image.url %}
-                                <img class="card-img-top"
-                                    src="https://res.cloudinary.com/dlbny6lhn/image/upload/v1701465502/no_image_recipe_h80j5m.jpg">
-                                {% else %}
-                                <img class="card-img-top" src=" {{ profile.image.url }}">
-                                {% endif %}
-                            </div>
-                            <div>
-                                
+{% load crispy_forms_tags %}
 
-                            </div>
+<div class="col-md-4">{{ profile }}</div>
 
+<div class="image-container">
+  {% if "placeholder" in profile.image.url %}
+  <img
+    class="card-img-top"
+    src="https://res.cloudinary.com/dlbny6lhn/image/upload/v1701465502/no_image_recipe_h80j5m.jpg"
+  />
+  {% else %}
+  <img class="card-img-top" src=" {{ profile.image.url }}" />
+  {% endif %}
+</div>
+
+<div>
+  <form action="{% url 'profile' %}" method="POST">
+    {% csrf_token %} {{ profile_form|crispy }}
+    <div>
+      <button class="styled-btn" type="submit">Create Post</button>
+    </div>
+  </form>
+</div>
 
 {%endblock%}

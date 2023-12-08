@@ -14,4 +14,5 @@ class ProfileForm(forms.ModelForm):
             'profile_picture': 'Profile Picture',
         }
 
+
 form = ProfileForm()

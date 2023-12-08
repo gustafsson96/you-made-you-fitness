@@ -1,6 +1,7 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
 from django.contrib.auth.models import User
+from userprofile.models import UserProfile
 
 STATUS = ((0, 'Draft'), (1, 'Published'))
 
@@ -82,8 +83,7 @@ class OtherPost(models.Model):
     """ Model to make other posts """
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name='other_post')
+    author = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField(null=False, blank=False)
     image = CloudinaryField('image', default='placeholder')

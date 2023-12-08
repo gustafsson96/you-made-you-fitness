@@ -20,7 +20,7 @@
                                 <img class="card-img-top" src=" {{ other_post.image.url }}">
                                 {% endif %}
                                 <div class="image-flash">
-                                    <p class="author">Author: {{ other_post.author }}</p>
+                                    <p class="author">Author: {{ other_post.author.user.username }}</p>
                                 </div>
                             </div>
                             <a href="{% url 'other_post_detail' other_post.slug %}" class="post-link text-decoration-none">

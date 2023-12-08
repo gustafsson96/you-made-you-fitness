@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.utils.text import slugify
 from .models import Recipe, Workout, OtherPost
+from userprofile.models import UserProfile
 from .forms import RecipeForm, WorkoutForm, OtherPostForm
 
 
@@ -99,7 +100,7 @@ def get_user_posts(request):
     """
     user_recipes = Recipe.objects.filter(author=request.user)
     user_workouts = Workout.objects.filter(author=request.user)
-    user_other_posts = OtherPost.objects.filter(author=request.user)
+    user_other_posts = OtherPost.objects.filter(author__user=request.user)
 
     context = {
         'user_recipes': user_recipes,
@@ -170,7 +171,7 @@ def add_other_post(request):
         other_post_form = OtherPostForm(request.POST)
         if other_post_form.is_valid():
             other_post = other_post_form.save(commit=False)
-            other_post.author = request.user
+            other_post.author = UserProfile.objects.get(user=request.user)
             other_post.slug = slugify(other_post.title)
             other_post_form.save()
             print("Post saved!")
