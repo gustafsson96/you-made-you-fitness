@@ -1,3 +1,8 @@
+:root {
+    /** color scheme **/
+    --purple: #843467;
+}
+
 /* relative page container for footer positioning */
 
 #page-container {
@@ -13,7 +18,7 @@
 
 #navbar {
     background-color: white;
-    border-bottom: orange solid 2px;
+    border-bottom: var(--purple) solid 2px;
 }
 
 
@@ -30,16 +35,16 @@
 }
 
 .hero-text-container {
-    color: white;
-    background-color: red;
-    opacity: 0.88;
+    color: var(--purple);
+    background-color: white;
+    opacity: 0.9;
     min-width: 60%;
     max-height: 80%;
     padding: 2rem;
-    border-radius: 3px;
+    border-radius: 50px;
     position: absolute;
     text-align: center;
-    top: 40%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -40%);
 }
@@ -60,7 +65,7 @@
 @media screen and (max-width: 430px) {
 
     .hero-text-container {
-        padding: 1.5rem;
+        padding: 1.2rem;
     }
 
     .hero-text-container h1 {
