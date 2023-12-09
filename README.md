@@ -130,6 +130,17 @@ Additional Pages:
 
 ## Agile Methodology
 
+## Search Engine Optimization
+
+This project includes implemantations that have been made from a Search Engine Optimization (SEO) perspective, in order to ensure that potential customers can find "You Made You Fitness Community". The process is documented below.
+
+**Keyword Research:**
+
+* I started by using pen and paper to brainstorm general topics and possible keywords.
+* 
+
+
+
 ## Features
 
 ### For Both Unregistered and Registered Users
