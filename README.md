@@ -136,10 +136,14 @@ This project includes implemantations that have been made from a Search Engine O
 
 **Keyword Research:**
 
-* I started by using pen and paper to brainstorm general topics and possible keywords.
-* 
-
-
+1. Pen and paper were used to brainstorm general topics and possible keywords.
+![screenshot of keyword brainstorm](/documentation/images/SEO-keywords-brainstorm.png)
+2. A Google search was made for each keyword and the relevant results were documented in tables. Some of the keywords from the brainstorming were deleted/modified as they were too general.
+![google search result presented in table](/documentation/images/SEO-google-search-1.png)
+![google search result presented in table](/documentation/images/SEO-google-search-2.png)
+![google search result presented in table](/documentation/images/SEO-google-search-3.png)
+3. A mix of 10 short and long-tail keywords were selected.
+4. The relevance and authoritaviness was checked for some keywords using **[wordtracker](https://www.wordtracker.com/)** (I checked as many as I could before running out of free searches).
 
 ## Features
 
