@@ -143,7 +143,7 @@ This project includes implemantations that have been made from a Search Engine O
 ![google search result presented in table](/documentation/images/SEO-google-search-2.png)
 ![google search result presented in table](/documentation/images/SEO-google-search-3.png)
 3. A mix of 10 short and long-tail keywords were selected based on the Google search results.
-4. The relevance and authoritaviness was checked for some keywords using **[wordtracker](https://www.wordtracker.com/)** (I checked as many as I could before running out of free searches).
+4. The relevance and authoritativeness was checked for some keywords using **[wordtracker](https://www.wordtracker.com/)** (I checked as many as I could before running out of free searches).
 
 ## Features
 
@@ -160,6 +160,12 @@ This project includes implemantations that have been made from a Search Engine O
 ## Credits
 
 ### Content
+
+To better understand and implement search bar functionality (in combination with Code Institue's Boutique Ado): 
+https://learndjango.com/tutorials/django-search-tutorial
+
+To create 404 page:
+https://studygyaan.com/django/django-custom-404-error-template-page?utm_content=cmp-true&expand_article=1
 
 ### Media
 
