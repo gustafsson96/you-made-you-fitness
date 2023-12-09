@@ -38,7 +38,7 @@
                                 </td>
                                 </td>
                                 <td class="py-3">
-                                    <a class="btn remove-item" id="remove_{{ item.guide_id }}" data-item-id="{{ guide.id }}">
+                                    <a class="remove-item btn float-right" id="remove_{{ item.item_id }}"  data-item-id="{{ guide.id }}">
                                         <i class="fas fa-solid fa-trash"></i>
                                     </a>
                                 </td>
@@ -94,21 +94,20 @@
 
 {% block postloadjs %}
 
-<!-- js code to remove an item from the shopping cart -->
+<!-- js code to remove an item from the shopping cart. code from https://www.youtube.com/watch?v=LrvBBTGZucQ&t=174s modified for this project -->
 
 <script type="text/javascript">
-    $('.remove-item').click(function(e) {
+    $('.remove-item').click(function (e) {
         var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).data('guide-id');
-        var url = `/cart/remove/${itemId}`;
-        var data = {'csrfmiddlewaretoken': csrfToken};
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/cart/remove/${itemId}/`;
+        var data = { 'csrfmiddlewaretoken': csrfToken };
 
-        console.log(url)
         $.post(url, data)
-         .done(function() {
-             location.reload();
-         });
-    })
+            .done(function () {
+                location.reload();
+            });
+    });
 </script>
 
 {% endblock %}
