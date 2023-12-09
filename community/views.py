@@ -10,6 +10,11 @@ def community(request):
     return render(request, 'community/community.html')
 
 
+def community_unauthorized(request):
+    """ view community page for unauthorized users """
+    return render(request, 'community/community_unauthorized.html')
+
+
 def recipe_list(request):
     """ view to show recipe posts """
 
