@@ -197,16 +197,14 @@
     padding: 0 1rem;
 }
 
-.social-media:link {
-    color: var(--purple);
-}
-
+.social-media
+.social-media:link,
 .social-media:visited {
     color: var(--purple);
 }
 
 .social-media:hover {
-    color: var(--light-pink);
+    color: purple;
 }
 
 /* Mailchimp */
