@@ -85,6 +85,20 @@ body {
         color: pink;
     }
 
+.add-post-container {
+    border: 2px solid var(--purple);
+    padding: 2rem;
+}
+
+.form-group label {
+    color: var(--purple);
+    font-weight: bold;
+}
+
+.add-btn-container {
+    margin-top: 1rem;
+}
+
 .footer {
     position: fixed;
     margin-top: auto;
