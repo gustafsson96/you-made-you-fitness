@@ -28,17 +28,12 @@
                                 <h2 class="card-title">{{ recipe.title }}</h2>
                             </a>
                             <div>
-                                <p><i>{{ recipe.recipe_type }}</i></p>
-                                <hr>
-                                <p>{{ recipe.description }}</p>
-                                <hr>
-                                <p>{{ recipe.ingredients }}</p>
-                                <hr>
-                                <p>{{ recipe.instructions | safe }}</p>
-                                <hr>
-                                <a href="{% url 'edit_recipe' slug=recipe.slug %}" class="edit-cancel-btn">Edit Recipe</a>
-                                <hr>
-                                <a href="{% url 'delete_recipe' slug=recipe.slug %}" class="edit-cancel-btn">Delete Recipe</a>
+                                <a href="{% url 'edit_recipe' slug=recipe.slug %}" class="community-btn-sm edit-delete-btn">
+                                    Edit
+                                </a>
+                                <a href="{% url 'delete_recipe' slug=recipe.slug %}" class="community-btn-sm edit-delete-btn">
+                                    Delete
+                                </a>
                             </div>
                             <hr>
                             <p class="card-text text-muted h6">{{ recipe.created_on}}</p>
@@ -76,19 +71,14 @@ There are no recipe posts to show right now
                                 <h2 class="card-title">{{ workout.title }}</h2>
                             </a>
                             <div>
-                                <p><i>{{ workout.workout_type }}</i></p>
-                                <hr>
-                                {{ workout.equipment }}
-                                <hr>
-                                {{ workout.exercises }}
-                                <hr>
-                                {{ workout.instructions | safe }}
-                                <hr>
-                            <a href="{% url 'edit_workout' slug=workout.slug %}" class="edit-cancel-btn">Edit Workout</a>
-                            <hr>
-                            <a href="{% url 'delete_workout' slug=workout.slug %}" class="edit-cancel-btn">Delete Workout</a>
+                            <a href="{% url 'edit_workout' slug=workout.slug %}" class="community-btn-sm edit-delete-btn">
+                                Edit
+                            </a>
+                            <a href="{% url 'delete_workout' slug=workout.slug %}" class="community-btn-sm edit-delete-btn">
+                                Delete
+                            </a>
                             </div>
-                            <hr />
+                            <hr/>
                             <p class="card-text text-muted h6">{{ workout.created_on}}</p>
                         </div>
                     </div>
@@ -124,12 +114,11 @@ There are no workout posts to show right now
                                 <h2 class="card-title">{{ other_post.title }}</h2>
                             </a>
                             <div>
-                                {{ other_post.content | safe }}
-                                <hr>
-                            <a href="{% url 'edit_other_post' slug=other_post.slug %}" class="edit-cancel-btn">Edit Post</a>
-                            <hr>
-                            <a href="{% url 'delete_other_post' slug=other_post.slug %}" class="edit-cancel-btn">Delete Post</a>
+                            <a href="{% url 'edit_other_post' slug=other_post.slug %}" class="community-btn-sm edit-delete-btn">Edit</a>
+                            <a href="{% url 'delete_other_post' slug=other_post.slug %}" class="community-btn-sm edit-delete-btn">Delete</a>
+
                             </div>
+                            <hr>
                             <p class="card-text text-muted h6">{{ other_post.created_on}}</p>
                         </div>
                         </div>

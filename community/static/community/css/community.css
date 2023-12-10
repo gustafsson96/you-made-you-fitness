@@ -101,6 +101,10 @@ body {
     margin-top: 1rem;
 }
 
+.edit-delete-btn {
+    margin: 1rem;
+}
+
 .footer {
     position: fixed;
     margin-top: auto;
