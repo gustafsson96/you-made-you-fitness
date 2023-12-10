@@ -7,9 +7,15 @@
   <span class="hero-text-container">
     <h1>You Made You Fitness Community</h1>
     <hr>
+    {% if user.is_authenticated %}
+    <a class="home-btn" href="{% url 'community' %}">
+        Join Us
+    </a>
+    {% else %}
     <a class="home-btn" href="{% url 'account_signup' %}">
         Join Us
     </a>
+    {% endif %}
 </span>
 </div>
 

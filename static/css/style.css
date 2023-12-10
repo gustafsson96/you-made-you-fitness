@@ -7,6 +7,7 @@ body {
 :root {
     /** color scheme **/
     --purple: #581845;
+    --lavender: #e6ddf0;
     --light-pink: #ffe9ec;
     --light-yellow: #feffd6;
 }
@@ -25,8 +26,25 @@ body {
 /* navbar css */
 
 #navbar {
-    background-color: var(--light-yellow);
+    background-color: var(--lavender);
     border-bottom: var(--purple) solid 2px;
+}
+
+.nav-item p {
+    color: var(--purple);
+    text-transform: lowercase;
+}
+
+.nav-item i {
+    color: var(--purple);
+}
+
+#nav-cart i {
+    color: darkgreen;
+}
+
+#nav-cart p {
+    color: darkgreen;
 }
 
 .logo {
@@ -79,8 +97,9 @@ body {
 }
 
 .home-page-content {
-    border-bottom: solid 2px purple;
     font-size: 1.3rem;
+    margin-bottom: 1rem;
+    border-bottom: solid 1px var(--purple);
 }
 
 .home-page-content h2 {
@@ -162,6 +181,10 @@ body {
 
 @media screen and (max-width: 370px) {
 
+    .logo {
+        font-size: 1.1rem;
+    }
+
     .hero-text-container {
         padding: 0.8rem;
     }
@@ -172,6 +195,10 @@ body {
 
     .home-btn {
         font-size: 0.7rem;
+    }
+
+    .small-home-btn {
+        font-size: 0.9rem;
     }
 
 }
@@ -188,7 +215,7 @@ body {
     text-align: center;
     font-size: 1.5rem;
     text-decoration: none;
-    background-color: var(--light-yellow);
+    background-color: var(--lavender);
     opacity: 0.9;
     color: var(--purple);
     border-top: solid 2px var(--purple);

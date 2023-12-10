@@ -34,7 +34,7 @@
             <!-- Bootstrap navbar -->
             <nav class="navbar sticky-top navbar-expand-lg navbar-light" id="navbar">
                 <div class="container-fluid">
-                    <a class="navbar-brand logo" href="{% url 'home' %}">You Made You</a>
+                    <a class="navbar-brand logo" href="{% url 'home' %}">YMY Fitness Community</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                         aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -132,9 +132,9 @@
                                 </a>
                             </li>
                             {% endif %}
-                            <li class="nav-item">
+                            <li class="nav-item" id="nav-cart">
                                 <a class="nav-link" href="{% url 'view_cart' %}">
-                                    <div class="text-center text-success">
+                                    <div class="text-center">
                                         <div><i class="fas fa-regular fa-cart-shopping"></i></div>
                                         <p class="my-0">
                                             {% if total %}
