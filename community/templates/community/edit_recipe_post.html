@@ -1,24 +1,30 @@
-{% extends "base.html" %} {% load static %} {% block content %}
-
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
 {% load crispy_forms_tags %}
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-6 offset-md-3 p-4 text-center">
-            <h1 class="page-heading-no-border">Edit Recipe</h1>
-            <div class="box-border">
 
+{% block extracss %}
+<link rel="stylesheet" href="{% static 'community/css/community.css' %}">
+{% endblock %}
+
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 p-4">
+            <span class="text-center">
+                <h1 class="community-heading">Edit Recipe <i class="fas fa-regular fa-carrot"></i></h1>
+            </span>
+            <div class="add-post-container">
                 {% if user.is_authenticated %}
                 <form method="POST">
-                    {{ recipe_form|crispy  }}
+                    {{ recipe_form | crispy }}
                     {% csrf_token %}
-                    <div>
-                        <hr>
-                        <button class="styled-btn" type="submit">Edit Recipe</button>
+                    <div class="add-btn-container text-center">
+                        <button class="btn community-btn-sm" type="submit">Edit Post</button>
                     </div>
                 </form>
                 {% endif %}
-
             </div>
         </div>
     </div>
