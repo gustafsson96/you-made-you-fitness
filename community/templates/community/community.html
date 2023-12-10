@@ -6,7 +6,27 @@
 
 <div class="containter">
     <div class="row">
-        <div class="col-sm-5 col-md-6 border border-info">
+        <div class="col m-4 border border-success text-center">
+            <h2 class="community-heading">Community Page</h2>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+    <div class="col-6">
+        <form method="GET" action="{% url 'search_results' %}">
+            <div class="input-group w-100">
+                <input class="form-control search-bar-input" type="text" name="q" placeholder="Search posts">
+                <div class="input-group-append">
+                    <button id="search-bar-btn" class="form-control btn search-bar-btn" type="submit">
+                        <span class="icon">
+                            <i class="fas fa-search search-bar-icon"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
 
 <a href="{% url 'recipes' %}" class="btn btn-black rounded-0 btn-lg">Link to recipe page</a>
 <a href="{% url 'workouts' %}" class="btn btn-black rounded-0 btn-lg">Link to workouts page</a>
@@ -17,22 +37,8 @@
 <a href="{% url 'add_other' %}" class="btn btn-black rounded-0 btn-lg">Add other post</a>
 </div>
 
-<div class="col-sm-5 col-md-6 border border-success">
-<form method="GET" action="{% url 'search_results' %}">
-    <div class="input-group w-100">
-     <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search posts">
-        <div class="input-group-append">
-            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
-                    <span class="icon">
-                        <i class="fas fa-search"></i>
-                    </span>
-            </button>
-        </div>
-    </div>
-</form>
-</div>
-</div>
-</div>
 
+</div>
+</div>
 
 {%endblock%}

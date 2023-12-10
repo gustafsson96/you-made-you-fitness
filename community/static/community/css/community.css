@@ -1,5 +1,38 @@
 body {
-    background-color: red;
-    color: green;
+    background-color: var(--light-pink);
 }
+
+.community-heading {
+    color: var(--purple);
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.search-bar-input {
+    border: solid 1px var(--purple);
+    border-radius: 30px;
+}
+
+.search-bar-input:focus {
+    border: solid 1px var(--purple);
+    box-shadow: 0 0 5px var(--purple);
+    z-index: 1;
+}
+
+.search-bar-btn {
+    color: var(--purple);
+    background-color: white;
+    border: solid 1px var(--purple);
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    transition: transform 0.2s ease-in-out;
+    z-index: 3;
+}
+
+.search-bar-btn:hover {
+    transform: scale(1.1);
+    z-index: 3;
+}
+
 
