@@ -4,8 +4,21 @@
 <link rel="stylesheet" href="{% static 'community/css/community.css' %}">
 {% endblock %}
 
+
 <div class="container-fluid">
     <div class="row">
+        <div class="col-12 m-3 text-center">
+            <h2 class="community-heading">Other Posts</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-sm-12 mb-2 text-lg-end text-center">
+            <a href="{% url 'add_other' %}" class="btn community-btn-sm">Add other post</a>
+        </div>
+        <div class="col-lg-6 col-sm-12 md-2 text-lg-start text-center">
+            <a href="{% url 'community' %}" class="btn community-btn-sm">Back to Community</a>
+        </div>
+    </div>
         <div class="col-12 mt-3">
             <div class="row justify-content-center">
                 {% for other_post in other_posts %}
