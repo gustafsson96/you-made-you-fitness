@@ -4,149 +4,161 @@
 <link rel="stylesheet" href="{% static 'community/css/community.css' %}">
 {% endblock %}
 
-<div class="container-fluid">
+<div class="container">
+
     <div class="row">
-        <div class="col-12 mt-3 left">
-            <div class="row">
+        <div class="col-12 m-4 text-center">
+            <h1 class="community-heading">Your Blog Posts</h1>
+            <hr>
+        </div>
+    </div>
 
-{% for recipe in user_recipes %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="image-container">
-                                {% if "placeholder" in recipe.image.url %}
-                                <img class="card-img-top"
-                                    src="https://res.cloudinary.com/dlbny6lhn/image/upload/v1701465502/no_image_recipe_h80j5m.jpg">
-                                {% else %}
-                                <img class="card-img-top" src=" {{ recipe.image.url }}">
-                                {% endif %}
-                                <div class="image-flash">
-                                    <p class="author">Author: {{ recipe.author }}</p>
-                                </div>
-                            </div>
-                            <a href="{% url 'recipe_detail' recipe.slug %}" class="post-link text-decoration-none">
-                                <h2 class="card-title">{{ recipe.title }}</h2>
-                            </a>
-                            <div>
-                                <a href="{% url 'edit_recipe' slug=recipe.slug %}" class="community-btn-sm edit-delete-btn">
-                                    Edit
-                                </a>
-                                <a href="{% url 'delete_recipe' slug=recipe.slug %}" class="community-btn-sm edit-delete-btn">
-                                    Delete
-                                </a>
-                            </div>
-                            <hr>
-                            <p class="card-text text-muted h6">{{ recipe.created_on}}</p>
-                        </div>
-                    </div>
-                </div>
+<!-- table with logged in users recipes -->
 
+    <div class="row">
+        <div class="col-12 m-2">
+            <h2 class="community-sub-heading">Your Recipes</h2>
+
+    <div class="table-responsive">
+    <table class="table table-borderless">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col" class="purple-text">Title</th>
+                <th scope="col"></th>
+                
+            </tr>
+                </thead>
+                <tbody>
+                    {% for recipe in user_recipes %}
+                    <tr>
+                        <td scope="row"></td>
+                        <td><a href="{% url 'recipe_detail' recipe.slug %}" class="post-link text-decoration-none">
+                            <h2 class="card-title">{{ recipe.title }}</h2>
+                        </a> {{ recipe.created_on }}</td>
+                        <td class="d-flex flex-wrap">
+                                <a href="{% url 'edit_recipe' slug=recipe.slug %}" class="community-btn-sm edit-delete-btn m-2">
+                                    Edit</a>
+                                
+                                <a href="{% url 'delete_recipe' slug=recipe.slug %}" class="community-btn-sm edit-delete-btn m-2">
+                                    Delete</a>
+                        </td>
 {% empty %}
-
-There are no recipe posts to show right now
-
+<tr>
+    <td></td>
+    <td class="purple-text">You have no recipes to show right now <i class="fa-regular fa-face-smile"></i></td>
+    <td></td>
+    <td></td>
+</tr>
 {% endfor %}
 
+</tbody>
+</table>
+</div>
+</div>
+</div>
 
-<div class="container-fluid">
+<hr>
+
+<!-- table with logged in users workouts-->
+
     <div class="row">
-        <div class="col-12 mt-3 left">
-            <div class="row">
-{% for workout in user_workouts %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="image-container">
-                                {% if "placeholder" in workout.image.url %}
-                                <img class="card-img-top"
-                                    src="https://res.cloudinary.com/dlbny6lhn/image/upload/v1701465524/no_image_workout_pv8xmk.jpg">
-                                {% else %}
-                                <img class="card-img-top" src=" {{ workout.image.url }}">
-                                {% endif %}
-                                <div class="image-flash">
-                                    <p class="author">Author: {{ workout.author }}</p>
-                                </div>
-                            </div>
-                            <a href="{% url 'workout_detail' workout.slug %}" class="post-link text-decoration-none">
+        <div class="col-12 m-2">
+            <h2 class="community-sub-heading">Your Workouts</h2>
+    
+            <div class="table-responsive">
+                <table class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col" class="purple-text">Title</th>
+                            <th scope="col"></th>
+    
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for workout in user_workouts %}
+                        <tr>
+                            <td scope="row"></td>
+                            <td><a href="{% url 'workout_detail' workout.slug %}" class="post-link text-decoration-none">
                                 <h2 class="card-title">{{ workout.title }}</h2>
-                            </a>
-                            <div>
-                            <a href="{% url 'edit_workout' slug=workout.slug %}" class="community-btn-sm edit-delete-btn">
-                                Edit
-                            </a>
-                            <a href="{% url 'delete_workout' slug=workout.slug %}" class="community-btn-sm edit-delete-btn">
-                                Delete
-                            </a>
-                            </div>
-                            <hr/>
-                            <p class="card-text text-muted h6">{{ workout.created_on}}</p>
-                        </div>
-                    </div>
-                </div>
+                            </a></td>
+                            <td class="d-flex flex-wrap">
+                                <a href="{% url 'edit_workout' slug=workout.slug %}"
+                                    class="community-btn-sm edit-delete-btn m-2">
+                                    Edit</a>
+    
+                                <a href="{% url 'delete_workout' slug=workout.slug %}"
+                                    class="community-btn-sm edit-delete-btn m-2">
+                                    Delete</a>
+                            </td>
+    {% empty %}
+    <tr>
+        <td></td>
+        <td class="purple-text">You have no workout posts to show right now <i class="fa-regular fa-face-smile"></i></td>
+        <td></td>
+        <td></td>
+    </tr>
+                            {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+<hr>
+
+<!-- table with logged in users other posts-->
+
+
+<div class="row">
+    <div class="col-12 m-2">
+        <h2 class="community-sub-heading">Your Other Posts</h2>
+
+        <div class="table-responsive">
+            <table class="table table-borderless">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col" class="purple-text">Title</th>
+                        <th scope="col"></th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for other_post in user_other_posts %}
+                    <tr>
+                        <td scope="row"></td>
+                        <td><a href="{% url 'other_post_detail' other_post.slug %}" class="post-link text-decoration-none">
+                            <h2 class="card-title">{{ other_post.title }}</h2>
+                        </a></td>
+                        <td class="d-flex flex-wrap">
+                            <a href="{% url 'edit_other_post' slug=other_post.slug %}"
+                                class="community-btn-sm edit-delete-btn m-2">
+                                Edit</a>
+
+                            <a href="{% url 'delete_other_post' slug=other_post.slug %}"
+                                class="community-btn-sm edit-delete-btn m-2">
+                                Delete</a>
+                        </td>
 
 {% empty %}
 
-There are no workout posts to show right now
+<tr>
+    <td></td>
+    <td class="purple-text">You have no other posts to show right now <i class="fa-regular fa-face-smile"></i></td>
+    <td></td>
+    <td></td>
+</tr>
+                        {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 
-{% endfor %}
+<hr>
 
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-12 mt-3 left">
-            <div class="row">
-{% for other_post in user_other_posts %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="image-container">
-                                {% if "placeholder" in other_post.image.url %}
-                                <img class="card-img-top"
-                                    src="https://res.cloudinary.com/dlbny6lhn/image/upload/v1701465538/no_image_other_goasol.jpg">
-                                {% else %}
-                                <img class="card-img-top" src=" {{ other_post.image.url }}">
-                                {% endif %}
-                                <div class="image-flash">
-                                    <p class="author">Author: {{ other_post.author }}</p>
-                                </div>
-                            </div>
-                            <a href="{% url 'other_post_detail' other_post.slug %}" class="post-link text-decoration-none">
-                                <h2 class="card-title">{{ other_post.title }}</h2>
-                            </a>
-                            <div>
-                            <a href="{% url 'edit_other_post' slug=other_post.slug %}" class="community-btn-sm edit-delete-btn">Edit</a>
-                            <a href="{% url 'delete_other_post' slug=other_post.slug %}" class="community-btn-sm edit-delete-btn">Delete</a>
-
-                            </div>
-                            <hr>
-                            <p class="card-text text-muted h6">{{ other_post.created_on}}</p>
-                        </div>
-                        </div>
-                        </div>
-
-
-{% empty %}
-
-There are no other posts to show right now
-
-{% endfor %}
-
-
-    <!-- code from CI I think therefore I blog -->
-
-    {% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
-            {% endif %}
-            {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
 </div>
 
 {%endblock%}
