@@ -1,10 +1,11 @@
 :root {
     /** color scheme **/
     --purple: #843467;
+    --light-pink: #ffe9ec;
 }
 
-body {
-    background-color: rgba(255, 233, 236, 0.6)
+.body-home {
+    background-color: rgba(255, 233, 236, 0.6);
 }
 
 /* relative page container for footer positioning */
