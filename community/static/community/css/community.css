@@ -58,7 +58,7 @@ body {
     background-color: pink;
     color: purple;
     border: 2px solid purple;
-    border-radius: 50%;
+    border-radius: 10px;
     transition-duration: 0.4s;
 }
 
