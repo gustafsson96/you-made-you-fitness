@@ -10,12 +10,12 @@ body {
 }
 
 .search-bar-input {
-    border: solid 1px var(--purple);
+    border: solid 2px var(--purple);
     border-radius: 30px;
 }
 
 .search-bar-input:focus {
-    border: solid 1px var(--purple);
+    border: solid 2px var(--purple);
     box-shadow: 0 0 5px var(--purple);
     z-index: 1;
 }
@@ -23,7 +23,7 @@ body {
 .search-bar-btn {
     color: var(--purple);
     background-color: white;
-    border: solid 1px var(--purple);
+    border: solid 2px var(--purple);
     border-bottom-right-radius: 30px;
     border-top-right-radius: 30px;
     transition: transform 0.2s ease-in-out;
