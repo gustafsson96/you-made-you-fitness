@@ -6,12 +6,14 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-12 mt-3 left">
-            <div class="row">
+
+        <div class="col-12 mt-3">
+            <div class="row justify-content-center">
                 {% for recipe in recipes %}
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
+
                             <div class="image-container">
                                 {% if "placeholder" in recipe.image.url %}
                                 <img class="card-img-top"
@@ -19,37 +21,38 @@
                                 {% else %}
                                 <img class="card-img-top" src=" {{ recipe.image.url }}">
                                 {% endif %}
+
                                 <div class="image-flash">
-                                    <p class="author">Author: {{ recipe.author.user.username }}</p>
+                                    <p class="text-muted">Author: {{ recipe.author.user.username }}</p>
                                 </div>
+
                             </div>
                             <a href="{% url 'recipe_detail' recipe.slug %}" class="post-link text-decoration-none">
                                 <h2 class="card-title">{{ recipe.title }}</h2>
                                 </a>
                                 <div>
-                                <p><i>{{ recipe.recipe_type }}</i></p>
+                                <p class="purple-text">Category: {{ recipe.recipe_type }}</p>
                                 <hr>
+                                <p class="purple-text">Decription:</p>
                                 <p>{{ recipe.description }}</p>
-                                <hr>
-                                <p>{{ recipe.ingredients }}</p>
-                                <hr>
-                                <p>{{ recipe.instructions | safe }}</p>
                                 </div>
                                 <hr>
-                            <p class="card-text text-muted h6">{{ recipe.created_on}} <i class="far fa-heart"></i>
-                                {{ recipe.number_of_likes }}</p>
+                            <p class="card-text text-muted h6">{{ recipe.created_on}}</p>
                         </div>
                     </div>
                 </div>
-                {% if forloop.counter|divisibleby:2 %}
+                {% if forloop.counter|divisibleby:3 %}
             </div>
             <div class="row">
                 {% endif %}
                 {% endfor %}
-
             </div>
-        </div>
+
+    
     </div>
+</div>
+
+
     <!-- code from CI I think therefore I blog -->
 
     {% if is_paginated %}

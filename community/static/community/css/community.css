@@ -2,6 +2,11 @@ body {
     background-color: var(--light-pink);
 }
 
+.purple-text {
+    color: var(--purple);
+    font-weight: bold;
+}
+
 .community-heading {
     color: var(--purple);
     font-size: 2.5rem;
