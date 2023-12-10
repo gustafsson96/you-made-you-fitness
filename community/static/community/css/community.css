@@ -86,7 +86,9 @@ body {
     }
 
 .add-post-container {
+    background-color: rgba(254, 255, 214, 0.2);
     border: 2px solid var(--purple);
+    border-style: dotted;
     padding: 2rem;
 }
 
