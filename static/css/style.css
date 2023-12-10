@@ -1,3 +1,9 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
 :root {
     /** color scheme **/
     --purple: #581845;
@@ -197,7 +203,7 @@
     padding: 0 1rem;
 }
 
-.social-media
+.social-media,
 .social-media:link,
 .social-media:visited {
     color: var(--purple);

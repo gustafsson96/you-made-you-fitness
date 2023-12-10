@@ -5,11 +5,13 @@
 {% endblock %}
 
 <div class="containter">
+
     <div class="row">
-        <div class="col m-4 text-center">
+        <div class="col m-3 text-center">
             <h2 class="community-heading">Community Page</h2>
         </div>
     </div>
+
     <div class="row justify-content-center">
     <div class="col-6">
         <form method="GET" action="{% url 'search_results' %}">
@@ -27,18 +29,59 @@
     </div>
 </div>
 
-
-<a href="{% url 'recipes' %}" class="btn btn-black rounded-0 btn-lg">Link to recipe page</a>
-<a href="{% url 'workouts' %}" class="btn btn-black rounded-0 btn-lg">Link to workouts page</a>
-<a href="{% url 'other_posts' %}" class="btn btn-black rounded-0 btn-lg">Link to other posts page</a>
-<a href="{% url 'user_posts' %}" class="btn btn-black rounded-0 btn-lg">Link to logged in users posts</a>
-<a href="{% url 'add_recipe' %}" class="btn btn-black rounded-0 btn-lg">Add recipe post</a>
-<a href="{% url 'add_workout' %}" class="btn btn-black rounded-0 btn-lg">Add workout post</a>
-<a href="{% url 'add_other' %}" class="btn btn-black rounded-0 btn-lg">Add other post</a>
+<div class="row">
+    <div class="col text-center m-3">
+        <h3 class="community-sub-heading">Read other members posts</h3>
+    </div>
 </div>
 
-
+<div class="row">
+    <div class="col-lg-4 col-md-12 text-lg-end text-center mb-3">
+        <a href="{% url 'recipes' %}" class="btn community-btn">Recipes</a>
+    </div>
+    <div class="col-lg-4 col-md-12 text-center mb-3">
+        
+        <a href="{% url 'workouts' %}" class="btn community-btn">Workouts</a>
+        
+    </div>
+    <div class="col-lg-4 col-md-12 text-lg-start text-center mb-3">
+            <a href="{% url 'other_posts' %}" class="btn community-btn">Other posts</a>
+    </div>
 </div>
+
+<div class="row">
+    <div class="col text-center m-3">
+        <hr>
+        <h3 class="community-sub-heading">Create your own post</h3>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-4 col-md-12 text-lg-end text-center mb-3">
+        <a href="{% url 'add_recipe' %}" class="btn community-btn">Add Recipe</a>
+    </div>
+    <div class="col-lg-4 col-md-12 text-center mb-3">
+
+        <a href="{% url 'add_workout' %}" class="btn community-btn">Add Workout</a>
+
+    </div>
+    <div class="col-lg-4 col-md-12 text-lg-start text-center mb-3">
+        <a href="{% url 'add_other' %}" class="btn community-btn">Add other post</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col text-center m-3">
+        <hr>
+        <h3 class="community-sub-heading">Your Posts</h3>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-6 mb-5 text-center">
+        <a href="{% url 'user_posts' %}" class="btn community-btn">View Your Posts</a>
+    </div>
+</div>
+
 </div>
 
 {%endblock%}

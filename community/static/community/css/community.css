@@ -9,6 +9,14 @@ body {
     text-transform: uppercase;
 }
 
+.community-sub-heading {
+    color: var(--purple);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 1rem;
+}
+
 .search-bar-input {
     border: solid 2px var(--purple);
     border-radius: 30px;
@@ -35,4 +43,34 @@ body {
     z-index: 3;
 }
 
+.community-btn {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    background-color: pink;
+    color: purple;
+    border: 2px solid purple;
+    border-radius: 50%;
+    transition-duration: 0.4s;
+}
 
+.community-btn:hover {
+    background-color: purple;
+    color: pink;
+}
+
+.footer {
+    position: fixed;
+    margin-top: auto;
+}
+
+
+/* community page media quries for screens smaller than 400px */
+@media screen and (max-width: 400px) {
+
+    .community-heading {
+        font-size: 1.9rem;
+    }
+}
