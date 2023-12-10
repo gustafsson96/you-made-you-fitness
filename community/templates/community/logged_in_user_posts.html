@@ -24,7 +24,7 @@
                                     <p class="author">Author: {{ recipe.author }}</p>
                                 </div>
                             </div>
-                            <a href="#" class="post-link text-decoration-none">
+                            <a href="{% url 'recipe_detail' recipe.slug %}" class="post-link text-decoration-none">
                                 <h2 class="card-title">{{ recipe.title }}</h2>
                             </a>
                             <div>
@@ -41,8 +41,7 @@
                                 <a href="{% url 'delete_recipe' slug=recipe.slug %}" class="edit-cancel-btn">Delete Recipe</a>
                             </div>
                             <hr>
-                            <p class="card-text text-muted h6">{{ recipe.created_on}} <i class="far fa-heart"></i>
-                                {{ recipe.number_of_likes }}</p>
+                            <p class="card-text text-muted h6">{{ recipe.created_on}}</p>
                         </div>
                     </div>
                 </div>
@@ -73,7 +72,7 @@ There are no recipe posts to show right now
                                     <p class="author">Author: {{ workout.author }}</p>
                                 </div>
                             </div>
-                            <a href="#" class="post-link text-decoration-none">
+                            <a href="{% url 'workout_detail' workout.slug %}" class="post-link text-decoration-none">
                                 <h2 class="card-title">{{ workout.title }}</h2>
                             </a>
                             <div>
@@ -90,8 +89,7 @@ There are no recipe posts to show right now
                             <a href="{% url 'delete_workout' slug=workout.slug %}" class="edit-cancel-btn">Delete Workout</a>
                             </div>
                             <hr />
-                            <p class="card-text text-muted h6">{{ workout.created_on}} <i class="far fa-heart"></i>
-                                {{ workout.number_of_likes }}</p>
+                            <p class="card-text text-muted h6">{{ workout.created_on}}</p>
                         </div>
                     </div>
                 </div>
@@ -122,8 +120,7 @@ There are no workout posts to show right now
                                     <p class="author">Author: {{ other_post.author }}</p>
                                 </div>
                             </div>
-                            <a href="#"
-                                class="post-link text-decoration-none">
+                            <a href="{% url 'other_post_detail' other_post.slug %}" class="post-link text-decoration-none">
                                 <h2 class="card-title">{{ other_post.title }}</h2>
                             </a>
                             <div>
@@ -133,8 +130,7 @@ There are no workout posts to show right now
                             <hr>
                             <a href="{% url 'delete_other_post' slug=other_post.slug %}" class="edit-cancel-btn">Delete Post</a>
                             </div>
-                            <p class="card-text text-muted h6">{{ other_post.created_on}} <i class="far fa-heart"></i>
-                                {{ other_post.number_of_likes }}</p>
+                            <p class="card-text text-muted h6">{{ other_post.created_on}}</p>
                         </div>
                         </div>
                         </div>
