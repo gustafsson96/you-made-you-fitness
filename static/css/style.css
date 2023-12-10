@@ -3,6 +3,10 @@
     --purple: #843467;
 }
 
+body {
+    background-color: rgba(255, 233, 236, 0.6)
+}
+
 /* relative page container for footer positioning */
 
 #page-container {
@@ -31,7 +35,6 @@
 .hero-image {
     max-width: 100%;
     height: auto;
-    margin-bottom: 3.5rem;
 }
 
 .hero-text-container {
@@ -40,40 +43,122 @@
     opacity: 0.9;
     min-width: 60%;
     max-height: 80%;
-    padding: 2rem;
-    border-radius: 50px;
+    padding: 3rem;
+    border-radius: 30px;
     position: absolute;
     text-align: center;
-    top: 30%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -40%);
 }
 
+.home-btn {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.5rem 1.5rem;
+    background-color: pink;
+    color: purple;
+    border: 2px solid purple;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+}
+
+.home-btn:hover {
+    background-color: purple;
+    color: pink;
+}
+
+.home-page-content {
+    border-bottom: solid 2px purple;
+    font-size: 1.3rem;
+}
+
+.home-page-content h2 {
+    color: var(--purple);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.small-home-btn {
+    font-weight: bolder;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.5rem 1.5rem;
+    background-color: pink;
+    color: purple;
+    border: 2px solid purple;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+}
+
+.small-home-btn:hover {
+    background-color: purple;
+    color: pink;
+}
+
+.home-img-container {
+    margin-bottom: 20px !important;
+    margin-top: 20px !important;
+}
 
 /* home page media quries for screens smaller than 600px */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 610px) {
 
-    .hero-text-container h1 {
-        font-size: 1.5rem;
+    .hero-text-container {
+        padding: 1.5rem;
     }
 
-    .hero-text-container h3 {
-        font-size: 1rem;
+    .hero-text-container h1 {
+        font-size: 1.6rem;
+    }
+
+    .home-btn {
+        font-size: 1.1rem;
+    }
+
+    .home-page-content {
+        font-size: 1.2rem;
     }
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 480px) {
 
     .hero-text-container {
-        padding: 1.2rem;
+        padding: 1.3rem;
     }
 
     .hero-text-container h1 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
-    .hero-text-container h3 {
-        font-size: 0.85rem;
+    .home-btn {
+        font-size: 1rem;
+    }
+
+    .home-page-content {
+        font-size: 1rem;
+    }
+
+    .img-hide {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 370px) {
+
+    .hero-text-container {
+        padding: 0.8rem;
+    }
+
+    .hero-text-container h1 {
+        font-size: 1rem;
+    }
+
+    .home-btn {
+        font-size: 0.7rem;
     }
 
 }
@@ -133,7 +218,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(23, 162, 184, .85);
+    background: #de6875;
     z-index: 9999;
 }
 
@@ -172,4 +257,4 @@
     clear: left;
     font: 14px Helvetica, Arial, sans-serif;
     width: 600px;
-                }
+}
