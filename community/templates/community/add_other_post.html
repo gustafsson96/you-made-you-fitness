@@ -1,21 +1,28 @@
-{% extends "base.html" %} {% load static %} {% block content %}
-
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
 {% load crispy_forms_tags %}
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-6 offset-md-3 p-4 text-center">
-            <h1 class="page-heading-no-border">Add a Post</h1>
-            <div class="box-border">
 
+{% block extracss %}
+<link rel="stylesheet" href="{% static 'community/css/community.css' %}">
+{% endblock %}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 p-4">
+            <span class="text-center">
+                <h1 class="community-heading">Add a Post <i class="fa-solid fa-message"></i></h1>
+            </span>
+            <div class="add-post-container">
                 {% if user.is_authenticated %}
                 <form method="POST" action="add_other">
                     {{ other_post_form|crispy }}
                     {% csrf_token %}
-                    <div>
-                        <button class="styled-btn" type="submit">Create Post</button>
+                    <div class="add-btn-container text-center">
+                        <button class="btn community-btn-sm" type="submit">Create Post</button>
                     </div>
-                </form>
+                    </form>
                 {% endif %}
 
             </div>
