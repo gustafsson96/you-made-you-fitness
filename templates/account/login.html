@@ -1,17 +1,28 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% load allauth account socialaccount %}
+{% load static %}
 {% block head_title %}
     {% trans "Sign In" %}
 {% endblock head_title %}
+
 {% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+<div class="allauth-container">
+
+<div class="allauth-heading">
     {% element h1 %}
         {% trans "Sign In" %}
     {% endelement %}
-    <p>
+</div>
+
+    <p class="allauth-login-message">
         {% blocktrans %}If you have not created an account yet, then please
     <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}
     </p>
+
     {% url 'account_login' as login_url %}
     {% element form form=form method="post" action=login_url tags="entrance,login" %}
         {% slot body %}
@@ -24,11 +35,18 @@
                        value="{{ redirect_field_value }}" />
             {% endif %}
         {% endslot %}
+        
         {% slot actions %}
+        <div class="allauth-btn">
             {% element button type="submit" tags="prominent,login" %}
                 {% trans "Sign In" %}
             {% endelement %}
-        {% endslot %}
+            </div>
+        </div>
+    </div>
+    </div>
+    {% endslot %}
     {% endelement %}
     {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
+    </div>
 {% endblock content %}
