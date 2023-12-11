@@ -23,6 +23,11 @@ body {
     margin: 1rem;
 }
 
+.community-text {
+    font-size: 1.3rem;
+    color: var(--purple);
+}
+
 .search-bar-input {
     border: solid 2px var(--purple);
     border-radius: 30px;
@@ -68,22 +73,22 @@ body {
 }
 
 .community-btn-sm {
-        font-size: 0.9rem;
-        font-weight: bolder;
-        text-decoration: none;
-        text-transform: uppercase;
-        padding: 0.5rem 1.8rem;
-        background-color: pink;
-        color: purple;
-        border: 2px solid purple;
-        border-radius: 3px;
-        transition-duration: 0.4s;
-    }
-    
-    .community-btn-sm:hover {
-        background-color: purple;
-        color: pink;
-    }
+    font-size: 0.9rem;
+    font-weight: bolder;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.5rem 1.8rem;
+    background-color: pink;
+    color: purple;
+    border: 2px solid purple;
+    border-radius: 3px;
+    transition-duration: 0.4s;
+}
+
+.community-btn-sm:hover {
+    background-color: purple;
+    color: pink;
+}
 
 
 .add-post-container {
@@ -122,5 +127,14 @@ body {
 
     .community-heading {
         font-size: 1.9rem;
+    }
+
+    .community-text {
+        font-size: 1.1rem;
+    }
+
+    .community-btn {
+        font-size: 1.1rem;
+        padding: 0.8rem 1.8rem;
     }
 }

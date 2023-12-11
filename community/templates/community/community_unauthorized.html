@@ -4,7 +4,35 @@
 <link rel="stylesheet" href="{% static 'community/css/community.css' %}">
 {% endblock %}
 
-<div>Sign up to view community page</div>
-
-
+<div class="container">
+    <div class="row">
+        <div class="col-12 mb-3 text-center">
+            <h2 class="community-heading">Join Our Community</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center community-text">
+            <p>
+                To take part of and share recipes, workouts and other blog posts with helpful tips and tricks, sign up!
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center mb-3">
+            <a href="{% url 'account_signup' %}" class="btn community-btn">Sign Up</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center community-text">
+            <p>
+            Already a member? Please log in.
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center community-text mb-3">
+            <a href="{% url 'account_login' %}" class="btn community-btn">Log In</a>
+        </div>
+    </div>
+</div>
 {%endblock%}
