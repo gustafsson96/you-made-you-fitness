@@ -242,6 +242,23 @@ body {
     text-transform: uppercase;
 }
 
+.add-products-btn {
+    font-weight: bolder;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.5rem 1.5rem;
+    background-color: pink;
+    color: purple;
+    border: 2px solid purple;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+}
+
+.add-products-btn:hover {
+    background-color: purple;
+    color: pink;
+}
+
 /* allauth login, signup, and logout */
 
 .allauth-container {

@@ -1,8 +1,12 @@
-{% extends "base.html" %} {% load static %} {% block content %}
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
 
 {% block extracss %}
 <link rel="stylesheet" href="{% static 'community/css/community.css' %}">
 {% endblock %}
+
+{% load cloudinary %}
 
 <div class="container-fluid">
     <div class="row">
