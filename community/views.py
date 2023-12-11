@@ -3,6 +3,7 @@ from .models import Recipe, Workout, OtherPost
 from userprofile.models import UserProfile
 from .forms import RecipeForm, WorkoutForm, OtherPostForm
 from django.utils.text import slugify
+from django.contrib import messages
 
 
 def community(request):
@@ -127,12 +128,10 @@ def add_recipe_post(request):
             recipe.author = UserProfile.objects.get(user=request.user)
             recipe.slug = slugify(recipe.title)
             recipe_form.save()
-            print("Recipe saved!")
+            messages.add_message(request, messages.SUCCESS,
+                                 'Your recipe post has been created')
             return redirect('user_posts')
-        else:
-            print("Error", recipe_form.errors)
     else:
-
         recipe_form = RecipeForm()
 
     context = {
@@ -153,12 +152,10 @@ def add_workout_post(request):
             workout.author = UserProfile.objects.get(user=request.user)
             workout.slug = slugify(workout.title)
             workout_form.save()
-            print("Workout saved!")
+            messages.add_message(request, messages.SUCCESS,
+                                 'Your workout post has been created')
             return redirect('user_posts')
-        else:
-            print("Error", workout_form.errors)
     else:
-
         workout_form = WorkoutForm()
 
     context = {
@@ -179,12 +176,10 @@ def add_other_post(request):
             other_post.author = UserProfile.objects.get(user=request.user)
             other_post.slug = slugify(other_post.title)
             other_post_form.save()
-            print("Post saved!")
+            messages.add_message(request, messages.SUCCESS,
+                                 'Your post has been created')
             return redirect('user_posts')
-        else:
-            print("Error", other_post_form.errors)
     else:
-
         other_post_form = OtherPostForm()
 
     context = {
@@ -203,7 +198,8 @@ def edit_recipe_post(request, slug, *args, **kwargs):
         recipe_form = RecipeForm(request.POST, instance=recipe)
         if recipe_form.is_valid():
             recipe_form.save()
-            print('Hello')
+            messages.add_message(request, messages.SUCCESS,
+                                 'Your recipe post was updated successfully')
             return redirect('user_posts')
     else:
         recipe_form = RecipeForm(instance=recipe)
@@ -225,7 +221,8 @@ def edit_workout_post(request, slug, *args, **kwargs):
         workout_form = WorkoutForm(request.POST, instance=workout)
         if workout_form.is_valid():
             workout_form.save()
-            print('Hello')
+            messages.add_message(request, messages.SUCCESS,
+                                 'Your workout post was updated successfully')
             return redirect('user_posts')
     else:
         workout_form = WorkoutForm(instance=workout)
@@ -247,7 +244,8 @@ def edit_other_post(request, slug, *args, **kwargs):
         other_post_form = OtherPostForm(request.POST, instance=other_post)
         if other_post_form.is_valid():
             other_post_form.save()
-            print('Hello')
+            messages.add_message(request, messages.SUCCESS,
+                                 'Your post was updated successfully')
             return redirect('user_posts')
     else:
         other_post_form = OtherPostForm(instance=other_post)
@@ -266,6 +264,8 @@ def delete_recipe(request, slug):
     """
     recipe = get_object_or_404(Recipe, slug=slug)
     recipe.delete()
+    messages.add_message(request, messages.ERROR,
+                         'Your recipe post has been deleted')
     return redirect('user_posts')
 
 
@@ -275,6 +275,8 @@ def delete_workout(workout, slug):
     """
     workout = get_object_or_404(Workout, slug=slug)
     workout.delete()
+    messages.add_message(request, messages.ERROR,
+                         'Your workout post has been deleted')
     return redirect('user_posts')
 
 
@@ -284,6 +286,8 @@ def delete_other_post(request, slug):
     """
     other_post = get_object_or_404(OtherPost, slug=slug)
     other_post.delete()
+    messages.add_message(request, messages.ERROR,
+                         'Your post has been deleted')
     return redirect('user_posts')
 
 

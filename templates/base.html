@@ -152,21 +152,22 @@
                     </div>
             </nav>
 
-            <!-- message functionality from walkthrough
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 offset-md-2">
-                        {% for message in messages %}
-                        <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
-                            {{ message | safe }}
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-                            </button>
-                        </div>
-                        {% endfor %}
-                    </div>
-                </div>
+{% if messages %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2 mt-1">
+            {% for message in messages %}
+            <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                {{ message | safe }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                </button>
             </div>
--->
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endif %}
+
             <main class="flex-shrink-0 main-bg">
 
                 {% block content %}
@@ -185,15 +186,14 @@
         </div>
     </div>
 
-    <!-- JS message function copied from CI walkthrough "I Think Therefore I Blog" 
-    <script>
-        setTimeout(function () {
-            let messages = document.getElementById("msg");
-            let alert = new bootstrap.Alert(messages);
-            alert.close();
-        }, 4000);
-    </script>
-    -->
-</body>
+<!-- JS message function copied from CI walkthrough "I Think Therefore I Blog" -->
+<script>
+    setTimeout(function () {
+        let messages = document.getElementById("msg");
+        let alert = new bootstrap.Alert(messages);
+        alert.close();
+    }, 4000);
+</script>
 
+</body>
 </html>

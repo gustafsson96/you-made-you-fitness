@@ -26,7 +26,7 @@ body {
 /* navbar css */
 
 #navbar {
-    background-color: var(--lavender);
+    background-color: white;
     border-bottom: var(--purple) solid 2px;
 }
 
@@ -215,7 +215,7 @@ body {
     text-align: center;
     font-size: 1.5rem;
     text-decoration: none;
-    background-color: var(--lavender);
+    background-color: white;
     opacity: 0.9;
     color: var(--purple);
     border-top: solid 2px var(--purple);
