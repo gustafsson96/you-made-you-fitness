@@ -12,9 +12,9 @@
         <div class="col-md-6 mt-4">
                 <!-- The featured image URL goes in the src attribute -->
         {% if "placeholder" in recipe.image.url %}
-        <img class="card-img" src="https://res.cloudinary.com/dlbny6lhn/image/upload/v1701465502/no_image_recipe_h80j5m.jpg">
+        <img class="img-fluid" src="https://res.cloudinary.com/dlbny6lhn/image/upload/v1701465502/no_image_recipe_h80j5m.jpg">
         {% else %}
-        <img class="card-img" src=" {{ recipe.image.url }}">
+        <img class="img-fluid" src=" {{ recipe.image.url }}">
         {% endif %}
             </div>
         <div class="col-md-6 mt-lg-4">

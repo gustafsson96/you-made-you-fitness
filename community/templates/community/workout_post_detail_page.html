@@ -12,10 +12,10 @@
         <div class="col-md-6 mt-4">
             <!-- The featured image URL goes in the src attribute -->
             {% if "placeholder" in workout.image.url %}
-            <img class="card-img"
+            <img class="img-fluid"
                 src="https://res.cloudinary.com/dlbny6lhn/image/upload/v1701465524/no_image_workout_pv8xmk.jpg">
             {% else %}
-            <img class="card-img" src=" {{ workout.image.url }}">
+            <img class="img-fluid" src=" {{ workout.image.url }}">
             {% endif %}
         </div>
         <div class="col-md-6 mt-lg-4">
