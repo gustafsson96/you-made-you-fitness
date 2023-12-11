@@ -16,14 +16,13 @@ def add_to_cart(request, item_id):
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
 
-    if item_id in list(cart.keys()):
-        cart[item_id] += quantity
-        messages.add_message(request, messages.SUCCESS,
-                             f'Item {item_id} was added to you cart')
+    if item_id in cart:
+        messages.add_message(request, messages.ERROR,
+                         'This item is already in your shopping cart')
     else:
         cart[item_id] = quantity
         messages.add_message(request, messages.SUCCESS,
-                             f'Item {item_id} was added to you cart')
+                             'The item was added to your shopping cart')
 
     request.session['cart'] = cart
     return redirect(redirect_url)
@@ -37,11 +36,11 @@ def remove_from_cart(request, item_id):
 
         if item_id in cart:
             cart.pop(item_id)
-            messages.add_message(request, messages.ERROR,
-                         'Your item has been deleted from the cart')
+            messages.add_message(request, messages.INFO,
+                         'Your item has been deleted from the shopping cart')
 
         request.session['cart'] = cart
         return HttpResponse(status=200)
-
+        
     except Exception as e:
         return HttpResponse(status=500)
