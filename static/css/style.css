@@ -12,6 +12,10 @@ body {
     --light-yellow: #feffd6;
 }
 
+.pink-background {
+    background-color: var(--light-pink);
+}
+
 /* relative page container for footer positioning */
 
 #page-container {
@@ -47,7 +51,7 @@ body {
 }
 
 .logo {
-    color: var(--purple)!important;
+    color: var(--purple) !important;
     font-weight: bold;
 }
 
@@ -200,6 +204,34 @@ body {
         font-size: 0.9rem;
     }
 
+}
+
+/* contact.html css */
+
+.contact-heading {
+    color: var(--purple);
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+.contact-sub-heading {
+    color: var(--purple);
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 1rem;
+}
+
+.purple-text {
+    color: var(--purple);
+}
+
+.purple-border {
+    border: solid 2px var(--purple);
+    border-style: dotted;
+    margin-bottom: 5rem;
 }
 
 /* products.html css */

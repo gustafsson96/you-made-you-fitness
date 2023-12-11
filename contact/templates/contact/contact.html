@@ -1,16 +1,29 @@
-{% extends "base.html" %}
-{% load static %}
-{% block content %}
-
-<div class="pink-background">
+{% extends "base.html" %} {% load static %} {% block content %}
 
 <div class="container">
+    <div class="row">
+        <div class="col-12 m-3 text-center">
+            <h1 class="contact-heading">Contact Us</h1>
+            <hr>
+        </div>
+    </div>
 <div class="row">
-<div class="col-12 col-md-6">
-    <h2>Contact Us</h2>
+<div class="col-12 text-center">
+    <h4 class="contact-sub-heading">Got a question?</h4>
 </div>
-<div class="col-12 col-md-6 purple-border">
-
+<div class="col-12 text-center">
+    <p>For questions please email <b>ymyfitness@email.com</b>.
+    <br>We'll get back to you as soon as possible.</p>
+</div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-12 text-center">
+        <h3 class="contact-sub-heading">Newsletter Sign Up</h3>
+        <p>Don't miss out on healhty recipes, fun workouts and other tips and tricks. Subscribe to our monthly newletter below.</p>
+    </div>
+</div>
+<div class="row justify-content-center purple-border">
+<div class="col-6">
 <div id="mc_embed_shell">
     <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
     <div id="mc_embed_signup">
@@ -50,10 +63,10 @@
                 </div>
             </div>
         </form>
+      </div>
     </div>
-    </div>
-</div>
-</div>
+  </div>
+
 
     <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
     <script
