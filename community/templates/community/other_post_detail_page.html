@@ -10,7 +10,6 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6 mt-4">
-            <!-- The featured image URL goes in the src attribute -->
             {% if "placeholder" in other_post.image.url %}
             <img class="img-fluid"
                 src="https://res.cloudinary.com/dlbny6lhn/image/upload/v1701465538/no_image_other_goasol.jpg">
@@ -26,5 +25,11 @@
             <p>{{ other_post.content }}</p>
         </div>
     </div>
+        <div class="row">
+            <div class="col mb-3 mt-lg-3">
+                <a href="{% url 'other_posts' %}" class="btn community-btn-sm"><i class="fa-solid fa-chevron-left"></i> 
+                    Back to Posts</a>
+            </div>
+        </div>
 </div>
 {% endblock %}
