@@ -244,6 +244,15 @@ body {
     color: purple;
 }
 
+/* contact */
+.background-pink {
+    background-color: var(--light-pink);
+}
+
+.purple-border {
+    border: solid 2px var(purple);
+}
+
 /* Mailchimp */
 
 #mc_embed_signup {
