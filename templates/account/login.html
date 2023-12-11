@@ -20,7 +20,7 @@
 
     <p class="allauth-login-message">
         {% blocktrans %}If you have not created an account yet, then please
-    <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}
+        <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}
     </p>
 
     {% url 'account_login' as login_url %}
@@ -46,6 +46,8 @@
     </div>
     </div>
     {% endslot %}
+    </div>
+    </div>
     {% endelement %}
     {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
     </div>
