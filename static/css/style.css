@@ -32,7 +32,6 @@ body {
 
 .nav-item p {
     color: var(--purple);
-    text-transform: lowercase;
 }
 
 .nav-item i {
