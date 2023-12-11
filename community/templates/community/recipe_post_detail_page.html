@@ -20,17 +20,19 @@
         <div class="col-md-6 mt-lg-4">
                 <h1 class="community-heading">{{ recipe.title }}</h1>
                 <p class="text-muted h6 mb-3">By {{ recipe.author.user.username }} | {{ recipe.created_on}}</p>
+                <hr>
                 <p class="purple-text">Description:</p>
-                <p>{{ recipe.description | safe }}</p>
+                <p>{{ recipe.description }}</p>
                 <hr>
                 <p class="purple-text">Ingredients:</p>
-                <p>{{ recipe.ingredients | safe }}</p>
+                <p>{{ recipe.ingredients }}</p>
             </div>
         </div>
             <div class="row">
         <div class="col-md-12 mt-lg-4">
+            <hr>
                 <p class="purple-text">Instructions:</p>
-                <p>{{ recipe.instructions | safe }}</p>
+                <p>{{ recipe.instructions }}</p>
             </div>
         </div>
     </div>

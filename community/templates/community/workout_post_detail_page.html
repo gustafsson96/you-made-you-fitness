@@ -1,53 +1,40 @@
-{% extends "base.html" %} {% load static %} {% block content %}
+{% extends "base.html" %}
+{% load static %}
 
-<div class="masthead">
-    <div class="container">
-        <div class="row g-0">
-            <div class="col-md-6 masthead-text">
-                <!-- Post title goes in these h1 tags -->
-                <h1 class="post-title">{{ workout.title }}</h1>
-                <!-- Post author goes before the | the post's created date goes after -->
-                <p class="post-subtitle"> {{ workout.author.user.username }} | {{ workout.created_on}}</p>
-            </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
-                <!-- The featured image URL goes in the src attribute -->
-                {% if "placeholder" in workout.image.url %}
-                <img class="card-img-top"
-                    src="https://res.cloudinary.com/dlbny6lhn/image/upload/v1701465524/no_image_workout_pv8xmk.jpg">
-                {% else %}
-                <img class="card-img-top" src=" {{ workout.image.url }}">
-                {% endif %}
-            </div>
-        </div>
-    </div>
-</div>
+{% block content %}
+
+{% block extracss %}
+<link rel="stylesheet" href="{% static 'community/css/community.css' %}">
+{% endblock %}
 
 <div class="container">
     <div class="row">
-        <div class="col card mb-4  mt-3 left  top">
-            <div class="card-body">
-                <hr>
-                {{ workout.equipment }}
-                <hr>
-                {{ workout.exercises }}
-                <hr>
-                {{ workout.instructions | safe }}
-            </div>
+        <div class="col-md-6 mt-4">
+            <!-- The featured image URL goes in the src attribute -->
+            {% if "placeholder" in workout.image.url %}
+            <img class="card-img"
+                src="https://res.cloudinary.com/dlbny6lhn/image/upload/v1701465524/no_image_workout_pv8xmk.jpg">
+            {% else %}
+            <img class="card-img" src=" {{ workout.image.url }}">
+            {% endif %}
+        </div>
+        <div class="col-md-6 mt-lg-4">
+            <h1 class="community-heading">{{ workout.title }}</h1>
+            <p class="text-muted h6 mb-3">By {{ workout.author.user.username }} | {{ workout.created_on}}</p>
             <hr>
-            <!-- The post content goes inside the card-text. -->
-            <!-- Use the | safe filter inside the template tags -->
-            <p class="card-text "></p>
-            <div class="row">
-
-                <div class="col-1">
-                    <!-- The number of likes goes before the closing strong tag -->
-                    <strong class="text-secondary"><i class="far fa-heart"></i> </strong>
-                </div>
-            </div>
+            <p class="purple-text">Equipment:</p>
+            <p>{{ workout.equipment }}</p>
+            
+            <p class="purple-text">Exercises:</p>
+            <p>{{ workout.exercises }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 mt-lg-4">
+            <p class="purple-text">Instructions:</p>
+            <p>{{ workout.instructions }}</p>
         </div>
     </div>
 </div>
 
-
-
-{%endblock%}
+{% endblock %}
