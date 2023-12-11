@@ -138,3 +138,14 @@ body {
         padding: 0.8rem 1.8rem;
     }
 }
+
+/* css for search results */
+
+.search-results-container {
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.search-results-heading {
+    margin-bottom: 1.5rem;
+}
