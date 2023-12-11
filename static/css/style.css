@@ -203,11 +203,15 @@ body {
 
 }
 
-/* PRODUCTS.HTML css */
+/* products.html css */
 
 .product-page-header {
     text-transform: uppercase;
 }
+
+/* allauth login, signup, and logout */
+
+
 
 /* footer */
 

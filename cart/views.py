@@ -37,10 +37,10 @@ def remove_from_cart(request, item_id):
         if item_id in cart:
             cart.pop(item_id)
             messages.add_message(request, messages.INFO,
-                         'Your item has been deleted from the shopping cart')
+                        'Your item has been deleted from the shopping cart')
 
         request.session['cart'] = cart
         return HttpResponse(status=200)
-        
+
     except Exception as e:
         return HttpResponse(status=500)

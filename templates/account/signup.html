@@ -7,6 +7,9 @@
     {% element h1 %}
         {% trans "Sign Up" %}
     {% endelement %}
+<div class="container">
+    <div class="row">
+    <div class="border border-success">
     <p>
         {% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}
     </p>
@@ -24,9 +27,12 @@
         {% endslot %}
         {% slot actions %}
             {% element button tags="prominent,signup" type="submit" %}
+       
                 {% trans "Sign Up" %}
             {% endelement %}
         {% endslot %}
+    </div>
+    </div>
     {% endelement %}
     {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
 {% endblock content %}
