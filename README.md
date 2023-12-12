@@ -159,6 +159,12 @@ This project includes implemantations that have been made from a Search Engine O
 
 ![screenshot of footer](/documentation/images/footer.png)
 
+### Webshop
+
+![screenshot of webshop overview](/documentation/images/webshop.png)
+
+![screenshot of product detail page](/documentation/images/product-detail.png)
+
 ### For Both Unregistered and Registered Users
 
 ### Unregistered Users
