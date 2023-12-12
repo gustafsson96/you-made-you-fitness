@@ -16,6 +16,37 @@ body {
     background-color: var(--light-pink);
 }
 
+.purple-text {
+    background-color: var(--purple);
+}
+
+.smaller-btn {
+    font-weight: bolder;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    background-color: pink;
+    color: purple;
+    border: 2px solid purple;
+    border-radius: 4px;
+    transition-duration: 0.2s;
+}
+
+.smaller-btn:hover {
+    background-color: purple;
+    color: pink;
+}
+
+/*  media queries for screens smaller than 480px */
+@media screen and (max-width: 480px) {
+    .smaller-btn {
+        font-size: 0.9rem;
+        padding: 0.2rem 0.7rem;
+    }
+
+}
+
 /* relative page container for footer positioning */
 
 #page-container {
@@ -242,21 +273,10 @@ body {
     text-transform: uppercase;
 }
 
-.add-products-btn {
-    font-weight: bolder;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 0.5rem 1.5rem;
-    background-color: pink;
-    color: purple;
-    border: 2px solid purple;
-    border-radius: 4px;
-    transition-duration: 0.4s;
-}
+/* cart.html css */
 
-.add-products-btn:hover {
-    background-color: purple;
-    color: pink;
+.checkout-btn {
+    margin;
 }
 
 /* allauth login, signup, and logout */
