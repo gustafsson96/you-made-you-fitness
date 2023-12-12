@@ -147,6 +147,18 @@ This project includes implemantations that have been made from a Search Engine O
 
 ## Features
 
+### Home Page
+
+![screenshot of navbar unauthorized user](/documentation/images/navbar-unauthorized-user.png)
+
+![screenshot of navbar authorized user](/documentation/images/navbar-authorized-user.png)
+
+![screenshot of hero container](/documentation/images/home-page-hero.png)
+
+![screenshot of home page content](/documentation/images/home-page-content.png)
+
+![screenshot of footer](/documentation/images/footer.png)
+
 ### For Both Unregistered and Registered Users
 
 ### Unregistered Users
