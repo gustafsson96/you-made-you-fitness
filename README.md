@@ -171,6 +171,12 @@ This project includes implemantations that have been made from a Search Engine O
 
 ![screenshot of empty cart](/documentation/images/cart-empty.png)
 
+### Checkout
+
+![screenshot of checkout view](/documentation/images/checkout-view.png)
+
+![screenshot of checkout success page](/documentation/images/checkout-success.png)
+
 ### For Both Unregistered and Registered Users
 
 ### Unregistered Users
