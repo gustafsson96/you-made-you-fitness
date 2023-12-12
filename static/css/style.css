@@ -16,10 +16,6 @@ body {
     background-color: var(--light-pink);
 }
 
-.purple-text {
-    background-color: var(--purple);
-}
-
 .smaller-btn {
     font-weight: bolder;
     text-decoration: none;
