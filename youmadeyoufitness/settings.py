@@ -32,6 +32,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+
 ALLOWED_HOSTS = ['8000-gustafsson96-you-made-yo-8dg1dwfxwf.us2.codeanyapp.com',
                  'you-made-you-fitness-e606c79e6b9a.herokuapp.com', 'localhost', '*']
 
