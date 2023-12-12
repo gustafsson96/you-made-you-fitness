@@ -26,13 +26,13 @@
             <p>{{ workout.equipment }}</p>
             
             <p class="purple-text">Exercises:</p>
-            <p>{{ workout.exercises }}</p>
+            <p>{{ workout.exercises | linebreaks }}</p>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12 mt-lg-4">
             <p class="purple-text">Instructions:</p>
-            <p>{{ workout.instructions }}</p>
+            <p>{{ workout.instructions | linebreaks }}</p>
         </div>
     </div>
         <div class="row">
