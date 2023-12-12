@@ -165,6 +165,12 @@ This project includes implemantations that have been made from a Search Engine O
 
 ![screenshot of product detail page](/documentation/images/product-detail.png)
 
+### Shopping Cart
+
+![screenshot of cart with items](/documentation/images/cart-items.png)
+
+![screenshot of empty cart](/documentation/images/cart-empty.png)
+
 ### For Both Unregistered and Registered Users
 
 ### Unregistered Users
