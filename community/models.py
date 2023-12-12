@@ -46,9 +46,6 @@ class Recipe(models.Model):
     def __str__(self):
         return self.title
 
-    def number_of_likes(self):
-        return self.likes.count()
-
 
 class Workout(models.Model):
     """ Model to post workouts """
@@ -73,9 +70,6 @@ class Workout(models.Model):
     def __str__(self):
         return self.title
 
-    def number_of_likes(self):
-        return self.likes.count()
-
 
 class OtherPost(models.Model):
     """ Model to make other posts """
@@ -96,5 +90,3 @@ class OtherPost(models.Model):
     def __str__(self):
         return self.title
 
-    def number_of_likes(self):
-        return self.likes.count()
