@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /accounts/
 Dissalow: /cart/
-Sitemap: 
+Sitemap: https://you-made-you-fitness-e606c79e6b9a.herokuapp.com/sitemap.xml
