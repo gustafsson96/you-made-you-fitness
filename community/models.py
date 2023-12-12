@@ -3,8 +3,6 @@ from cloudinary.models import CloudinaryField
 from django.contrib.auth.models import User
 from userprofile.models import UserProfile
 
-STATUS = ((0, 'Draft'), (1, 'Published'))
-
 TYPE_OF_RECIPE = (
     ('breakfast', 'Breakfast'),
     ('lunch', 'Lunch'),
@@ -36,9 +34,6 @@ class Recipe(models.Model):
         max_length=50, choices=TYPE_OF_RECIPE, default='breakfast')
     recipe_image = CloudinaryField('image', default='placeholder')
     created_on = models.DateTimeField(auto_now_add=True)
-    status = models.IntegerField(choices=STATUS, default=0)
-    likes = models.ManyToManyField(
-        User, related_name='recipe_likes', blank=True)
 
     class Meta:
         ordering = ['-created_on']
@@ -60,9 +55,6 @@ class Workout(models.Model):
         max_length=50, choices=TYPE_OF_WORKOUT, default='cardio')
     image = CloudinaryField('image', default='placeholder')
     created_on = models.DateTimeField(auto_now_add=True)
-    status = models.IntegerField(choices=STATUS, default=0)
-    likes = models.ManyToManyField(
-        User, related_name='workout_likes', blank=True)
 
     class Meta:
         ordering = ['-created_on']
@@ -80,13 +72,9 @@ class OtherPost(models.Model):
     content = models.TextField(null=False, blank=False)
     image = CloudinaryField('image', default='placeholder')
     created_on = models.DateTimeField(auto_now_add=True)
-    status = models.IntegerField(choices=STATUS, default=0)
-    likes = models.ManyToManyField(
-        User, related_name='other_post_likes', blank=True)
 
     class Meta:
         ordering = ['-created_on']
 
     def __str__(self):
         return self.title
-
