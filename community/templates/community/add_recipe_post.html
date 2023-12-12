@@ -19,7 +19,7 @@
                 {% if user.is_authenticated %}
                 <form method="POST" action="add_recipe">
                         {{ recipe_form.title|as_crispy_field }}
-                        {{ recipe_form.slug|as_crispy_field }}
+                        <div class="hide-slug">{{ recipe_form.slug|as_crispy_field }}</div>
                         {{ recipe_form.description|as_crispy_field }}
                         {{ recipe_form.ingredients|as_crispy_field }}
                         {{ recipe_form.instructions|as_crispy_field }}
@@ -39,5 +39,18 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const titleField = document.getElementById("id_title");
+        const slugField = document.getElementById("id_slug");
+
+        titleField.addEventListener("input", function () {
+            const titleValue = titleField.value.toLowerCase();
+            const slugValue = titleValue.replace(/[^a-z0-9]+/g, "-");
+            slugField.value = slugValue;
+        });
+    });
+    </script>
 
 {%endblock%}

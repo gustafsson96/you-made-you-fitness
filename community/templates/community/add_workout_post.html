@@ -18,7 +18,7 @@
                 {% if user.is_authenticated %}
                 <form method="POST" action="add_workout">
                         {{ workout_form.title|as_crispy_field }}
-                        {{ workout_form.slug|as_crispy_field }}
+                        <div class="hide-slug">{{ workout_form.slug|as_crispy_field }}</div>
                         {{ workout_form.equipment|as_crispy_field }}
                         {{ workout_form.exercises|as_crispy_field }}
                         {{ workout_form.instructions|as_crispy_field }}
@@ -38,5 +38,18 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const titleField = document.getElementById("id_title");
+        const slugField = document.getElementById("id_slug");
+
+        titleField.addEventListener("input", function () {
+            const titleValue = titleField.value.toLowerCase();
+            const slugValue = titleValue.replace(/[^a-z0-9]+/g, "-");
+            slugField.value = slugValue;
+        });
+    });
+</script>
 
 {%endblock%}
