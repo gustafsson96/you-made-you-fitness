@@ -34,7 +34,7 @@ class Recipe(models.Model):
     instructions = models.TextField(null=False, blank=False)
     recipe_type = models.CharField(
         max_length=50, choices=TYPE_OF_RECIPE, default='breakfast')
-    image = CloudinaryField('image', default='placeholder')
+    recipe_image = CloudinaryField('image', default='placeholder')
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(
