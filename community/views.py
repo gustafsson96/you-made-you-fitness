@@ -119,7 +119,7 @@ def add_recipe_post(request):
             recipe_form.save()
             messages.add_message(request, messages.SUCCESS,
                                  'Your recipe post has been created')
-            return redirect('user_posts')
+            return redirect('recipes')
     else:
         recipe_form = RecipeForm()
 
@@ -144,7 +144,7 @@ def add_workout_post(request):
             workout_form.save()
             messages.add_message(request, messages.SUCCESS,
                                  'Your workout post has been created')
-            return redirect('user_posts')
+            return redirect('workouts')
     else:
         workout_form = WorkoutForm()
 
@@ -169,7 +169,7 @@ def add_other_post(request):
             other_post_form.save()
             messages.add_message(request, messages.SUCCESS,
                                  'Your post has been created')
-            return redirect('user_posts')
+            return redirect('other_posts')
     else:
         other_post_form = OtherPostForm()
 
