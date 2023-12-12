@@ -82,7 +82,7 @@
                             <td scope="row"></td>
                             <td><a href="{% url 'workout_detail' workout.slug %}" class="post-link text-decoration-none">
                                 <h2 class="card-title">{{ workout.title }}</h2>
-                            </a>{{ workout.created_on }}</td>
+                            </a><p class="text-muted h6">{{ workout.created_on }}</p></td>
                             <td class="d-flex flex-wrap">
                                 <a href="{% url 'edit_workout' slug=workout.slug %}"
                                     class="community-btn-sm edit-delete-btn m-2">
@@ -131,7 +131,7 @@
                         <td scope="row"></td>
                         <td><a href="{% url 'other_post_detail' other_post.slug %}" class="post-link text-decoration-none">
                             <h2 class="card-title">{{ other_post.title }}</h2>
-                        </a>{{ other_post.created_on }}</td>
+                        </a><p class="text-muted h6">{{ other_post.created_on }}</p></td>
                         <td class="d-flex flex-wrap">
                             <a href="{% url 'edit_other_post' slug=other_post.slug %}"
                                 class="community-btn-sm edit-delete-btn m-2">

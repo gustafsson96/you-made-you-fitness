@@ -17,8 +17,18 @@
             <div class="add-post-container">
                 {% if user.is_authenticated %}
                 <form method="POST" action="add_workout">
-                    {{ workout_form|crispy }}
-                    {% csrf_token %}
+                        {{ workout_form.title|as_crispy_field }}
+                        {{ workout_form.slug|as_crispy_field }}
+                        {{ workout_form.equipment|as_crispy_field }}
+                        {{ workout_form.exercises|as_crispy_field }}
+                        {{ workout_form.instructions|as_crispy_field }}
+                        {{ workout_form.workout_type|as_crispy_field }}
+
+                        {% if show_image_field %}
+                        {{ workout_form.image|as_crispy_field }}
+                        {% endif %}
+                        
+                        {% csrf_token %}
                     <div class="add-btn-container text-center">
                         <button class="btn community-btn-sm" type="submit">Create Post</button>
                     </div>

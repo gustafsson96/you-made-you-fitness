@@ -18,8 +18,18 @@
             <div class="add-post-container">
                 {% if user.is_authenticated %}
                 <form method="POST" action="add_recipe">
-                    {{ recipe_form | crispy }}
-                    {% csrf_token %}
+                        {{ recipe_form.title|as_crispy_field }}
+                        {{ recipe_form.slug|as_crispy_field }}
+                        {{ recipe_form.description|as_crispy_field }}
+                        {{ recipe_form.ingredients|as_crispy_field }}
+                        {{ recipe_form.instructions|as_crispy_field }}
+                        {{ recipe_form.recipe_type|as_crispy_field }}
+                        
+                        {% if show_image_field %}
+                        {{ recipe_form.recipe_image|as_crispy_field }}
+                        {% endif %}
+
+                        {% csrf_token %}
                     <div class="add-btn-container text-center">
                         <button class="btn community-btn-sm" type="submit">Create Post</button>
                     </div>

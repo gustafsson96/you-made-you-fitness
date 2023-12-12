@@ -16,7 +16,6 @@ class RecipeForm(forms.ModelForm):
             'ingredients': ('Ingredients'),
             'instructions': ('Instructions'),
             'recipe_type': ('Type'),
-            'recipe_image': ('Image'),
         }
 
 
@@ -37,7 +36,6 @@ class WorkoutForm(forms.ModelForm):
             'exercises': ('Exercises'),
             'instructions': ('Instructions'),
             'workout_type': ('Type'),
-            'image': ('Image'),
         }
 
 
@@ -54,7 +52,6 @@ class OtherPostForm(forms.ModelForm):
         labels = {
             'title': ('Title'),
             'content': ('Content'),
-            'image': ('Image'),
         }
 
 

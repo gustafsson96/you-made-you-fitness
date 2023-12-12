@@ -110,6 +110,7 @@ def add_recipe_post(request):
     Create and validate a new recipe post
     """
     if request.method == 'POST':
+        show_image_field = False
         recipe_form = RecipeForm(request.POST)
         if recipe_form.is_valid():
             recipe = recipe_form.save(commit=False)
@@ -134,6 +135,7 @@ def add_workout_post(request):
     Create and validate a new workout post
     """
     if request.method == 'POST':
+        show_image_field = False
         workout_form = WorkoutForm(request.POST)
         if workout_form.is_valid():
             workout = workout_form.save(commit=False)
@@ -158,6 +160,7 @@ def add_other_post(request):
     Create and validate a new other post
     """
     if request.method == 'POST':
+        show_image_field = False
         other_post_form = OtherPostForm(request.POST)
         if other_post_form.is_valid():
             other_post = other_post_form.save(commit=False)

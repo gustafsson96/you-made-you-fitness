@@ -17,7 +17,14 @@
             <div class="add-post-container">
                 {% if user.is_authenticated %}
                 <form method="POST" action="add_other">
-                    {{ other_post_form|crispy }}
+                    {{ other_post_form.title|as_crispy_field }}
+                    {{ other_post_form.slug|as_crispy_field }}
+                    {{ other_post_form.content|as_crispy_field }}
+                        
+                    {% if show_image_field %}
+                    {{ recipe_form.recipe_image|as_crispy_field }}
+                    {% endif %}
+                    
                     {% csrf_token %}
                     <div class="add-btn-container text-center">
                         <button class="btn community-btn-sm" type="submit">Create Post</button>
