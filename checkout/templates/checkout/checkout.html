@@ -9,8 +9,6 @@
 {% block content %}
     <div id="page-container">
         <div id="content-wrap">
-
-
 <div class="overlay"></div>
 <div class="container">
     <div class="row">
@@ -20,7 +18,7 @@
         </div>
     </div>
         <div class="row">
-            <div class="col-12 col-lg-6 order-lg-last mb-5 border border-warning">
+            <div class="col-12 col-lg-6 order-lg-last mb-5">
                 <p class="text-muted">Order Summary ({{ product_count }})</p>
                 <div class="row">
                     <div class="col-7 offset-2">
@@ -56,8 +54,21 @@
                         <p class="my-0"><strong>${{ total | floatformat:2 }}</strong></p>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-12 mt-2 text-right">
+<div class="submit-button text-start mt-5 mb-2">
+    <a href="{% url 'view_cart' %}" class="btn">
+        <span class="icon">
+            <i class="fas fa-chevron-left"></i>
+        </span>
+        <span class="font-weight-bold">Adjust Cart</span>
+    </a>
+    </span>
+</div>
+                    </div>
+                </div>
             </div>
-        <div class="col-12 col-lg-6 mb-5 border border-danger">
+        <div class="col-12 col-lg-6 mb-5">
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
                 <fieldset class="rounded mb-3 px-3">
@@ -75,7 +86,7 @@
     
 </div>
     <div class="row">
-        <div class="col-12 col-lg-6 border border-success">
+        <div class="col-12 col-lg-6">
     <fieldset class="px-3">
         <legend class="fieldset-label text-black px-2 w-auto">Payment</legend>
         <!-- A Stripe card element will go here -->
@@ -86,27 +97,21 @@
             </fieldset>
 </div>
 </div>
-</div>            
-                        <div class="submit-button text-right mt-5 mb-2">
-                            <a href="{% url 'view_cart' %}" class="btn btn-outline-black rounded-0">
-                                <span class="icon">
-                                    <i class="fas fa-chevron-left"></i>
-                                </span>
-                                <span class="font-weight-bold">Adjust Bag</span>
-                            </a>
-                            <button id="submit-button" class="btn btn-black rounded-0">
-                                <span class="font-weight-bold">Complete Order</span>
-                                <span class="icon">
-                                    <i class="fas fa-lock"></i>
-                                </span>
-                            </button>
-                            <p class="small text-danger my-0">
-                                <span class="icon">
-                                    <i class="fas fa-exclamation-circle"></i>
-                                </span>
-                                <span>Your card will be charged <strong>${{ total|floatformat:2 }}</strong></span>
-                            </p>
-                        </div>
+</div>
+<div class="row">
+    <div class="col-12 text-center">
+        <button id="submit-button" class="btn">
+            <div class="order-btn">Complete Order <i class="fas fa-lock"></i></span>
+            </button>
+            <p class="small text-danger my-0">
+                <span class="icon">
+                    <i class="fas fa-exclamation-circle"></i>
+                </span>
+                <span>Your card will be charged <strong>${{ total|floatformat:2 }}</strong></span>
+            </p>
+    </div>
+</div>
+                        
                         </form>
                         </div>
                         </div>
