@@ -8,6 +8,78 @@ Table of Contents
 
 ### HTML
 
+<details>
+<summary>Home App</summary>
+<br>
+
+![home page html validation](/documentation/testing/html-validation-home-page.png)
+</details>
+
+<details>
+<summary>Community App</summary>
+<br>
+
+![community unauthorized user html validation](/documentation/testing/html-validation-community-unauthorized.png)
+
+![community start html validation](/documentation/testing/html-validation-community-start.png)
+
+![community recipe list html validation](/documentation/testing/html-validation-recipe-list.png)
+
+![community workout list html validation](/documentation/testing/html-validation-workout-list.png)
+
+![community other post html validation](/documentation/testing/html-validation-other-post-list.png)
+
+![community recipe detail html validation](/documentation/testing/html-validation-recipe-detail.png)
+
+![community workout detail html validation](/documentation/testing/html-validation-workout-detail.png)
+
+![community other post detail html validation](/documentation/testing/html-validation-other-detail.png)
+
+![community add recipe html validation](/documentation/testing/html-validation-add-recipe.png)
+
+![community add workout html validation](/documentation/testing/html-validation-add-workout.png)
+
+![community add other post html validation](/documentation/testing/html-validation-add-other-post.png)
+
+![community edit recipe html validation](/documentation/testing/html-validation-edit-recipe.png)
+
+![community edit workout html validation](/documentation/testing/html-validation-edit-workout.png)
+
+![community edit other post html validation](/documentation/testing/html-validation-edit-other-post.png)
+
+</details>
+
+<details>
+<summary>Products App</summary>
+
+![product guide list html validation](/documentation/testing/)
+<br>
+
+</details>
+
+<details>
+<summary>Cart App</summary>
+<br>
+
+</details>
+
+<details>
+<summary>Checkout App</summary>
+<br>
+
+![checkout view html validation](/documentation/testing/html-validation-checkout-page.png)
+
+![checkout success html validation](/documentation/testing/html-validation-checkout-success-page.png)
+</details>
+
+<details>
+<summary>Contact App</summary>
+<br>
+
+</details>
+
+
+
 ### CSS
 
 ### JavaScript

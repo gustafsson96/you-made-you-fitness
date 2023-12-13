@@ -201,6 +201,8 @@ This project includes implemantations that have been made from a Search Engine O
 
 ![screenshot of editing a post](/documentation/images/community-edit-post.png)
 
+![screenshot of search results page](/documentation/images/community-search-result.png)
+
 ### Contact
 
 ![screenshot of contact page](/documentation/images/contact.png)
