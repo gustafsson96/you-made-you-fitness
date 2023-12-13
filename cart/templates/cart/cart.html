@@ -1,90 +1,101 @@
 {% extends "base.html" %}
 {% load static %}
+
 {% block content %}
 
-    <div class="overlay"></div>
-    <div class="container mb-2">
-        <div class="row">
-            <div class="col">
-                <h2 class="logo-font m-4"><i class="fas fa-regular fa-cart-shopping"></i> Shopping Cart</h2>
-                <hr>
-            </div>
-        </div>
-    
-        <div class="row">
-            <div class="col">
-                {% if cart_items %}
-                <div class="table-responsive rounded">
-                        <table class="table table-sm table-borderless">
-                            <thead class="text-black">
-                                <tr>
-                                    <th scope="col">Product Info</th>
-                                    <th scope="col"></th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col"></th>
-                                </tr>
-                            </thead>
-                            {% for item in cart_items %}
-                            <tr>
-                                <td class="p-3 w-25">
-                                    <img class="img-fluid rounded" src="{{ item.guide.image.url }}" width="100" height="140">
-                                </td>
-                                <td class="py-3">
-                                    <p class="my-0"><strong>{{ item.guide.name }}</strong></p>
-                                    <p class="my-0 small text-muted">SKU: {{ item.guide.sku|upper }}</p>
-                                </td>
-                                <td class="py-3">
-                                    <p class="my-0">${{ item.guide.price }}</p>
-                                </td>
-                                </td>
-                                <td class="py-3">
-                                    <a class="remove-item btn float-right" id="remove_{{ item.item_id }}"  data-item-id="{{ guide.id }}">
-                                        <i class="fas fa-solid fa-trash"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            {% endfor %}
-                            <tr class="table-active">
-                                <td></td>
-                                <td></td>
+{% if user.is_authenticated %}
 
-                                <td colspan="5" class="pt-3">
-                                    <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
-                                </td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                         
-                             <td>
-                              <a href="{% url 'products_guides' %}" class="btn btn-lg">
-                                    <div class="smaller-btn"><i class="fas fa-chevron-left"></i>  Keep Shopping</div>
-                                  </td>
-                                <td></td>
-                                <td colspan="5" class="text-right pt-2">
-                                    <a href="{% url 'checkout' %}" class="btn btn-lg">
-                                        <div class="smaller-btn checkout-btn">Checkout <i class="fas fa-lock"></i>
-                                        </div>
-                                    </a>
-                                </td>
-                                </tr>
-                            </table>
-                            </div>
-                </div>
-                {% else %}
-                <p class="lead mb-5">Your cart is empty.</p>
-                <a href="{% url 'products_guides' %}" class="btn btn-lg">
-                    <div class="smaller-btn"><i class="fas fa-chevron-left"></i>Keep Shopping</div>
-                </a>
-                {% endif %}
-            </div>
+<div class="overlay"></div>
+<div class="container mb-2">
+
+    <div class="row">
+        <div class="col">
+            <h2 class="logo-font m-4"><i class="fas fa-regular fa-cart-shopping"></i> Shopping Cart</h2>
+              <hr>
         </div>
     </div>
+    
+    <div class="row">
+        <div class="col">
+            {% if cart_items %}
+            <div class="table-responsive rounded">
+                <table class="table table-sm table-borderless">
+                    <thead class="text-black">
+                        <tr>
+                            <th scope="col">Product Info</th>
+                            <th scope="col"></th>
+                            <th scope="col">Price</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in cart_items %}
+                        <tr>
+                            <td class="p-3 w-25">
+                                <img class="img-fluid rounded" src="{{ item.guide.image.url }}" alt="image of workout gudie cover" width="100" height="140">
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0"><strong>{{ item.guide.name }}</strong></p>
+                                <p class="my-0 small text-muted">SKU: {{ item.guide.sku|upper }}</p>
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0">${{ item.guide.price }}</p>
+                            </td>
+                            <td class="py-3 text-center">
+                                <a class="remove-item btn" id="remove_{{ item.item_id }}" 
+                                data-item-id="{{ guide.id }}"> <i class="fas fa-solid fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        <tr class="table-active text-center">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="pt-3">
+                                <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
+                            </td>
+                        </tr>
+                        <tr class="text-center">                        
+                            <td>
+                                <a href="{% url 'products_guides' %}" class="btn btn-lg">
+                                <div class="smaller-btn"><i class="fas fa-chevron-left"></i>  Keep Shopping</div>
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td class="text-right pt-2">
+                                <a href="{% url 'checkout' %}" class="btn btn-lg">
+                                <div class="smaller-btn checkout-btn">Checkout <i class="fas fa-lock"></i></div>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {% else %}
+            <p class="lead mb-5">Your cart is empty.</p>
+            <a href="{% url 'products_guides' %}" class="btn btn-lg">
+                <div class="smaller-btn"><i class="fas fa-chevron-left"></i> Keep Shopping</div>
+            </a>
+        </div>
+    {% endif %}
+</div>
+
+{% else %}
+
+<h2 class="m-4 purple-text">Please sign in or sign up to view this content.</h2>
+
+{% endif %}
+
+</div>
 
 {% block postloadjs %}
 
 <!-- js code to remove an item from the shopping cart. code from https://www.youtube.com/watch?v=LrvBBTGZucQ&t=174s modified for this project -->
 
-<script type="text/javascript">
+<script>
     $('.remove-item').click(function (e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
