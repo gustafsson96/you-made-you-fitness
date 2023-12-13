@@ -17,7 +17,14 @@
             <div class="add-post-container">
                 {% if user.is_authenticated %}
                 <form method="POST">
-                    {{ other_post_form|crispy }}
+                    {{ other_post_form.title|as_crispy_field }}
+                    <div class="hide-slug">{{ other_post_form.slug|as_crispy_field }}</div>
+                    {{ other_post_form.content|as_crispy_field }}
+                    
+                    {% if show_image_field %}
+                    {{ recipe_form.recipe_image|as_crispy_field }}
+                    {% endif %}
+                    
                     {% csrf_token %}
                     <div class="add-btn-container text-center">
                         <button class="btn community-btn-sm" type="submit">Edit Post</button>
@@ -29,5 +36,18 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const titleField = document.getElementById("id_title");
+        const slugField = document.getElementById("id_slug");
+
+        titleField.addEventListener("input", function () {
+            const titleValue = titleField.value.toLowerCase();
+            const slugValue = titleValue.replace(/[^a-z0-9]+/g, "-");
+            slugField.value = slugValue;
+        });
+    });
+</script>
 
 {%endblock%}
