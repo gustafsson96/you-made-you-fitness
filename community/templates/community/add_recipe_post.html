@@ -3,18 +3,14 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
-
 {% block extracss %}
 <link rel="stylesheet" href="{% static 'community/css/community.css' %}">
 {% endblock %}
 
-
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-6 p-4">
-            <span class="text-center">
+        <div class="col-md-6 p-4 text-center">
             <h1 class="community-heading">Add a Recipe <i class="fas fa-regular fa-carrot"></i></h1>
-            </span>
             <div class="add-post-container">
                 {% if user.is_authenticated %}
                 <form method="POST" action="add_recipe">
@@ -37,7 +33,11 @@
                 {% endif %}
                 </div>
         </div>
-    </div>
+            <div class="col-12 m-2 text-center">
+                <a href="{% url 'community' %}" class="btn community-btn-sm"><i class="fa-solid fa-chevron-left"></i> 
+                    Back to Community</a>
+            </div>
+        </div>
 </div>
 
 <script>
