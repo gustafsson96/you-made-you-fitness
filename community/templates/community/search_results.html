@@ -1,50 +1,53 @@
-{% extends "base.html" %} {% load static %} {% block content %}
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
 
 {% block extracss %}
 <link rel="stylesheet" href="{% static 'community/css/community.css' %}">
 {% endblock %}
 
 <div class="search-results-container">
-<h2 class="search-results-heading">Search Results for "{{ query }}"</h2>
+    <h2 class="search-results-heading">Search Results for "{{ query }}"</h2>
 
-<h3>Recipes</h3>
-{% for recipe in recipes %}
-<ul>
-    <li>
-        <a href="{% url 'recipe_detail' recipe.slug %}" class="post-link text-decoration-none">
-        {{ recipe.title }}
-        </a>
-    </li>
-</ul>
-{% empty %}
-<p>No search results for "{{ query }}" in recipes</p>
-{% endfor %}
+    <h3>Recipes</h3>
+        {% for recipe in recipes %}
+        <ul>
+            <li>
+                <a href="{% url 'recipe_detail' recipe.slug %}" class="post-link text-decoration-none">
+                  {{ recipe.title }}
+                </a>
+            </li>
+        </ul>
+        {% empty %}
+            <p>No search results for "{{ query }}" in recipes</p>
+        {% endfor %}
 
-<h3>Workouts</h3>
-{% for workout in workouts %}
-<ul>
-    <li>
-        <a href="{% url 'workout_detail' workout.slug %}" class="post-link text-decoration-none">
-         {{ workout.title }}
-        </a>
-    </li>
-</ul>
-{% empty %}
-<p>No search results for "{{ query }}" in workouts</p>
-{% endfor %}
+    <h3>Workouts</h3>
+        {% for workout in workouts %}
+        <ul>
+            <li>
+                <a href="{% url 'workout_detail' workout.slug %}" class="post-link text-decoration-none">
+                  {{ workout.title }}
+                </a>
+            </li>
+        </ul>
+        {% empty %}
+            <p>No search results for "{{ query }}" in workouts</p>
+        {% endfor %}
 
-<h3>Other Posts</h3>
-{% for other_post in other_posts %}
-<ul>
-    <li>
-        <a href="{% url 'other_post_detail' other_post.slug %}" class="post-link text-decoration-none">
-        {{ other_post.title }}
-        </a>
-    </li>
-</ul>
-{% empty %}
-<p>No search results for "{{ query }}" in other posts</p>
-{% endfor %}
+    <h3>Other Posts</h3>
+        {% for other_post in other_posts %}
+        <ul>
+            <li>
+                <a href="{% url 'other_post_detail' other_post.slug %}" class="post-link text-decoration-none">
+                  {{ other_post.title }}
+                </a>
+            </li>
+        </ul>
+        {% empty %}
+            <p>No search results for "{{ query }}" in other posts</p>
+        {% endfor %}
 
 {% if user.is_authenticated %}
 <a href="{% url 'community' %}">Back to community page</a>
@@ -53,5 +56,3 @@
 </div>
 
 {% endblock %}
-
-

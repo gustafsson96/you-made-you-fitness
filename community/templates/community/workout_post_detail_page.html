@@ -7,39 +7,51 @@
 <link rel="stylesheet" href="{% static 'community/css/community.css' %}">
 {% endblock %}
 
+{% if user.is_authenticated %}
+
 <div class="container">
+
     <div class="row">
         <div class="col-md-6 mt-4">
-            <!-- The featured image URL goes in the src attribute -->
             {% if "placeholder" in workout.image.url %}
-            <img class="img-fluid"
-                src="https://res.cloudinary.com/dlbny6lhn/image/upload/v1701465524/no_image_workout_pv8xmk.jpg">
+                <img class="img-fluid" src="https://res.cloudinary.com/dlbny6lhn/image/upload/v1701465524/no_image_workout_pv8xmk.jpg" alt="purple dumbbells">
             {% else %}
-            <img class="img-fluid" src=" {{ workout.image.url }}">
+                <img class="img-fluid" src=" {{ workout.image.url }}">
             {% endif %}
         </div>
         <div class="col-md-6 mt-lg-4">
             <h1 class="community-heading">{{ workout.title }}</h1>
             <p class="text-muted h6 mb-3">By {{ workout.author.user.username }} | {{ workout.created_on}}</p>
-            <hr>
+              <hr>
             <p class="purple-text">Equipment:</p>
-            <p>{{ workout.equipment }}</p>
-            
+            <div>{{ workout.equipment }}</div>
+              <hr>
             <p class="purple-text">Exercises:</p>
-            <p>{{ workout.exercises | linebreaks }}</p>
+            <div>{{ workout.exercises | linebreaks }}</div>
+              <hr>
         </div>
     </div>
+
     <div class="row">
         <div class="col-md-12 mt-lg-4">
             <p class="purple-text">Instructions:</p>
-            <p>{{ workout.instructions | linebreaks }}</p>
+            <div>{{ workout.instructions | linebreaks }}</div>
         </div>
     </div>
-        <div class="row">
-            <div class="col mb-3">
-                <a href="{% url 'workouts' %}" class="btn community-btn-sm"><i class="fa-solid fa-chevron-left"></i> Back to
-                    Posts</a>
-            </div>
+
+    <div class="row">
+        <div class="col mb-3">
+            <a href="{% url 'workouts' %}" class="btn community-btn-sm"><i class="fa-solid fa-chevron-left"></i> 
+                Back to Posts
+            </a>
         </div>
+    </div>
 </div>
+
+{% else %}
+
+<h2 class="m-4 purple-text">Please sign in or sign up to view this content.</h2>
+
+{% endif %}
+
 {% endblock %}

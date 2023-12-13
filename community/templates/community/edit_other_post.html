@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
+
 {% block content %}
 {% load crispy_forms_tags %}
-
 
 {% block extracss %}
 <link rel="stylesheet" href="{% static 'community/css/community.css' %}">
@@ -10,17 +10,14 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-6 p-4">
-            <span class="text-center">
-                <h1 class="community-heading">Edit Post <i class="fa-solid fa-message"></i></h1>
-            </span>
+        <div class="col-md-6 p-4 text-center">
+            <h1 class="community-heading">Edit Post <i class="fa-solid fa-message"></i></h1>
             <div class="add-post-container">
                 {% if user.is_authenticated %}
                 <form method="POST">
                     {{ other_post_form.title|as_crispy_field }}
                     <div class="hide-slug">{{ other_post_form.slug|as_crispy_field }}</div>
                     {{ other_post_form.content|as_crispy_field }}
-                    
                     {% if show_image_field %}
                     {{ recipe_form.recipe_image|as_crispy_field }}
                     {% endif %}
@@ -31,7 +28,6 @@
                     </div>
                 </form>
                 {% endif %}
-
             </div>
         </div>
     </div>

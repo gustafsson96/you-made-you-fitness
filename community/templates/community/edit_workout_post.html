@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
+
 {% block content %}
 {% load crispy_forms_tags %}
-
 
 {% block extracss %}
 <link rel="stylesheet" href="{% static 'community/css/community.css' %}">
@@ -10,10 +10,8 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-6 p-4">
-            <span class="text-center">
-                <h1 class="community-heading">Edit Workout <i class="fas fa-solid fa-dumbbell"></i></h1>
-            </span>
+        <div class="col-md-6 p-4 text-center">
+            <h1 class="community-heading">Edit Workout <i class="fas fa-solid fa-dumbbell"></i></h1>
             <div class="add-post-container">
                 {% if user.is_authenticated %}
                 <form method="POST">
@@ -22,8 +20,7 @@
                         {{ workout_form.equipment|as_crispy_field }}
                         {{ workout_form.exercises|as_crispy_field }}
                         {{ workout_form.instructions|as_crispy_field }}
-                        {{ workout_form.workout_type|as_crispy_field }}
-                        
+                        {{ workout_form.workout_type|as_crispy_field }} 
                         {% if show_image_field %}
                         {{ workout_form.image|as_crispy_field }}
                         {% endif %}
@@ -52,4 +49,4 @@
     });
 </script>
 
-{%endblock%}
+{% endblock %}

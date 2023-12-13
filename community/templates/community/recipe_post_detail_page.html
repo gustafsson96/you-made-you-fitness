@@ -8,41 +8,51 @@
 <link rel="stylesheet" href="{% static 'community/css/community.css' %}">
 {% endblock %}
 
-    <div class="container">
-        <div class="row">
+{% if user.is_authenticated %}
+
+<div class="container">
+
+    <div class="row">
         <div class="col-md-6 mt-4">
-                <!-- The featured image URL goes in the src attribute -->
-        {% if "placeholder" in recipe.recipe_image.url %}
-        <img class="img-fluid" src="https://res.cloudinary.com/dlbny6lhn/image/upload/v1701465502/no_image_recipe_h80j5m.jpg">
-        {% else %}
-        <img class="img-fluid" src=" {{ recipe.recipe_image.url }}">
-        {% endif %}
-            </div>
+            {% if "placeholder" in recipe.recipe_image.url %}
+                <img class="img-fluid" src="https://res.cloudinary.com/dlbny6lhn/image/upload/v1701465502/no_image_recipe_h80j5m.jpg" alt="avocado with pink background">
+            {% else %}
+                <img class="img-fluid" src=" {{ recipe.recipe_image.url }}" alt="user image">
+            {% endif %}
+        </div>
         <div class="col-md-6 mt-lg-4">
-                <h1 class="community-heading">{{ recipe.title }}</h1>
-                <p class="text-muted h6 mb-3">By {{ recipe.author.user.username }} | {{ recipe.created_on}}</p>
-                <hr>
-                <p class="purple-text">Description:</p>
-                <p>{{ recipe.description }}</p>
-                <hr>
-                <p class="purple-text">Ingredients:</p>
-                <p>{{ recipe.ingredients | linebreaks }}</p>
-            </div>
-        </div>
-            <div class="row">
-        <div class="col-md-12 mt-lg-4">
-            <hr>
-                <p class="purple-text">Instructions:</p>
-                <p>{{ recipe.instructions | linebreaks }}</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col mb-3">
-                <a href="{% url 'recipes' %}" class="btn community-btn-sm"><i class="fa-solid fa-chevron-left"></i> Back to Posts</a>
-            </div>
+            <h1 class="community-heading">{{ recipe.title }}</h1>
+            <p class="text-muted h6 mb-3">By {{ recipe.author.user.username }} | {{ recipe.created_on}}</p>
+              <hr>
+            <p class="purple-text">Description:</p>
+            <div>{{ recipe.description }}</div>
+              <hr>
+            <p class="purple-text">Ingredients:</p>
+            <div>{{ recipe.ingredients | linebreaks }}</div>
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-md-12 mt-lg-4">
+          <hr>
+            <p class="purple-text">Instructions:</p>
+            <div>{{ recipe.instructions | linebreaks }}</div>
+        </div>
+    </div>
 
+    <div class="row">
+        <div class="col mb-3">
+            <a href="{% url 'recipes' %}" class="btn community-btn-sm"><i class="fa-solid fa-chevron-left"></i> 
+                Back to Posts
+            </a>
+        </div>
+    </div>
+</div>
 
-{%endblock%}
+{% else %}
+
+<h2 class="m-4 purple-text">Please sign in or sign up to view this content.</h2>
+
+{% endif %}
+
+{% endblock %}

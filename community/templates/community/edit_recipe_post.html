@@ -1,20 +1,17 @@
 {% extends "base.html" %}
 {% load static %}
+
 {% block content %}
 {% load crispy_forms_tags %}
-
 
 {% block extracss %}
 <link rel="stylesheet" href="{% static 'community/css/community.css' %}">
 {% endblock %}
 
-
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-6 p-4">
-            <span class="text-center">
-                <h1 class="community-heading">Edit Recipe <i class="fas fa-regular fa-carrot"></i></h1>
-            </span>
+        <div class="col-md-6 p-4 text-center">
+            <h1 class="community-heading">Edit Recipe <i class="fas fa-regular fa-carrot"></i></h1>
             <div class="add-post-container">
                 {% if user.is_authenticated %}
                 <form method="POST">
@@ -24,7 +21,6 @@
                         {{ recipe_form.ingredients|as_crispy_field }}
                         {{ recipe_form.instructions|as_crispy_field }}
                         {{ recipe_form.recipe_type|as_crispy_field }}
-                        
                         {% if show_image_field %}
                         {{ recipe_form.recipe_image|as_crispy_field }}
                         {% endif %}
@@ -51,6 +47,6 @@
             slugField.value = slugValue;
         });
     });
-    </script>
+</script>
 
-{%endblock%}
+{% endblock %}
