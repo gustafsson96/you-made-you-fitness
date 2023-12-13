@@ -160,23 +160,23 @@
 </div>
 {% endif %}
 
-            <main class="flex-shrink-0 main-bg">
+    <main class="flex-shrink-0 main-bg">
+        {% block content %}
+            <!--  content goes here  -->
+        {% endblock content %}
+    </main>
 
-                {% block content %}
-                <!--  Content Here -->
-                {% endblock content %}
-            </main>
-
-            <footer class="footer mt-auto py-3" id="footer">
-                <a class="social-media" href="https://www.facebook.com" aria-label="link to facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i></a>
-                <a class="social-media" href="https://www.instagram.com" aria-label="link to instagram"
-                    target="_blank" rel="noopener"><i class="fa-brands fa-square-instagram"></i></a>
-                <a class="social-media" href="https://www.youtube.com" aria-label="link to instagram" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
-            </footer>
+    <footer class="footer mt-auto py-3" id="footer">
+        <a class="social-media" href="https://www.facebook.com" aria-label="link to facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i></a>
+        <a class="social-media" href="https://www.instagram.com" aria-label="link to instagram"
+            target="_blank" rel="noopener"><i class="fa-brands fa-square-instagram"></i></a>
+        <a class="social-media" href="https://www.youtube.com" aria-label="link to instagram" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
+    </footer>
         </div>
     </div>
 
 <!-- JS message function copied from CI walkthrough "I Think Therefore I Blog" -->
+
 <script>
     setTimeout(function () {
         let messages = document.getElementById("msg");
