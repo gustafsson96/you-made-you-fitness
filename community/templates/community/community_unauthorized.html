@@ -1,4 +1,7 @@
-{% extends "base.html" %} {% load static %} {% block content %}
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
 
 {% block extracss %}
 <link rel="stylesheet" href="{% static 'community/css/community.css' %}">
@@ -24,9 +27,7 @@
     </div>
     <div class="row">
         <div class="col-12 text-center community-text">
-            <p>
-            Already a member? Please log in.
-            </p>
+            <p>Already a member? Please log in.</p>
         </div>
     </div>
     <div class="row">
@@ -35,4 +36,5 @@
         </div>
     </div>
 </div>
+
 {%endblock%}

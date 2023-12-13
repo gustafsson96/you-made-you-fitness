@@ -1,19 +1,22 @@
 {% extends "base.html" %}
 {% load static %}
+
 {% block content %}
 
 {% block extracss %}
 <link rel="stylesheet" href="{% static 'community/css/community.css' %}">
 {% endblock %}
 
-{% load cloudinary %}
+{% if user.is_authenticated %}
 
 <div class="container-fluid">
+
     <div class="row">
         <div class="col-12 m-3 text-center">
             <h2 class="community-heading">Workout Posts</h2>
         </div>
     </div>
+    
     <div class="row">
         <div class="col-lg-6 col-sm-12 mb-2 text-lg-end text-center">
             <a href="{% url 'add_workout' %}" class="btn community-btn-sm">Add workout post</a>
@@ -22,49 +25,60 @@
             <a href="{% url 'community' %}" class="btn community-btn-sm">Back to Community</a>
         </div>
     </div>
-        <div class="col-12 mt-3">
-            <div class="row justify-content-center">
-                {% for workout in workouts %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="image-container">
-                                {% if "placeholder" in workout.image.url %}
-                                <img class="card-img-top"
-                                    src="https://res.cloudinary.com/dlbny6lhn/image/upload/v1701465524/no_image_workout_pv8xmk.jpg">
-                                {% else %}
-                                <img class="card-img-top" src=" {{ workout.image.url }}">
-                                {% endif %}
-                                <div class="image-flash">
-                                    <p class="text-muted">Author: {{ workout.author.user.username }}</p>
-                                </div>
+
+    <div class="col-12 mt-3">
+        <div class="row justify-content-center">
+            {% for workout in workouts %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="image-container">
+                            {% if "placeholder" in workout.image.url %}
+                            <img class="card-img-top"
+                                    src="https://res.cloudinary.com/dlbny6lhn/image/upload/v1701465524/no_image_workout_pv8xmk.jpg" alt="purple dumbells">
+                            {% else %}
+                            <img class="card-img-top" src=" {{ workout.image.url }}" alt="user workout image">
+                            {% endif %}
+                            <div class="image-flash">
+                                <p class="text-muted">Author: {{ workout.author.user.username }}</p>
                             </div>
-                            <a href="{% url 'workout_detail' workout.slug %}" class="post-link text-decoration-none">
-                                <h2 class="card-title">{{ workout.title }}</h2>
-                            </a>
+                            </div>
+                                <a href="{% url 'workout_detail' workout.slug %}" class="post-link text-decoration-none">
+                                    <h2 class="card-title">{{ workout.title }}</h2>
+                                </a>
                             <div>
                                 <p class="purple-text">Category: {{ workout.workout_type }}</p>
                             </div>
-                            <hr/>
-                            <p class="card-text text-muted h6">{{ workout.created_on}}</p>
+                            <div>
+                                <hr>
+                                <p class="card-text text-muted h6">{{ workout.created_on }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                {% if forloop.counter|divisibleby:3 %}
+
+            {% if forloop.counter|divisibleby:3 %}
+
             </div>
             <div class="row">
-                {% endif %}
+                
+            {% endif %}
 
-                {% empty %}
+            {% empty %}
 
-                <h3 class="community-sub-heading">
-                    There are no workouts to show
-                </h3>
-                {% endfor %}
-
-            </div>
+            <h3 class="community-sub-heading">
+                There are no workouts to show
+            </h3>
+                
+            {% endfor %}
         </div>
     </div>
 </div>
 
-{%endblock%}
+{% else %}
+
+<h2 class="m-4 purple-text">Please sign in or sign up to view this content.</h2>
+
+{% endif %}
+
+{% endblock %}

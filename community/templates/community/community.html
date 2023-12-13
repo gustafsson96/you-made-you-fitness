@@ -1,9 +1,13 @@
-{% extends "base.html" %} {% load static %} {% block content %}
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
 
 {% block extracss %}
 <link rel="stylesheet" href="{% static 'community/css/community.css' %}">
 {% endblock %}
 
+{% if user.is_authenticated %}
 <div class="containter">
 
     <div class="row">
@@ -13,74 +17,76 @@
     </div>
 
     <div class="row justify-content-center">
-    <div class="col-6">
-        <form method="GET" action="{% url 'search_results' %}">
-            <div class="input-group w-100">
-                <input class="form-control search-bar-input" type="text" name="q" placeholder="Search posts">
+        <div class="col-6">
+            <form method="GET" action="{% url 'search_results' %}">
+                <div class="input-group w-100">
+                  <input class="form-control search-bar-input" type="text" name="q" placeholder="Search posts">
                 <div class="input-group-append">
-                    <button id="search-bar-btn" class="form-control btn search-bar-btn" type="submit">
-                        <span class="icon">
-                            <i class="fas fa-search search-bar-icon"></i>
-                        </span>
-                    </button>
+                  <button id="search-bar-btn" class="form-control btn search-bar-btn" type="submit">
+                    <span class="icon">
+                        <i class="fas fa-search search-bar-icon"></i>
+                    </span>
+                  </button>
                 </div>
-            </div>
-        </form>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 
-<div class="row">
-    <div class="col text-center m-3">
-        <h3 class="community-sub-heading">Read other members posts</h3>
+    <div class="row">
+        <div class="col text-center m-3">
+            <h3 class="community-sub-heading">Read other members posts</h3>
+        </div>
     </div>
-</div>
-<div class="row">
-    <div class="col-lg-4 col-md-12 text-lg-end text-center mb-3">
-        <a href="{% url 'recipes' %}" class="btn community-btn">Recipes</a>
-    </div>
-    <div class="col-lg-4 col-md-12 text-center mb-3">
-        
-        <a href="{% url 'workouts' %}" class="btn community-btn">Workouts</a>
-        
-    </div>
-    <div class="col-lg-4 col-md-12 text-lg-start text-center mb-3">
+    <div class="row">
+        <div class="col-lg-4 col-md-12 text-lg-end text-center mb-3">
+            <a href="{% url 'recipes' %}" class="btn community-btn">Recipes</a>
+        </div>
+        <div class="col-lg-4 col-md-12 text-center mb-3">
+            <a href="{% url 'workouts' %}" class="btn community-btn">Workouts</a>
+        </div>
+        <div class="col-lg-4 col-md-12 text-lg-start text-center mb-3">
             <a href="{% url 'other_posts' %}" class="btn community-btn">Other posts</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col text-center m-3">
+            <hr>
+            <h3 class="community-sub-heading">Create your own post</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4 col-md-12 text-lg-end text-center mb-3">
+            <a href="{% url 'add_recipe' %}" class="btn community-btn">Add Recipe</a>
+        </div>
+        <div class="col-lg-4 col-md-12 text-center mb-3">
+            <a href="{% url 'add_workout' %}" class="btn community-btn">Add Workout</a>
+        </div>
+        <div class="col-lg-4 col-md-12 text-lg-start text-center mb-3">
+            <a href="{% url 'add_other' %}" class="btn community-btn">Add other post</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col text-center m-3">
+            <hr>
+            <h3 class="community-sub-heading">Your Posts</h3>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-6 mb-5 text-center">
+            <a href="{% url 'user_posts' %}" class="btn community-btn">View Your Posts</a>
+        </div>
     </div>
 </div>
 
-<div class="row">
-    <div class="col text-center m-3">
-        <hr>
-        <h3 class="community-sub-heading">Create your own post</h3>
-    </div>
-</div>
+{% else %}
 
-<div class="row">
-    <div class="col-lg-4 col-md-12 text-lg-end text-center mb-3">
-        <a href="{% url 'add_recipe' %}" class="btn community-btn">Add Recipe</a>
-    </div>
-    <div class="col-lg-4 col-md-12 text-center mb-3">
+<h2 class="m-4 purple-text">Please sign in or sign up to view this content.</h2>
 
-        <a href="{% url 'add_workout' %}" class="btn community-btn">Add Workout</a>
-
-    </div>
-    <div class="col-lg-4 col-md-12 text-lg-start text-center mb-3">
-        <a href="{% url 'add_other' %}" class="btn community-btn">Add other post</a>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col text-center m-3">
-        <hr>
-        <h3 class="community-sub-heading">Your Posts</h3>
-    </div>
-</div>
-<div class="row justify-content-center">
-    <div class="col-6 mb-5 text-center">
-        <a href="{% url 'user_posts' %}" class="btn community-btn">View Your Posts</a>
-    </div>
-</div>
-
-</div>
+{% endif %}
 
 {%endblock%}

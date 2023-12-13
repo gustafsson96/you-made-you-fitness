@@ -8,13 +8,17 @@
 <link rel="stylesheet" href="{% static 'community/css/community.css' %}">
 {% endblock %}
 
+{% if user.is_authenticated %}
+
 <div class="container-fluid">
+
     <div class="row">
         <div class="col-12 m-3 text-center">
             <h2 class="community-heading">Recipe Posts</h2>
         </div>
     </div>
-        <div class="row">
+
+    <div class="row">
         <div class="col-lg-6 col-sm-12 mb-2 text-lg-end text-center">
             <a href="{% url 'add_recipe' %}" class="btn community-btn-sm">Add recipe post</a>
         </div>
@@ -23,43 +27,48 @@
         </div>
     </div>
         
+    <div class="row">
         <div class="col-12 mt-3">
             <div class="row justify-content-center">
                 {% for recipe in recipes %}
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
-
                             <div class="image-container">
                                 {% if "placeholder" in recipe.recipe_image.url %}
                                 <img class="card-img-top"
-                                    src="https://res.cloudinary.com/dlbny6lhn/image/upload/v1701465502/no_image_recipe_h80j5m.jpg">
+                                    src="https://res.cloudinary.com/dlbny6lhn/image/upload/v1701465502/no_image_recipe_h80j5m.jpg" alt="an avocado with pink background">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ recipe.image.url }}">
+                                <img class="card-img-top" src=" {{ recipe.image.url }}" alt="user recipe image">
                                 {% endif %}
-
                                 <div class="image-flash">
-                                    <p class="text-muted">Author: {{ recipe.author.user.username }}</p>
+                                     <p class="text-muted">Author: {{ recipe.author.user.username }}</p>
                                 </div>
-
                             </div>
-                            <a href="{% url 'recipe_detail' recipe.slug %}" class="post-link text-decoration-none">
+                            <div>
+                                <a href="{% url 'recipe_detail' recipe.slug %}" class="post-link text-decoration-none">
                                 <h2 class="card-title">{{ recipe.title }}</h2>
                                 </a>
-                                <div>
+                            </div>
+                            <div>
                                 <p class="purple-text">Category: {{ recipe.recipe_type }}</p>
                                 <hr>
                                 <p class="purple-text">Decription:</p>
                                 <p>{{ recipe.description }}</p>
-                                </div>
+                            </div>
+                            <div>
                                 <hr>
-                            <p class="card-text text-muted h6">{{ recipe.created_on}}</p>
+                                <p class="card-text text-muted h6">{{ recipe.created_on}}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 {% if forloop.counter|divisibleby:3 %}
-            </div>
-            <div class="row">
+
+                </div>
+                <div class="row">
+
                 {% endif %}
 
                 {% empty %}
@@ -70,8 +79,14 @@
 
                 {% endfor %}
             </div>
+        </div>
     </div>
 </div>
-</div>
+
+{% else %}
+
+<h2 class="m-4 purple-text">Please sign in or sign up to view this content.</h2>
+
+{% endif %}
 
 {%endblock%}

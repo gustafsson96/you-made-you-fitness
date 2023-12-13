@@ -1,16 +1,23 @@
-{% extends "base.html" %} {% load static %} {% block content %}
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
 
 {% block extracss %}
 <link rel="stylesheet" href="{% static 'community/css/community.css' %}">
 {% endblock %}
 
+{% if user.is_authenticated %}
+
 
 <div class="container-fluid">
+
     <div class="row">
         <div class="col-12 m-3 text-center">
             <h2 class="community-heading">Other Posts</h2>
         </div>
     </div>
+    
     <div class="row">
         <div class="col-lg-6 col-sm-12 mb-2 text-lg-end text-center">
             <a href="{% url 'add_other' %}" class="btn community-btn-sm">Add other post</a>
@@ -19,6 +26,7 @@
             <a href="{% url 'community' %}" class="btn community-btn-sm">Back to Community</a>
         </div>
     </div>
+        
         <div class="col-12 mt-3">
             <div class="row justify-content-center">
                 {% for other_post in other_posts %}
@@ -28,38 +36,47 @@
                             <div class="image-container">
                                 {% if "placeholder" in other_post.image.url %}
                                 <img class="card-img-top"
-                                    src="https://res.cloudinary.com/dlbny6lhn/image/upload/v1701465538/no_image_other_goasol.jpg">
+                                    src="https://res.cloudinary.com/dlbny6lhn/image/upload/v1701465538/no_image_other_goasol.jpg" alt="white flowers on pink background">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ other_post.image.url }}">
+                                <img class="card-img-top" src=" {{ other_post.image.url }}" alt="user image">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="text-muted">Author: {{ other_post.author.user.username }}</p>
                                 </div>
                             </div>
-                            <a href="{% url 'other_post_detail' other_post.slug %}" class="post-link text-decoration-none">
-                                <h2 class="card-title">{{ other_post.title }}</h2>
-                            </a>
-                            <hr>
-                            <p class="card-text text-muted h6">{{ other_post.created_on}}</p>
+                                <a href="{% url 'other_post_detail' other_post.slug %}" class="post-link text-decoration-none">
+                                    <h2 class="card-title">{{ other_post.title }}</h2>
+                                </a>
+                            <div>
+                                <hr>
+                                <p class="card-text text-muted h6">{{ other_post.created_on}}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                {% if forloop.counter|divisibleby:3 %}
+
+            {% if forloop.counter|divisibleby:3 %}
+
             </div>
             <div class="row">
-                {% endif %}
 
-                {% empty %}
+            {% endif %}
+
+            {% empty %}
                 
-                <h3 class="community-sub-heading">
-                    There are no other posts to show
-                </h3>
+            <h3 class="community-sub-heading">
+                There are no other posts to show
+            </h3>
 
-                {% endfor %}
-
+            {% endfor %}
             </div>
         </div>
     </div>
-</div>
 
-{%endblock%}
+{% else %}
+
+<h2 class="m-4 purple-text">Please sign in or sign up to view this content.</h2>
+
+{% endif %}
+
+{% endblock %}
