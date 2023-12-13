@@ -107,6 +107,9 @@ checkout_success.html
 <summary>Contact App</summary>
 <br>
 
+contact.html
+![contact page html validation](/documentation/testing/html-validation-contact-page.png)
+
 </details>
 
 
