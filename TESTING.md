@@ -12,6 +12,7 @@ Table of Contents
 <summary>Home App</summary>
 <br>
 
+home.html
 ![home page html validation](/documentation/testing/html-validation-home-page.png)
 </details>
 
@@ -19,41 +20,64 @@ Table of Contents
 <summary>Community App</summary>
 <br>
 
+community_unauthorized.html
 ![community unauthorized user html validation](/documentation/testing/html-validation-community-unauthorized.png)
 
+community.html
 ![community start html validation](/documentation/testing/html-validation-community-start.png)
 
+
+recipe_post_page.html
 ![community recipe list html validation](/documentation/testing/html-validation-recipe-list.png)
 
+workout_post_page.html
 ![community workout list html validation](/documentation/testing/html-validation-workout-list.png)
 
+other_post_page.html
 ![community other post html validation](/documentation/testing/html-validation-other-post-list.png)
 
+recipe_post_detail_page.html
 ![community recipe detail html validation](/documentation/testing/html-validation-recipe-detail.png)
 
+workout_post_detail_page.html
 ![community workout detail html validation](/documentation/testing/html-validation-workout-detail.png)
 
+other_post_detail_page.html
 ![community other post detail html validation](/documentation/testing/html-validation-other-detail.png)
 
+add_recipe_post.html
 ![community add recipe html validation](/documentation/testing/html-validation-add-recipe.png)
 
+add_workout_post.html
 ![community add workout html validation](/documentation/testing/html-validation-add-workout.png)
 
+add_other_post.html
 ![community add other post html validation](/documentation/testing/html-validation-add-other-post.png)
 
+edit_recipe_post.html
 ![community edit recipe html validation](/documentation/testing/html-validation-edit-recipe.png)
 
+edit_workout_post.html
 ![community edit workout html validation](/documentation/testing/html-validation-edit-workout.png)
 
+edit_other_post.html
 ![community edit other post html validation](/documentation/testing/html-validation-edit-other-post.png)
+
+search_results.html
+![community search result html validation](/documentation/testing/html-validation-search-result.png)
 
 </details>
 
 <details>
 <summary>Products App</summary>
-
-![product guide list html validation](/documentation/testing/)
 <br>
+
+products.html
+![product guide list html validation](/documentation/testing/html-validation-product-view.png)
+
+
+product_guide_detail.html
+![product detail view html validation](/documentation/testing/html-validation-product-detail.png)
 
 </details>
 
@@ -67,8 +91,10 @@ Table of Contents
 <summary>Checkout App</summary>
 <br>
 
+checkout.html
 ![checkout view html validation](/documentation/testing/html-validation-checkout-page.png)
 
+checkout_success.html
 ![checkout success html validation](/documentation/testing/html-validation-checkout-success-page.png)
 </details>
 
