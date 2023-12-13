@@ -26,7 +26,6 @@ community_unauthorized.html
 community.html
 ![community start html validation](/documentation/testing/html-validation-community-start.png)
 
-
 recipe_post_page.html
 ![community recipe list html validation](/documentation/testing/html-validation-recipe-list.png)
 
@@ -63,6 +62,9 @@ edit_workout_post.html
 edit_other_post.html
 ![community edit other post html validation](/documentation/testing/html-validation-edit-other-post.png)
 
+logged_in_user_posts.html
+![logged in user posts html validation](/documentation/testing/html-validation-user-posts.png)
+
 search_results.html
 ![community search result html validation](/documentation/testing/html-validation-search-result.png)
 
@@ -84,6 +86,9 @@ product_guide_detail.html
 <details>
 <summary>Cart App</summary>
 <br>
+
+cart.html
+![cart view html validation](/documentation/testing/html-validation-cart-view.png)
 
 </details>
 
