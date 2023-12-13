@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
+
 {% block content %}
 {% load crispy_forms_tags %}
-
 
 {% block extracss %}
 <link rel="stylesheet" href="{% static 'community/css/community.css' %}">
@@ -10,34 +10,32 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-6 p-4">
-            <span class="text-center">
+        <div class="col-md-6 p-4 text-center">
                 <h1 class="community-heading">Add a Post <i class="fa-solid fa-message"></i></h1>
-            </span>
-            <div class="add-post-container">
-                {% if user.is_authenticated %}
-                <form method="POST" action="add_other">
-                    {{ other_post_form.title|as_crispy_field }}
-                   <div class="hide-slug">{{ other_post_form.slug|as_crispy_field }}</div>
-                    {{ other_post_form.content|as_crispy_field }}
-                        
-                    {% if show_image_field %}
-                    {{ recipe_form.recipe_image|as_crispy_field }}
-                    {% endif %}
+                <div class="add-post-container">
+                    {% if user.is_authenticated %}
+                    <form method="POST" action="add_other">
+                        {{ other_post_form.title|as_crispy_field }}
+                        <div class="hide-slug">{{ other_post_form.slug|as_crispy_field }}</div>
+                        {{ other_post_form.content|as_crispy_field }}   
+                        {% if show_image_field %}
+                        {{ recipe_form.recipe_image|as_crispy_field }}
+                        {% endif %}
                     
-                    {% csrf_token %}
-                    <div class="add-btn-container text-center">
-                        <button class="btn community-btn-sm" type="submit">Create Post</button>
-                    </div>
+                        {% csrf_token %}
+                        <div class="add-btn-container text-center">
+                            <button class="btn community-btn-sm" type="submit">Create Post</button>
+                        </div>
                     </form>
+                {% else %}
+                <h2 class="m-4 purple-text">Please sign in or sign up to view this content.</h2>
                 {% endif %}
-
             </div>
         </div>
-            <div class="col-12 m-2 text-center">
-                <a href="{% url 'community' %}" class="btn community-btn-sm"><i class="fa-solid fa-chevron-left"></i>
-                    Back to Community</a>
-            </div>
+        <div class="col-12 m-2 text-center">
+            <a href="{% url 'community' %}" class="btn community-btn-sm">
+                <i class="fa-solid fa-chevron-left"></i> Back to Community</a>
+        </div>
     </div>
 </div>
 

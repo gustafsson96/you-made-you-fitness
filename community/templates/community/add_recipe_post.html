@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+
 {% block content %}
 {% load crispy_forms_tags %}
 
@@ -19,8 +20,7 @@
                         {{ recipe_form.description|as_crispy_field }}
                         {{ recipe_form.ingredients|as_crispy_field }}
                         {{ recipe_form.instructions|as_crispy_field }}
-                        {{ recipe_form.recipe_type|as_crispy_field }}
-                        
+                        {{ recipe_form.recipe_type|as_crispy_field }} 
                         {% if show_image_field %}
                         {{ recipe_form.recipe_image|as_crispy_field }}
                         {% endif %}
@@ -30,14 +30,16 @@
                         <button class="btn community-btn-sm" type="submit">Create Post</button>
                     </div>
                 </form>
+                {% else %}
+                <h2 class="m-4 purple-text">Please sign in or sign up to view this content.</h2>
                 {% endif %}
                 </div>
-        </div>
-            <div class="col-12 m-2 text-center">
-                <a href="{% url 'community' %}" class="btn community-btn-sm"><i class="fa-solid fa-chevron-left"></i> 
-                    Back to Community</a>
             </div>
+        <div class="col-12 m-2 text-center">
+            <a href="{% url 'community' %}" class="btn community-btn-sm">
+                <i class="fa-solid fa-chevron-left"></i> Back to Community</a>
         </div>
+    </div>
 </div>
 
 <script>
@@ -51,6 +53,6 @@
             slugField.value = slugValue;
         });
     });
-    </script>
+</script>
 
 {%endblock%}

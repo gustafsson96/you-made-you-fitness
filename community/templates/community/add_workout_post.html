@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
+
 {% block content %}
 {% load crispy_forms_tags %}
-
 
 {% block extracss %}
 <link rel="stylesheet" href="{% static 'community/css/community.css' %}">
@@ -10,36 +10,35 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-6 p-4">
-            <span class="text-center">
-                <h1 class="community-heading">Add a Workout <i class="fas fa-solid fa-dumbbell"></i></h1>
-            </span>
+        <div class="col-md-6 p-4 text-center">
+            <h1 class="community-heading">Add a Workout <i class="fas fa-solid fa-dumbbell"></i></h1>
             <div class="add-post-container">
                 {% if user.is_authenticated %}
                 <form method="POST" action="add_workout">
-                        {{ workout_form.title|as_crispy_field }}
-                        <div class="hide-slug">{{ workout_form.slug|as_crispy_field }}</div>
-                        {{ workout_form.equipment|as_crispy_field }}
-                        {{ workout_form.exercises|as_crispy_field }}
-                        {{ workout_form.instructions|as_crispy_field }}
-                        {{ workout_form.workout_type|as_crispy_field }}
-
-                        {% if show_image_field %}
-                        {{ workout_form.image|as_crispy_field }}
-                        {% endif %}
-                        
-                        {% csrf_token %}
+                    {{ workout_form.title|as_crispy_field }}
+                    <div class="hide-slug">{{ workout_form.slug|as_crispy_field }}</div>
+                    {{ workout_form.equipment|as_crispy_field }}
+                    {{ workout_form.exercises|as_crispy_field }}
+                    {{ workout_form.instructions|as_crispy_field }}
+                    {{ workout_form.workout_type|as_crispy_field }}
+                    {% if show_image_field %}
+                    {{ workout_form.image|as_crispy_field }}
+                    {% endif %}
+                
+                    {% csrf_token %}
                     <div class="add-btn-container text-center">
                         <button class="btn community-btn-sm" type="submit">Create Post</button>
                     </div>
                 </form>
-                {% endif %}
+            {% else %}
+            <h2 class="m-4 purple-text">Please sign in or sign up to view this content.</h2>
+            {% endif %}
             </div>
         </div>
-            <div class="col-12 m-2 text-center">
-                <a href="{% url 'community' %}" class="btn community-btn-sm"><i class="fa-solid fa-chevron-left"></i>
-                    Back to Community</a>
-            </div>
+        <div class="col-12 m-2 text-center">
+            <a href="{% url 'community' %}" class="btn community-btn-sm">
+                <i class="fa-solid fa-chevron-left"></i> Back to Community</a>
+        </div>
     </div>
 </div>
 
