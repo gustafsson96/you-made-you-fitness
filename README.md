@@ -187,6 +187,20 @@ This project includes implemantations that have been made from a Search Engine O
 
 ### Community
 
+![screenshot of community page unauthorized users](/documentation/images/community-unauthorized.png)
+
+![screenshot of community start page](/documentation/images/community-start-page.png)
+
+![screenshot of community post list](/documentation/images/community-post-list.png)
+
+![screenshot of post detail page](/documentation/images/community-post-details.png)
+
+![screenshot of logged in user posts](/documentation/images/community-user-posts.png)
+
+![screenshot of adding a post](/documentation/images/community-add-post.png)
+
+![screenshot of editing a post](/documentation/images/community-edit-post.png)
+
 ### Contact
 
 ![screenshot of contact page](/documentation/images/contact.png)
