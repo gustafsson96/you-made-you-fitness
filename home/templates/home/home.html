@@ -1,61 +1,58 @@
-{% extends "base.html" %} {% load static %} {% block content %}
-<div class="pink-background">
-<div class="hero-container">
-    <span class="hero-image-container">
-  <img class="hero-image" src="https://res.cloudinary.com/dlbny6lhn/image/upload/v1702166751/hero-image-pink_eicdyf.png" alt="pink workout equipment">
-    </span>
-  <span class="hero-text-container">
-    <h1>You Made You Fitness Community</h1>
-    <hr>
-    {% if user.is_authenticated %}
-    <a class="home-btn" href="{% url 'community' %}">
-        Community
-    </a>
-    {% else %}
-    <a class="home-btn" href="{% url 'account_signup' %}">
-        Join Us
-    </a>
-    {% endif %}
-</span>
-</div>
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
 
-<div class="container">
-    <div class="row">
-        <div id="box1" class="col-12 mt-4 p-3 home-page-content">
-            <h2>About Us <i class="fas fa-regular fa-heart"></i></h2>
-            <p>We are an online fitness community. We know that you got what it takes to reach your goals and want to give 
-                you a place to both share and take part of recipes, workouts and other helpful tips. Beginner or years of experience doesn't matter, everyone is welcome. Join us today!
-            </p><a class="small-home-btn" href="{% url 'account_signup' %}">
-                Join Us
-            </a>
+<div class="pink-background">
+
+    <div class="hero-container">
+        <div class="hero-image-container">
+            <img class="hero-image" src="https://res.cloudinary.com/dlbny6lhn/image/upload/v1702166751/hero-image-pink_eicdyf.png" alt="pink workout equipment">
         </div>
-        <div id="box2" class="col-12 mt-4 p-3 home-page-content">
-            <div class="row">
-            <div class="col-lg-6 col-md-12 home-img-container order-last order-md-first">
-            <img src="https://res.cloudinary.com/dlbny6lhn/image/upload/v1700674411/media/workout-beginner-home_g9sidx.png" alt="workout guide" width="100" height="140" class="img-fluid m-1">
-            <img src="https://res.cloudinary.com/dlbny6lhn/image/upload/v1700671855/media/running-beginner_rtmkxr.png" alt="workout guide" width="100" height="140" class="img-fluid m-1">
-            <img src="https://res.cloudinary.com/dlbny6lhn/image/upload/v1700675128/media/workout-advanced-gym_oqfb1k.png"
-                alt="workout guide" width="100" height="140" class="img-fluid m-1 img-hide">
-            <img src="https://res.cloudinary.com/dlbny6lhn/image/upload/v1700595282/running-advanced_zndqtx.png"
-                alt="workout guide" width="100" height="140" class="img-fluid m-1 img-hide">
-            </div>
-                        <div class="col-lg-6 col-md-12 order-first order-md-last">
-                            <h2>Need some guidance? <i class="fas fa-regular fa-dumbbell"></i></h2>
-                            <p>Check out our webshop with workout guides.</p>
-                            <a class="small-home-btn" href="{% url 'products_guides' %}">WEBSHOP</a>
-                        </div>
-            </div>
-    </div>
-        <div id="box3" class="col-12 mt-4 p-3 home-page-content">
-            <h2>Share your favorites <i class="fas fa-regular fa-star"></i></h2>
-            <p>As a community memeber you can take part of posts from other memebers. Get inspired by recipes, workouts and other tips and tricks. Join the community and share your own favorites.
-            </p>
-            <a class="small-home-btn" href="{% url 'community_unauthorized' %}">
-                Community
-            </a>
+        <div class="hero-text-container">
+            <h1>You Made You Fitness Community</h1>
+            <hr>
+            {% if user.is_authenticated %}
+            <a class="home-btn" href="{% url 'community' %}">Community</a>
+            {% else %}
+            <a class="home-btn" href="{% url 'account_signup' %}">Join Us</a>
+            {% endif %}
         </div>
     </div>
-</div>
+
+    <div class="container">
+        <div class="row">
+            <div id="box1" class="col-12 mt-4 p-3 home-page-content">
+                <h2>About Us <i class="fas fa-regular fa-heart"></i></h2>
+                <p>We are an online fitness community. We know that you got what it takes to reach your goals and want to give you a place to both share and take part of recipes, workouts and other helpful tips. Beginner or years of experience doesn't matter, everyone is welcome. Join us today!
+                </p>
+                <a class="small-home-btn" href="{% url 'account_signup' %}">Join Us</a>
+            </div>
+
+            <div id="box2" class="col-12 mt-4 p-3 home-page-content">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 home-img-container order-last order-md-first">
+                      <img src="https://res.cloudinary.com/dlbny6lhn/image/upload/v1700674411/media/workout-beginner-home_g9sidx.png" alt="workout guide" width="100" height="140" class="img-fluid m-1">
+                      <img src="https://res.cloudinary.com/dlbny6lhn/image/upload/v1700671855/media/running-beginner_rtmkxr.png" alt="workout guide" width="100" height="140" class="img-fluid m-1">
+                      <img src="https://res.cloudinary.com/dlbny6lhn/image/upload/v1700675128/media/workout-advanced-gym_oqfb1k.png" alt="workout guide" width="100" height="140" class="img-fluid m-1 img-hide">
+                      <img src="https://res.cloudinary.com/dlbny6lhn/image/upload/v1700595282/running-advanced_zndqtx.png"
+                      alt="workout guide" width="100" height="140" class="img-fluid m-1 img-hide">
+                    </div>
+                    <div class="col-lg-6 col-md-12 order-first order-md-last">
+                      <h2>Need some guidance? <i class="fas fa-regular fa-dumbbell"></i></h2>
+                      <p>Check out our webshop with workout guides.</p>
+                      <a class="small-home-btn" href="{% url 'products_guides' %}">WEBSHOP</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="box3" class="col-12 mt-4 p-3 home-page-content">
+              <h2>Share your favorites <i class="fas fa-regular fa-star"></i></h2>
+              <p>As a community memeber you can take part of posts from other memebers. Get inspired by recipes, workouts and other tips and tricks. Join the community and share your own favorites.
+              </p>
+            <a class="small-home-btn" href="{% url 'community_unauthorized' %}">Community</a>
+            </div>
+        </div>
+    </div>
 </div>
 
 {%endblock%}
