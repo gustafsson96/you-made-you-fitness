@@ -159,6 +159,14 @@ This project includes implemantations that have been made from a Search Engine O
 
 ![screenshot of footer](/documentation/images/footer.png)
 
+### Authentication
+
+![screenshot of signup](/documentation/images/signup.png)
+
+![screenshot of signin](/documentation/images/signin.png)
+
+![screenshot of logout](/documentation/images/logout.png)
+
 ### Webshop
 
 ![screenshot of webshop overview](/documentation/images/webshop.png)
@@ -176,6 +184,12 @@ This project includes implemantations that have been made from a Search Engine O
 ![screenshot of checkout view](/documentation/images/checkout-view.png)
 
 ![screenshot of checkout success page](/documentation/images/checkout-success.png)
+
+### Community
+
+### Contact
+
+![screenshot of contact page](/documentation/images/contact.png)
 
 ### For Both Unregistered and Registered Users
 
