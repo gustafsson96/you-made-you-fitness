@@ -2,120 +2,112 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
+{% block content %}
+
 {% block extracss %}
 <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
-{% block content %}
-    <div id="page-container">
-        <div id="content-wrap">
 <div class="overlay"></div>
+
 <div class="container">
+
     <div class="row">
         <div class="col">
-            <h2 class="logo-font m-4"><i class="fa-regular fa-credit-card"></i> Checkout </h2>
-            <hr>
+            <h2 class="logo-font m-4"><i class="fa-regular fa-credit-card"></i> Checkout</h2>
+              <hr>
         </div>
     </div>
-        <div class="row">
-            <div class="col-12 col-lg-6 order-lg-last mb-5">
-                <p class="text-muted">Order Summary ({{ product_count }})</p>
-                <div class="row">
-                    <div class="col-7 offset-2">
-                        <p class="mb-1 mt-0 small text-muted">Item</p>
-                    </div>
-                    <div class="col-3 text-right">
-                        <p class="mb-1 mt-0 small text-muted">Subtotal</p>
-                    </div>
+
+    <div class="row">
+        <div class="col-12 col-lg-6 order-lg-last mb-5">
+            <p class="text-muted">Order Summary ({{ product_count }})</p>
+
+            <div class="row">
+                <div class="col-7 offset-2">
+                    <p class="mb-1 mt-0 small text-muted">Item</p>
                 </div>
-                {% for item in cart_items %}
-                <div class="row">
-                    <div class="col-2 mb-1">
-                        <a href="{% url 'product_guide_detail' item.guide.id %}">
-                            <img class="w-100" src="{{ item.guide.image.url }}" alt="{{ guide.name }}">
-                        </a>
-                    </div>
-                        <div class="col-7">
-                            <p class="my-0"><strong>{{ item.guide.name }}</strong></p>
-                        </div>
-                        <div class="col-3 text-right">
-                            <p class="my-0 small text-muted">${{ item.guide.price }}</p>
-                        </div>
+
+                <div class="col-3 text-right">
+                    <p class="mb-1 mt-0 small text-muted">Subtotal</p>
                 </div>
-                {% endfor %}
-                <hr class="my-0">
-                <div class="row text-black text-right">
-                    <div class="col-7 offset-2">
-                        <p class="my-0">Order Total:</p>
-                        <p class="my-0"><strong>Grand Total:</strong></p>
-                    </div>
-                    <div class="col-3">
-                        <p class="my-0">${{ total | floatformat:2 }}</p>
-                        <p class="my-0"><strong>${{ total | floatformat:2 }}</strong></p>
-                    </div>
+            </div>
+
+            {% for item in cart_items %}
+            <div class="row">
+                <div class="col-2 mb-1">
+                    <a href="{% url 'product_guide_detail' item.guide.id %}">
+                        <img class="w-100" src="{{ item.guide.image.url }}" alt="{{ guide.name }}">
+                    </a>
                 </div>
-                <div class="row">
-                    <div class="col-12 mt-2 text-right">
-<div class="submit-button text-start mt-5 mb-2">
-    <a href="{% url 'view_cart' %}" class="btn">
-        <span class="icon">
-            <i class="fas fa-chevron-left"></i>
-        </span>
-        <span class="font-weight-bold">Adjust Cart</span>
-    </a>
-    </span>
-</div>
+                <div class="col-7">
+                    <p class="my-0"><strong>{{ item.guide.name }}</strong></p>
+                </div>
+                <div class="col-3 text-right">
+                    <p class="my-0 small text-muted">${{ item.guide.price }}</p>
+                </div>
+            </div>
+            {% endfor %}
+            <hr>
+
+            <div class="row text-black text-right">
+                <div class="col-7 offset-2">
+                    <p class="my-0">Order Total:</p>
+                    <p class="my-0"><strong>Grand Total:</strong></p>
+                </div>
+                <div class="col-3">
+                    <p class="my-0">${{ total | floatformat:2 }}</p>
+                    <p class="my-0"><strong>${{ total | floatformat:2 }}</strong></p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 mt-2">
+                    <div class="submit-button text-center mt-4">
+                    <a href="{% url 'view_cart' %}" class="btn">
+                        <i class="fas fa-chevron-left"></i> Adjust Cart</a>
                     </div>
                 </div>
             </div>
+        </div>
+
         <div class="col-12 col-lg-6 mb-5">
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
                 <fieldset class="rounded mb-3 px-3">
-                    <legend class="mb-3">Fill out the information to complete your order:</legend>
-                    {{ order_form.first_name | as_crispy_field }}
-                    <br>
-                    {{ order_form.last_name | as_crispy_field }}
-                    <br>
-                    {{ order_form.email | as_crispy_field }}
-                    <br>
-                    {{ order_form.phone_number | as_crispy_field }}
+                <legend class="mb-3">Fill out the information to complete your order:</legend>
+                {{ order_form.first_name | as_crispy_field }}
+                <br>
+                {{ order_form.last_name | as_crispy_field }}
+                <br>
+                {{ order_form.email | as_crispy_field }}
+                <br>
+                {{ order_form.phone_number | as_crispy_field }}
                 </fieldset>
             <p><i>Your order will be sent to your email address.</i></p>
-    </div>
-    
-</div>
-    <div class="row">
-        <div class="col-12 col-lg-6">
-    <fieldset class="px-3">
-        <legend class="fieldset-label text-black px-2 w-auto">Payment</legend>
-        <!-- A Stripe card element will go here -->
-        <div class="mb-3" id="card-element"></div>
-                        
-        <!-- Used to display form errors -->
-         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+
+            <fieldset class="px-3">
+            <legend class="fieldset-label text-black px-2 w-auto">Payment</legend>
+            <!-- stripe card element goes here -->
+                <div class="mb-3" id="card-element"></div>        
+                <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
             </fieldset>
-</div>
-</div>
-</div>
-<div class="row">
-    <div class="col-12 text-center">
-        <button id="submit-button" class="btn">
-            <div class="order-btn">Complete Order <i class="fas fa-lock"></i></span>
-            </button>
-            <p class="small text-danger my-0">
-                <span class="icon">
+
+            <div class="text-center mt-2">
+                <button id="submit-button" class="btn">
+                  <span class="order-btn">Complete Order <i class="fas fa-lock"></i></span>
+                </button>
+                <p class="small text-danger my-0 mt-3">
+                  <span class="icon">
                     <i class="fas fa-exclamation-circle"></i>
-                </span>
-                <span>Your card will be charged <strong>${{ total|floatformat:2 }}</strong></span>
-            </p>
+                  </span>
+                  <span>
+                    Your card will be charged <strong>${{ total|floatformat:2 }}</strong>
+                  </span>
+                </p>
+            </div>          
+        </form>
     </div>
-</div>
-                        
-                        </form>
-                        </div>
-                        </div>
-                        </div>
                     
     <div id="loading-overlay">
         <h1 class="text-light logo-font loading-spinner">
@@ -125,7 +117,8 @@
         </h1>
     </div>
 
-   
+    </div>
+</div>
 
 {% block postloadjs %}
 {{ block.super }}
@@ -133,8 +126,5 @@
 {{ client_secret|json_script:"id_client_secret" }}
 <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}
-
-</div>
-</div>
 
 {%endblock%}
