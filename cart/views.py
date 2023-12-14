@@ -4,13 +4,13 @@ from django.contrib import messages
 
 
 def view_cart(request):
-    """ A view to show the shopping cart page """
+    """ view to show the shopping cart page """
 
     return render(request, 'cart/cart.html')
 
 
 def add_to_cart(request, item_id):
-    """ Add a product to the shopping cart """
+    """ add a product to the shopping cart """
 
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
