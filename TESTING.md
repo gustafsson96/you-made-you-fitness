@@ -323,7 +323,15 @@ wsgi.py
 |  | #6A Add Products: As a site admin, I can add, edit, and delete products to/in/from the web shop, so that I can ensure it is up to date with the latest news. | Given that a site admin is logged in, when viewing the webshop from the the admin panel, then they can add, edit and delete products.   |
 |  | #6B Manage Blog Posts: As a site admin, I can delete blog posts made by users, so that I can ensure that available content is appropriate and following community guidelines. |  Given that a site admin is logged in, when viewing the blog posts from the admin panel, then they can delete posts if they are not in line with the communitys guidelines.  |
 
-- Table for additional testing.
+| TEST PASS | TEST |
+| ------- | -------- |
+|  | Links and buttons take the user to its intended pages  |
+|  | Social media links open in a new window  |
+|  | The different sections of the site are responsive and work on different screen sizes  |
+|  | There is a page where the user can show the blog posts they have made  |
+|  | A 404 page is displayed when the user is trying to view a page that does not exist  |
+|  | User feedback is displayed in the for of messages when actions are made  |
+|  | The user is taken to a thank you page when completing a purchase  |
 
 ### Browsers
 
