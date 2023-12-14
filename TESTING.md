@@ -194,14 +194,47 @@ views.py
 </details>
 
 <details>
-<summary>Products Cart</summary>
+<summary>Cart App</summary>
 <br>
+
+apps.py
+![python testing of cart apps.py](/documentation/testing/python-linter-cart-appspy.png)
+
+contexts.py
+![python testing of cart contexts.py](/documentation/testing/python-linter-cart-contextspy.png)
+
+urls.py
+![python testing of cart urls.py](/documentation/testing/python-linter-cart-urlspy.png)
+
+views.py
+![python testing of cart views.py](/documentation/testing/python-linter-cart-viewspy.png)
 
 </details>
 
 <details>
-<summary>Products Checkout</summary>
+<summary>Checkout App</summary>
 <br>
+
+admin.py
+![python testing of checkout admin.py](/documentation/testing/python-linter-checkout-adminpy.png)
+
+apps.py
+![python testing of checkout apps.py](/documentation/testing/python-linter-checkout-appspy.png)
+
+forms.py
+![python testing of checkout forms.py](/documentation/testing/python-linter-checkout-formspy.png)
+
+models.py
+![python testing of checkout models.py](/documentation/testing/python-linter-checkout-modelspy.png)
+
+signals.py
+![python testing of checkout signals.py](/documentation/testing/python-linter-checkout-signalspy.png)
+
+urls.py
+![python testing of checkout urls.py](/documentation/testing/python-linter-checkout-urlspy.png)
+
+views.py
+![python testing of checkout views.py](/documentation/testing/python-linter-checkout-viewspy.png)
 
 </details>
 
@@ -209,9 +242,16 @@ views.py
 <summary>Contact App</summary>
 <br>
 
+apps.py
+![python testing of contact app.py](/documentation/testing/python-linter-contact-appspy.png)
+
+urls.py
+![python testing of contact urls.py](/documentation/testing/python-linter-contact-urlspy.png)
+
+views.py
+![python testing of contact views.py](/documentation/testing/python-linter-contact-viewspy.png)
+
 </details>
-
-
 
 ## Accessibility
 

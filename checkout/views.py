@@ -37,7 +37,7 @@ def checkout(request):
                     order_line_item.save()
                 except Guide.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your cart wasn't found in our database. "
+                        "One of the products wasn't found in our database. "
                         "Please call us for assistance!")
                     )
                     order.delete()
@@ -97,5 +97,3 @@ def checkout_success(request, order_number):
     }
 
     return render(request, template, context)
-
-
