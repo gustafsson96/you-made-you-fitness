@@ -296,32 +296,32 @@ wsgi.py
 
 | TEST PASS | USER STORY | TEST | 
 | --- | ----------- | ----------- |
-|  | #1A Navigation Bar: As a site user, I can easily find the navigation bar, so that I can navigate the different pages of the site. |    |
-|  | #1B Business Logo: As a site user, I can relocate to the home page by clicking the business logo in the navbar, so that it is easily accessible when needed.  |    |
-|  | #2A Home Page: As a site user, I can understand the purpose of the site simply by looking at the home page, so that I can decide if I want to explore the content further. |    |
-|  | #2B Contact Information: As a site user, I can find the business contact information, so that I know how to get in touch with them.  |    |
-|  | #2C About Us Section: As a site user, I can find a section with information about the fitness community, so that I can learn more about it.  |    |
+|  | #1A Navigation Bar: As a site user, I can easily find the navigation bar, so that I can navigate the different pages of the site. | Given that a user visits the site, when exploring different pages, then the navbar is visible at the top of the screen at all times.   |
+|  | #1B Business Logo: As a site user, I can relocate to the home page by clicking the business logo in the navbar, so that it is easily accessible when needed.  |  Given that a user visits the page, when the logo in the navbar is clicked, then the user will be relocated to the home page.  |
+|  | #2A Home Page: As a site user, I can understand the purpose of the site simply by looking at the home page, so that I can decide if I want to explore the content further. |  Given that a first time user visits the site, when they land on the home page, then they know that it is a site for a fitness community.  |
+|  | #2B Contact Information: As a site user, I can find the business contact information, so that I know how to get in touch with them.  |  Given that a user wants to get in touch, when they need to find the contact information, then they can find a link to the contact page in the navbar.  |
+|  | #2C About Us Section: As a site user, I can find a section with information about the fitness community, so that I can learn more about it.  |  Given that a user visits the site, when looking for more information about the community, then they can find an about us section on the home page.  |
 |  | #2D Web Shop: As a site user, I can open the web shop, so that I can scroll through the products the fitness community offer. |    |
-|  | #2E Blog Page: As a registered user, I can view the blog page, so that I can take part of other member’s posts |    |
-|  | #2F Social Media Links: As a site user, I can find the fitness community’s social media links, so that I can learn more about their business. |    |
+|  | #2E Blog Page: As a registered user, I can view the blog page, so that I can take part of other member’s posts |  Given that a registered user is logged in, when wanting to read blog posts, then they can find a community page with all available blog posts.  |
+|  | #2F Social Media Links: As a site user, I can find the fitness community’s social media links, so that I can learn more about their business. |  Given that a user is visiting the site, when looking for the fitness communitys social media, then they can find links in the footer on all pages.  |
 |  | #2G Wish List: As a site user, I can add products to a wish list, so that I can save my favorites for later.  |    |
-|  | #3A Create Account: As an unregistered user, I can create an account, so that I can make purchases and take part of blog posts.  |    |
-|  | #3B Login: As a registered user, I can easily login to my account, so that I can access my profile and the content for registered users.  |    |
-|  | #3C Logout: As a registered user, I can easily logout from my account, so that I can protect my personal information |    |
+|  | #3A Create Account: As an unregistered user, I can create an account, so that I can make purchases and take part of blog posts.  |  Given that a user wants register, when clicking register/signup, then they can fill out a form with username and password and email (optional) to create an account.  |
+|  | #3B Login: As a registered user, I can easily login to my account, so that I can access my profile and the content for registered users.  | Given that a user wants to log in, when entering their username and password, then the user will log in and be relocated to the specific view for logged in users.  |
+|  | #3C Logout: As a registered user, I can easily logout from my account, so that I can protect my personal information |  Given that a logged in user wants to log out, when the logout button is clicked, then the user will be logged out and return to the home page.  |
 |  | #3D Reset Password: As a registered user, I can reset my password, so that I can access my information and keep my account safe.  |    |
 |  | #3E Update Profile: As a registered user, I can change my profile information, so that I can ensure it is up to date.  |    |
 |  | #3F Delete Account: As a registered user, I can delete my account, so that I have the option to remove my information from the site.  |    |
-|  | #4A View Products: As a site user, I can view the products in the web shop, so that I can decide if I want to make a purchase. |    |
+|  | #4A View Products: As a site user, I can view the products in the web shop, so that I can decide if I want to make a purchase. |  Given that a user is interested in making a purchase, when looking in the webshop, then they can scroll through all the communitys available products.  |
 |  | #4B Search for Products: As a site user, I can search for products by category or name, so that I can find what I am looking for.  |    |
-|  | #4C Add to Shopping Bag: As a site user, I can add products to my shopping bag, so that I can prepare for making a purchase. |    |
-|  | #4D Edit Shopping Bag: As a site user, I can edit and/or delete the products in my shopping bag, so that I can easily make changes if needed. |    |
-|  | #4E Checkout: As a registered user, I can fill out my contact and payment information, so that I can complete the purchase.  |    |
+|  | #4C Add to Shopping Cart: As a site user, I can add products to my shopping cart, so that I can prepare for making a purchase. |  Given that a user has decided to add something to their shopping cart, when they click an add to cart button, then the product is added to the shopping cart.  |
+|  | #4D Edit Shopping Cart: As a site user, I can delete the products in my shopping cart, so that I can easily make changes if needed. |  Given that a user wants to update their shopping cart, when clicking the trash can next to an item, then the item is removed from the shopping cart. |
+|  | #4E Checkout: As a registered user, I can fill out my contact and payment information, so that I can complete the purchase.  |  Given that a user wants to go through with their purchase, when clicking checkout, then they can fill out their information to complete the purchase.  |
 |  | #5A Make Blog Post: As a registered user, I can make a blog post, so that I can share content with the community. |    |
-|  | #5B Edit/Delete Blog Post: As a registered user, I can edit or delete my blog post, so that it is possible to make changes if needed. |    |
+|  | #5B Edit/Delete Blog Post: As a registered user, I can edit or delete my blog post, so that it is possible to make changes if needed. |  Given that a user wants to share a blog post, when clicking an add post button, then they can fill out a form to create their blog post.  |
 |  | #5C Like Blog Post: As a registered user, I can like or unlike other user’s blog posts, so that I can interact with their content. |    |
-|  | #5D Search for Blog Posts: As a registered user, I can search for blog posts using key words, so that I can find specific content. |    |
-|  | #6A Add Products: As a site admin, I can add, edit, and delete products to/in/from the web shop, so that I can ensure it is up to date with the latest news. |    |
-|  | #6B Manage Blog Posts: As a site admin, I can delete blog posts made by users, so that I can ensure that available content is appropriate and following community guidelines. |    |
+|  | #5D Search for Blog Posts: As a registered user, I can search for blog posts using key words, so that I can find specific content. | Given that a user is looking for a specific blog post, when entering a word to the search bar, then the search results are displayed.   |
+|  | #6A Add Products: As a site admin, I can add, edit, and delete products to/in/from the web shop, so that I can ensure it is up to date with the latest news. | Given that a site admin is logged in, when viewing the webshop from the the admin panel, then they can add, edit and delete products.   |
+|  | #6B Manage Blog Posts: As a site admin, I can delete blog posts made by users, so that I can ensure that available content is appropriate and following community guidelines. |  Given that a site admin is logged in, when viewing the blog posts from the admin panel, then they can delete posts if they are not in line with the communitys guidelines.  |
 
 - Table for additional testing.
 
