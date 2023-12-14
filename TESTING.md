@@ -130,6 +130,21 @@ checkout.css
 
 ### JavaScript
 
+To validate the JavaScript code for this project I used **[JSHint](https://jshint.com/)**.
+
+Base
+![javascript message function test result]
+
+Checkout
+![javascript checkout function test result]
+
+Cart
+![javascript cart function test result]
+
+Community
+![javascript community function test result]
+
+
 ### Python
 
 To validate the Python code for this project, I used **[CI Python Linter](https://pep8ci.herokuapp.com/)** the . The results are presented below.
