@@ -253,6 +253,24 @@ views.py
 
 </details>
 
+<details>
+<summary>YouMadeYouFitness Project</summary>
+<br>
+
+asgi.py
+![python testing of project asgi.py](/documentation/testing/python-linter-project-asgipy.png)
+
+settings.py
+![python testing of project settings.py](/documentation/testing/python-linter-project-settingspy.png)
+
+urls.py
+![python testing of project urls.py](/documentation/testing/python-linter-project-urlspy.png)
+
+wsgi.py
+![python testing of project wsgi.py](/documentation/testing/python-linter-project-wsgipy.png)
+
+</details>
+
 ## Accessibility
 
 - Wave report goes here.
