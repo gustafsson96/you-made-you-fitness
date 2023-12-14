@@ -344,14 +344,13 @@ body {
 }
 
 .purple-border {
-    border: solid 2px var(purple);
+    border: solid 2px var(--purple);
 }
 
-/* Mailchimp */
+/* from mailchimp */
 
 #mc_embed_signup {
     background: #fff;
-    false;
     clear: left;
     font: 14px Helvetica, Arial, sans-serif;
     width: 600px;
