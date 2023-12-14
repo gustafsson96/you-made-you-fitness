@@ -119,6 +119,16 @@ contact.html
 
 To validate the CSS code for this project I used the **[Jigsaw W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)**. The results are presented below.
 
+![css validation](/documentation/testing/css-validation-ymy-heroku.png)
+
+Before deploying the project I also used the same service to validate the additional css files presented below.
+
+community.css
+![css validation community](/documentation/testing/css-validation-additional-comminitycss.png)
+
+checkout.css
+![css validation checkout](/documentation/testing/css-validation-additional-checkoutcss.png)
+
 ### JavaScript
 
 ### Python
