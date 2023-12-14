@@ -79,7 +79,6 @@ search_results.html
 products.html
 ![product guide list html validation](/documentation/testing/html-validation-product-view.png)
 
-
 product_guide_detail.html
 ![product detail view html validation](/documentation/testing/html-validation-product-detail.png)
 
@@ -140,14 +139,13 @@ To validate the Python code for this project, I used **[CI Python Linter](https:
 <br>
 
 apps.py
-![python testing of home app apps.py]()
+![python testing of home apps.py](/documentation/testing/python-linter-home-appspy.png)
 
 views.py
-![python testing of home app views.py]()
+![python testing of home views.py](/documentation/testing/python-linter-home-viewspy.png)
 
 urls.py
-![python testing of home app urls.py]()
-
+![python testing of home urls.py](/documentation/testing/python-linter-home-urlspy.png)
 </details>
 
 <details>
@@ -155,16 +153,22 @@ urls.py
 <br>
 
 admin.py
+![python testing of community admin.py](/documentation/testing/python-linter-community-adminpy.png)
 
 apps.py
+![python testing of community apps.py](/documentation/testing/python-linter-community-appspy.png)
 
 forms.py
+![python testing of community forms.py](/documentation/testing/python-linter-community-formspy.png)
 
 models.py
+![python testing of community models.py](/documentation/testing/python-linter-community-modelspy.png)
 
 urls.py
+![python testing of community urls.py](/documentation/testing/python-linter-community-urlspy.png)
 
 views.py
+![python testing of community views.py](/documentation/testing/python-linter-community-viewspy.png)
 
 </details>
 
@@ -173,68 +177,37 @@ views.py
 <br>
 
 admin.py
+![python testing of products admin.py](/documentation/testing/python-linter-products-adminpy.png)
 
 apps.py
+![python testing of products apps.py](/documentation/testing/python-linter-products-appspy.png)
 
 models.py
+![python testing of products models.py](/documentation/testing/python-linter-products-modelspy.png)
 
 urls.py
+![python testing of products urls.py](/documentation/testing/python-linter-products-urlspy.png)
 
 views.py
+![python testing of products views.py](/documentation/testing/python-linter-products-viewspy.png)
 
 </details>
 
 <details>
-<summary>Cart App</summary>
+<summary>Products Cart</summary>
 <br>
-
-admin.py
-
-apps.py
-
-contexts.py
-
-models.py
-
-urls.py
-
-views.py
 
 </details>
 
 <details>
-<summary>Checkout App</summary>
+<summary>Products Checkout</summary>
 <br>
-
-admin.py
-
-apps.py
-
-forms.py
-
-models.py
-
-signals.py
-
-urls.py
-
-views.py
 
 </details>
 
 <details>
 <summary>Contact App</summary>
 <br>
-
-admin.py
-
-apps.py
-
-models.py
-
-urls.py
-
-views.py
 
 </details>
 

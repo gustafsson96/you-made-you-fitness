@@ -3,7 +3,7 @@ from .models import Guide
 
 
 def products_guides(request):
-    """ A view to show all workout guides """
+    """ view to show all workout guides """
 
     guides = Guide.objects.all()
 
@@ -15,7 +15,7 @@ def products_guides(request):
 
 
 def product_guide_detail(request, guide_id):
-    """ A view to show each guide's details"""
+    """ view to show each guide's details"""
 
     guide = get_object_or_404(Guide, pk=guide_id)
 
