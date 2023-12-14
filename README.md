@@ -35,8 +35,8 @@ Table of contents.
 | Web Shop |     |     |
 |  | #4A  | View Products: As a site user, I can view the products in the web shop, so that I can decide if I want to make a purchase. |
 |  | #4B  | Search for Products: As a site user, I can search for products by category or name, so that I can find what I am looking for.  |
-|  | #4C  | Add to Shopping Bag: As a site user, I can add products to my shopping bag, so that I can prepare for making a purchase. |
-|  | #4D  | Edit Shopping Bag: As a site user, I can edit and/or delete the products in my shopping bag, so that I can easily make changes if needed. |
+|  | #4C  | Add to Shopping Cart: As a site user, I can add products to my shopping cart, so that I can prepare for making a purchase. |
+|  | #4D  | Edit Shopping Cart: As a site user, I can delete the products in my shopping cart, so that I can easily make changes if needed. |
 |  | #4E  | Checkout: As a registered user, I can fill out my contact and payment information, so that I can complete the purchase.  |
 | Blog Posts |     |     |
 |  | #5A  | Make Blog Post: As a registered user, I can make a blog post, so that I can share content with the community. |
