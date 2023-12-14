@@ -133,6 +133,112 @@ checkout.css
 
 ### Python
 
+To validate the Python code for this project, I used **[CI Python Linter](https://pep8ci.herokuapp.com/)** the . The results are presented below.
+
+
+
+<details>
+<summary>Home App</summary>
+<br>
+
+apps.py
+
+views.py
+
+urls.py
+
+</details>
+
+<details>
+<summary>Community App</summary>
+<br>
+
+admin.py
+
+apps.py
+
+forms.py
+
+models.py
+
+urls.py
+
+views.py
+
+</details>
+
+<details>
+<summary>Products App</summary>
+<br>
+
+admin.py
+
+apps.py
+
+models.py
+
+urls.py
+
+views.py
+
+</details>
+
+<details>
+<summary>Cart App</summary>
+<br>
+
+admin.py
+
+apps.py
+
+contexts.py
+
+models.py
+
+urls.py
+
+views.py
+
+</details>
+
+<details>
+<summary>Checkout App</summary>
+<br>
+
+admin.py
+
+apps.py
+
+forms.py
+
+models.py
+
+signals.py
+
+urls.py
+
+views.py
+
+</details>
+
+<details>
+<summary>Contact App</summary>
+<br>
+
+admin.py
+
+apps.py
+
+models.py
+
+urls.py
+
+views.py
+
+</details>
+
+
+
 ## Accessibility
 
 - Wave report goes here.
