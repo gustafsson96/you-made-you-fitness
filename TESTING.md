@@ -8,6 +8,8 @@ Table of Contents
 
 ### HTML
 
+To validate the HTML code for all pages I used the **[W3C Markup Validation Service](https://validator.w3.org/nu/)**. Where necessary, the code was validated by direct input. The results are presented below.
+
 <details>
 <summary>Home App</summary>
 <br>
@@ -113,8 +115,9 @@ contact.html
 </details>
 
 
-
 ### CSS
+
+To validate the CSS code for this project I used the **[Jigsaw W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)**. The results are presented below.
 
 ### JavaScript
 
