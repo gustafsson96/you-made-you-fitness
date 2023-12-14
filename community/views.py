@@ -17,7 +17,7 @@ def community_unauthorized(request):
 
 
 def recipe_list(request):
-    """ view to show recipe posts """
+    """ view to show all recipe posts """
 
     recipes = Recipe.objects.all()
 
@@ -41,7 +41,7 @@ def recipe_detail(request, slug, *args, **kwargs):
 
 
 def workout_list(request):
-    """ view to show workout posts """
+    """ view to show all workout posts """
 
     workouts = Workout.objects.all()
 
@@ -65,7 +65,7 @@ def workout_detail(request, slug, *args, **kwargs):
 
 
 def other_post_list(request):
-    """ view to show 'other' posts """
+    """ view to show all other posts """
 
     other_posts = OtherPost.objects.all()
 
@@ -90,7 +90,7 @@ def other_post_detail(request, slug, *args, **kwargs):
 
 def get_user_posts(request):
     """
-    get posts specific to logged in user
+    view to get posts specific to logged in user
     """
     user_recipes = Recipe.objects.filter(author__user=request.user)
     user_workouts = Workout.objects.filter(author__user=request.user)
@@ -107,7 +107,7 @@ def get_user_posts(request):
 
 def add_recipe_post(request):
     """
-    Create and validate a new recipe post
+    view to create and validate a new recipe post
     """
     if request.method == 'POST':
         show_image_field = False
@@ -132,7 +132,7 @@ def add_recipe_post(request):
 
 def add_workout_post(request):
     """
-    Create and validate a new workout post
+    view to create and validate a new workout post
     """
     if request.method == 'POST':
         show_image_field = False
@@ -157,7 +157,7 @@ def add_workout_post(request):
 
 def add_other_post(request):
     """
-    Create and validate a new other post
+    view to create and validate a new other post
     """
     if request.method == 'POST':
         show_image_field = False
@@ -251,7 +251,7 @@ def edit_other_post(request, slug, *args, **kwargs):
 
 def delete_recipe(request, slug):
     """
-    Delete an existing recipe post
+    delete an existing recipe post
     """
     recipe = get_object_or_404(Recipe, slug=slug)
     recipe.delete()
@@ -262,7 +262,7 @@ def delete_recipe(request, slug):
 
 def delete_workout(workout, slug):
     """
-    Delete an existing workout post
+    delete an existing workout post
     """
     workout = get_object_or_404(Workout, slug=slug)
     workout.delete()
@@ -273,7 +273,7 @@ def delete_workout(workout, slug):
 
 def delete_other_post(request, slug):
     """
-    Delete an existing other post
+    delete an existing other post
     """
     other_post = get_object_or_404(OtherPost, slug=slug)
     other_post.delete()
@@ -283,7 +283,7 @@ def delete_other_post(request, slug):
 
 
 def community_search_result(request):
-    """ a view for searching posts """
+    """ view for searching posts """
     if request.GET:
         if 'q' in request.GET:
             query = request.GET.get('q', '')

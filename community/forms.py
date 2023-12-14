@@ -4,7 +4,7 @@ from django import forms
 
 class RecipeForm(forms.ModelForm):
     """
-    Class to make a new recipe post
+    class to make a new recipe post
     """
     class Meta:
         model = Recipe
@@ -24,7 +24,7 @@ form = RecipeForm()
 
 class WorkoutForm(forms.ModelForm):
     """
-    Class to make a new workout post
+    class to make a new workout post
     """
     class Meta:
         model = Workout
@@ -44,7 +44,7 @@ form = WorkoutForm()
 
 class OtherPostForm(forms.ModelForm):
     """
-    Class to make a new other post
+    class to make a new other post
     """
     class Meta:
         model = OtherPost

@@ -22,7 +22,7 @@ TYPE_OF_WORKOUT = (
 
 
 class Recipe(models.Model):
-    """ Model to post recipes """
+    """ model to post recipes """
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
@@ -43,7 +43,7 @@ class Recipe(models.Model):
 
 
 class Workout(models.Model):
-    """ Model to post workouts """
+    """ model to post workouts """
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
@@ -64,7 +64,7 @@ class Workout(models.Model):
 
 
 class OtherPost(models.Model):
-    """ Model to make other posts """
+    """ model to make other posts """
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
