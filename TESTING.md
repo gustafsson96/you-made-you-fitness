@@ -135,17 +135,18 @@ checkout.css
 
 To validate the Python code for this project, I used **[CI Python Linter](https://pep8ci.herokuapp.com/)** the . The results are presented below.
 
-
-
 <details>
 <summary>Home App</summary>
 <br>
 
 apps.py
+![python testing of home app apps.py]()
 
 views.py
+![python testing of home app views.py]()
 
 urls.py
+![python testing of home app urls.py]()
 
 </details>
 
