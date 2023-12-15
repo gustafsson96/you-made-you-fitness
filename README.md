@@ -147,23 +147,38 @@ This project includes implemantations that have been made from a Search Engine O
 
 ## Features
 
-### Home Page
+
+### Navigation Bar
+
+The navigation bar for unauthorized users contains 7 nav items: Home, Community (view for unauthorized users), Webshop, Login, Join Us, Contact and Shopping Cart. The shopping cart amount is updated when product is added/deleted from the cart.
 
 ![screenshot of navbar unauthorized user](/documentation/images/navbar-unauthorized-user.png)
 
+The navigation bar for authorized users contains 6 nav items: Home, Community (view for authorized users), Webshop, Contact, Logout, and Shopping Cart. The shopping cart amount is updated when product is added/deleted from the cart.
+
 ![screenshot of navbar authorized user](/documentation/images/navbar-authorized-user.png)
+
+### Home Page
+
+The home landing page contains a hero image with a text box containing the business name and a button linking to the sign up page (for unauthorized users) or the community page (for authorized, logged in users).
 
 ![screenshot of hero container](/documentation/images/home-page-hero.png)
 
-![screenshot of home page content](/documentation/images/home-page-content.png)
+Below the home page, there are three sections. The "About Us" section contatins more information about the business (and this could be improved further in the future). The "Need Some Guidance" section links to the webshop and is avaliable for both registered and unregistered user. The "Share Your Favorites" section links to the community page for either unregistered and registered users depending on if they are logged in or not.
 
-![screenshot of footer](/documentation/images/footer.png)
+![screenshot of home page content](/documentation/images/home-page-content.png)
 
 ### Authentication
 
+The register page (sign up) is where the user can create an account to join the community. It contains a form where user input is required in the form of username and password in order to sign up. Email is optional. There is also a link to the sign in page in case the user is already registered.
+
 ![screenshot of signup](/documentation/images/signup.png)
 
+The login page contains a form where user input is required in the form of username and password in order to log in. There is also a link to the sign up page in case the user is not registered yet.
+
 ![screenshot of signin](/documentation/images/signin.png)
+
+If the user clicks the "logout" navbar item they will relocate to the logout page. On the log out page they are asked if they are sure they want to log out If the answer is yes, they can click the button to log out.
 
 ![screenshot of logout](/documentation/images/logout.png)
 
@@ -206,6 +221,13 @@ This project includes implemantations that have been made from a Search Engine O
 ### Contact
 
 ![screenshot of contact page](/documentation/images/contact.png)
+
+### Footer
+
+The footer sticks to the bottom of the page on all sites and contains links to different social medias. 
+
+![screenshot of footer](/documentation/images/footer.png)
+
 
 ### For Both Unregistered and Registered Users
 
