@@ -119,6 +119,62 @@ Additional Pages:
 
 ### Skeleton
 
+#### Wireframes
+
+<details>
+<summary>Home</summary>
+<br>
+
+![screenshot of home page wireframe](/documentation/images/wireframe-home.png)
+
+</details>
+
+<details>
+<summary>Community</summary>
+<br>
+
+![screenshot of community wireframe for unauthorized users](/documentation/images/wireframe-commnity-unauthorized.png)
+
+![screenshot of start page community wireframe for authorized users](/documentation/images/wireframe-community-authorized.png)
+
+![screenshot of community post page wireframe](/documentation/images/wireframe-community-posts.png)
+
+</details>
+
+<details>
+<summary>Products</summary>
+<br>
+
+![screenshot of products page wireframe](/documentation/images/wireframe-products.png)
+
+![screenshot of products detail wireframe](/documentation/images/wireframe-product-detail.png)
+
+</details>
+
+<details>
+<summary>Shopping Cart</summary>
+<br>
+
+![screenshot of shopping cart wireframe](/documentation/images/wireframe-shopping-cart.png)
+
+</details>
+
+<details>
+<summary>Checkout</summary>
+<br>
+
+![screenshot of checkout wireframe](/documentation/images/wireframe-checkout.png)
+
+</details>
+
+<details>
+<summary>Contact</summary>
+<br>
+
+![screenshot of contact page wireframe](/documentation/images/wireframe-contact.png)
+
+</details>
+
 ### Surface
 
 - Color Scheme
@@ -130,9 +186,21 @@ Additional Pages:
 
 ## Agile Methodology
 
+![screenshot of github project board](/documentation/images/github-project-board.png)
+
+![screenshot of github milestones](/documentation/images/github-milestones.png)
+
+![screenshot of labels](/documentation/images/github-labels.png)
+
 ## Search Engine Optimization
 
 This project includes implemantations that have been made from a Search Engine Optimization (SEO) perspective, in order to ensure that potential customers can find "You Made You Fitness Community". The process is documented below.
+
+## Web Marketing
+
+![screenshot of facebook business page](/documentation/images/facebook-business-page-1.png)
+
+![screenshot of facebook business page 2](/documentation/images/facebook-business-page-2.png)
 
 **Keyword Research:**
 
