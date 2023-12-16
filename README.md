@@ -2,7 +2,7 @@
 
 The live application can be found: **here**
 
-(Screenshot AMIRESPONSIVE)
+![screenshot of amiresponsive](/documentation/images/amiresponsive-ymyfitness.png)
 
 Table of contents.
 
