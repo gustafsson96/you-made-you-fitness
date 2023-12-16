@@ -113,6 +113,23 @@ contact.html
 
 </details>
 
+<details>
+<summary>Authentication</summary>
+<br>
+
+login.html
+![login page html validation](/documentation/testing/html-validation-allauth-login.png)
+
+logout.html
+![logout page html validation](/documentation/testing/html-validation-allauth-logout.png)
+
+signup.html
+![signup page html validation](/documentation/testing/html-validation-allauth-signup.png)
+
+![signup page html validation warning](/documentation/testing/html-validation-allauth-signup-warnings.png)
+
+</details>
+
 
 ### CSS
 
