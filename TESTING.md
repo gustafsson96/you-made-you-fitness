@@ -307,9 +307,19 @@ wsgi.py
 
 ## Accessibility
 
-- Wave report goes here.
+To test the accessibility of the site I used the web accessibility evaluation tool [WAVE](https://wave.webaim.org/). The result is presented below.
+
+![wave report](/documentation/testing/wave-report.png)
 
 ### Lighthouse Report
+
+To test performance and for further testing of accessibility, I ran Lighthouse reports in Chrome DevTools (one for desktop and one for mobile). The results are presented below.
+
+Desktop
+![lighthouse report for desktop](/documentation/testing/lighthouse-report-desktop.png)
+
+Mobile
+![lighthouse report for mobile](/documentation/testing/lighthouse-report-mobile.png)
 
 ### Manual Testing
 
