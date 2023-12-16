@@ -133,16 +133,16 @@ checkout.css
 To validate the JavaScript code for this project I used **[JSHint](https://jshint.com/)**.
 
 Base
-![javascript message function test result]
+![javascript message function test result](/documentation/testing/js-hint-base-message.png)
 
 Checkout
-![javascript checkout function test result]
+![javascript checkout function test result](/documentation/testing/js-hint-checkout-stripe.png)
 
 Cart
-![javascript cart function test result]
+![javascript cart function test result](/documentation/testing/js-hint-cart-remove.png)
 
 Community
-![javascript community function test result]
+![javascript community function test result](/documentation/testing/js-hint-community-slug.png)
 
 
 ### Python
