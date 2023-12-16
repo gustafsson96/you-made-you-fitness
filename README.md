@@ -184,7 +184,7 @@ If the user clicks the "logout" navbar item they will relocate to the logout pag
 
 ### Webshop
 
-In the webshop the products are evenly displayed with a product image, title and price. The user can click the image to get to the product detail page with more information and an "add to cart" button.
+In the webshop the products are evenly displayed with a product image, title and price. The user can click the image to get to the product detail page with more information and an "add to cart" button. The webshop is available for both unregistered and registered users.
 
 ![screenshot of webshop overview](/documentation/images/webshop.png)
 
@@ -214,23 +214,41 @@ When an order has been completed, a checkout success page is displayed with an o
 
 ### Community
 
+The community page for an unregistered user links to login and signup.
+
 ![screenshot of community page unauthorized users](/documentation/images/community-unauthorized.png)
+
+For a registered user, the community page links to three sections: read posts, add posts, and the posts specific to the logged in user. For reading and adding there are three categories available: recipes, workouts and other posts. There is also a search bar available.
 
 ![screenshot of community start page](/documentation/images/community-start-page.png)
 
+If the user clicks on one of buttons under "read other memebers posts" they are relocated to a post overview specific for the category they picked. The posts are displayed evenly with a default image, a title, author and "created on" date. The user can click on a title to read the post. In addition, there are two buttons available: one to add a post and one to go back to the community start page.
+
 ![screenshot of community post list](/documentation/images/community-post-list.png)
+
+The post detail page contains the actual blog post and a button linking back to the post overview page.
 
 ![screenshot of post detail page](/documentation/images/community-post-details.png)
 
+Under "your blog posts" the posts specific to the logged in user are displayed. The main CRUD functionality is available on this page as the user can edit and/or delete their posts. If there are no posts in a category a "there are no posts" message is displayed. 
+
 ![screenshot of logged in user posts](/documentation/images/community-user-posts.png)
+
+The form for adding a post consists of different fields depending on category. The form presented below is for creating a general blog post.
 
 ![screenshot of adding a post](/documentation/images/community-add-post.png)
 
+The form for editing a post looks similar to the "add a post" form, but is prepopulated with the content of the post that is getting edited.
+
 ![screenshot of editing a post](/documentation/images/community-edit-post.png)
+
+The search results page displayed the search results for each category.
 
 ![screenshot of search results page](/documentation/images/community-search-result.png)
 
 ### Contact
+
+On the contact page the user can find the business email address. They can also sign up to the fitness community's newsletter (section created using mailchimp).
 
 ![screenshot of contact page](/documentation/images/contact.png)
 
@@ -251,13 +269,6 @@ When a user perfoms an action on the site, a message is displayed at the top of 
 ![screenshot of a bootstrap message](/documentation/images/bootstrap-message-4.png)
 
 ![screenshot of a bootstrap message](/documentation/images/bootstrap-message-2.png)
-
-
-### For Both Unregistered and Registered Users
-
-### Unregistered Users
-
-### Registered Users
 
 ## Testing
 
