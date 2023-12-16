@@ -184,19 +184,31 @@ If the user clicks the "logout" navbar item they will relocate to the logout pag
 
 ### Webshop
 
+In the webshop the products are evenly displayed with a product image, title and price. The user can click the image to get to the product detail page with more information and an "add to cart" button.
+
 ![screenshot of webshop overview](/documentation/images/webshop.png)
+
+The product detail page contains of the product image, title, description and price. The user can click "add to cart" if they want to purchase an item and "keep shopping" to go back to the webshop.
 
 ![screenshot of product detail page](/documentation/images/product-detail.png)
 
 ### Shopping Cart
 
+If there are items in the shopping cart, an overview of what is in the cart is displayed together with the cart total (the "bag" has been changed to "cart" since the screenshot was taken to keep it consitent). If the user wants to delete an item from the cart they can click the trash can icon. In addition to the order overview there are two buttons: one linking back to the webshop and one linking to the checkout page.
+
 ![screenshot of cart with items](/documentation/images/cart-items.png)
+
+If there are no items in the shopping cart, a "your cart is empty" message is displayed together with a button linking back to the webshop.
 
 ![screenshot of empty cart](/documentation/images/cart-empty.png)
 
 ### Checkout
 
+The checkout page is where the user completes a purchase. An order summary is displayed and the user is prompted to fill out their information to complete the purchase. Since there are no physical products (digital only) available the user does not have to fill out their address. Name, number, email and card information is enough.
+
 ![screenshot of checkout view](/documentation/images/checkout-view.png)
+
+When an order has been completed, a checkout success page is displayed with an order summary. 
 
 ![screenshot of checkout success page](/documentation/images/checkout-success.png)
 
@@ -227,6 +239,18 @@ If the user clicks the "logout" navbar item they will relocate to the logout pag
 The footer sticks to the bottom of the page on all sites and contains links to different social medias. 
 
 ![screenshot of footer](/documentation/images/footer.png)
+
+### Messages
+
+When a user perfoms an action on the site, a message is displayed at the top of the screen. The messages disappear by themselves but the user can click the X if they want it to disappear faster. A few message examples are presented below.
+
+![screenshot of a bootstrap message](/documentation/images/bootstrap-message-1.png)
+
+![screenshot of a bootstrap message](/documentation/images/bootstrap-message-3.png)
+
+![screenshot of a bootstrap message](/documentation/images/bootstrap-message-4.png)
+
+![screenshot of a bootstrap message](/documentation/images/bootstrap-message-2.png)
 
 
 ### For Both Unregistered and Registered Users
