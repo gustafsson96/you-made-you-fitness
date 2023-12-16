@@ -15,7 +15,7 @@
                 {% csrf_token %}
                 {% for radio in emailaddress_radios %}
                     {% with emailaddress=radio.emailaddress %}
-                        {% element field type="radio" checked=radio.checked name="email" value=emailaddress.email id=radio.id %}
+                    {% element field type="radio" checked=radio.checked name="email" value=emailaddress.email id=radio.id %}
                             {% slot label %}
                                 {{ emailaddress.email }}
                                 {% if emailaddress.verified %}
