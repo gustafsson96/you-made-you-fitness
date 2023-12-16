@@ -126,7 +126,7 @@ logout.html
 signup.html
 ![signup page html validation](/documentation/testing/html-validation-allauth-signup.png)
 
-I could not locate where to fix these warnings in the allauth templates, but will with more time look into it.
+I could not locate where to fix these warnings in the imported allauth templates, but will with more time look into it.
 
 ![signup page html validation warning](/documentation/testing/html-validation-allauth-signup-warnings.png)
 
