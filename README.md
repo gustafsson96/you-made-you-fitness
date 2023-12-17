@@ -206,6 +206,8 @@ ERD for models related to the Community blog posts:
 
 ## Agile Methodology
 
+This project was planned and created by the use of an agile approach. By the use of a GitHub project including issues (user stories), milestones and MoSCoW labels I kept track of the progress. For future projects, I will also plan and document the development process in sprints, to get a better overview of the timeframe.
+
 ![screenshot of github project board](/documentation/images/github-project-board.png)
 
 ![screenshot of github milestones](/documentation/images/github-milestones.png)
