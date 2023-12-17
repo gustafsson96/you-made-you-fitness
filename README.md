@@ -226,9 +226,9 @@ Wireframes were created using **[Balsamiq](https://balsamiq.com/)**.
 
 **Color Scheme**
 
-The colos scheme was created using **[Coolors](https://coolors.co/)** and follows a pink scheme that matches the hero image.
+The color scheme was created using **[Coolors](https://coolors.co/)** and follows a pink scheme that matches the hero image.
 
-
+![screenshot of color scheme](/documentation/images/color-scheme.png)
 
 ## Business Model
 
