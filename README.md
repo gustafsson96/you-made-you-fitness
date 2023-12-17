@@ -448,6 +448,16 @@ An admin can from the admin panel:
 
 ![screenshot of admin panel](/documentation/images/admin-panel.png)
 
+<h4>Features Left to Implement</h4>
+
+* Community: Liking and commenting blog posts for a more interactive community experience.
+
+* Updated Post: "Updated on" date and time for an updated post (included in the model but not the view).
+
+* User Profile: Viewing other members user profiles with a potential profile picture and a bio (in addition to editing your own).
+
+* Site Pagination: Site pagination should be implemented on the products and blog posts pages.
+
 ## Testing
 
 Find the complete documentation for testing here: **[TESTING.md](TESTING.md)**
@@ -562,6 +572,7 @@ The testing documentation contains validation of HTML, CSS, Python, and JavaScri
 
 * The sitemap was created using **[XML Sitemaps](https://www.xml-sitemaps.com/)**.
 
+* In addition to the more specific credits, I want to credit the Django Documentation, Stack Overflow, and the CI community on Slack as they have been helpful in solving problems along the way.
 
 <h3>Media</h3>
 
