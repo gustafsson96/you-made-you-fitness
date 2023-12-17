@@ -184,23 +184,35 @@ Additional Pages:
 
 ## Data Model
 
+ERD for models related to the Webshop functionality:
+![sceenshot of ERD for webshop](/documentation/images/ERD-webshop.png)
+
+ERD for models related to the Community blog posts:
+![screenshot of ERD for the community app](/documentation/images/ERD-community.png)
+
+* To create the entity relationship diagrams (ERD) for this project, I used **[creately](https://creately.com/)**.
+
+* The Webshop models were taken from Code Institute's walkthrough "Boutique Ado" and customized to fit an online business with digital products only.
+
+* The Community blog post models (Recipe, Workout and OtherPost) were created by me to fit each category. 
+
+* The User model was provided by Django for a one to many relationship to the blog post models. Find more information about Django's default user model in the Django documentation **[here](https://docs.djangoproject.com/en/3.2/ref/contrib/auth/)**.
+
+* This project uses a PostgreSQL database via **[ElephantSQL](https://www.elephantsql.com/)**.
+
 ## Agile Methodology
 
 ![screenshot of github project board](/documentation/images/github-project-board.png)
 
 ![screenshot of github milestones](/documentation/images/github-milestones.png)
 
+![screenshot of github issues](/documentation/images/github-issues.png)
+
 ![screenshot of labels](/documentation/images/github-labels.png)
 
 ## Search Engine Optimization
 
 This project includes implemantations that have been made from a Search Engine Optimization (SEO) perspective, in order to ensure that potential customers can find "You Made You Fitness Community". The process is documented below.
-
-## Web Marketing
-
-![screenshot of facebook business page](/documentation/images/facebook-business-page-1.png)
-
-![screenshot of facebook business page 2](/documentation/images/facebook-business-page-2.png)
 
 **Keyword Research:**
 
@@ -212,6 +224,13 @@ This project includes implemantations that have been made from a Search Engine O
 ![google search result presented in table](/documentation/images/SEO-google-search-3.png)
 3. A mix of 10 short and long-tail keywords were selected based on the Google search results.
 4. The relevance and authoritativeness was checked for some keywords using **[wordtracker](https://www.wordtracker.com/)** (I checked as many as I could before running out of free searches).
+
+## Web Marketing
+
+![screenshot of facebook business page](/documentation/images/facebook-business-page-1.png)
+
+![screenshot of facebook business page 2](/documentation/images/facebook-business-page-2.png)
+
 
 ## Features
 
