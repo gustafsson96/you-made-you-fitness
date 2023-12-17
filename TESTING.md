@@ -380,6 +380,12 @@ Mobile
 
 ## Browsers
 
+I have tested that the application works in the following browsers:
+
+* Google Chrome
+* Safari
+* Firefox
+
 ## Bugs
 
 - I did not manage to create a view for deleting items from the shopping cart in views.py. Fixed by adding js code instead.
