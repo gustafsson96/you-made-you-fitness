@@ -473,6 +473,8 @@ An admin can from the admin panel:
 
 <h4>Features Left to Implement</h4>
 
+* Webshop: Additional add to cart button on products overview page.
+
 * Community: Liking and commenting blog posts for a more interactive community experience.
 
 * Updated Post: "Updated on" date and time for an updated post (included in the model but not the view).
