@@ -337,6 +337,8 @@ Mobile
 
 ## Manual Testing
 
+A Behavior Driven Development (BDD) approach was used for the manual testing to ensure the functionality, usability, responsiveness and data management of the project. BDD extends the already created user stories by translating them into a testable format. Each user story with its additional testable statement is presented in the table below, along with the test results. All "❌ Not implemented" user/stories tests are marked as "won't have" in the GitHub project for this release.
+
 | TEST PASS | USER STORY | TEST | 
 | --- | ----------- | ----------- |
 | ✅ | #1A Navigation Bar: As a site user, I can easily find the navigation bar, so that I can navigate the different pages of the site. | Given that a user visits the site, when exploring different pages, then the navbar is visible at the top of the screen at all times.   |
@@ -388,10 +390,17 @@ I have tested that the application works in the following browsers:
 
 ## Bugs
 
-- I did not manage to create a view for deleting items from the shopping cart in views.py. Fixed by adding js code instead.
+* I did not manage to create a view for deleting items from the shopping cart in views.py. Fix: adding JavaScript code instead.
+* Did not manage to get Slugify to work. Fix: adding JavaScript code to autofill the slug field based on the title and hide the slug field for the user.
+* The community button on the home page did not work for registered users. Fix: add if statement for authenticated users in HTML code and link button to the community page for the logged in view.
+* A few buttons were not responsive on smaller screens. Fix: add media queries in CSS code.
 
 ### Unsolved Bugs
 
-- The mailchimp input field is not responsive.
+* The mailchimp input field is not responsive on smaller screens.
+* Users cannot add their own images to blog posts. Temporarily fixed by hiding the option to add an image in the add blog post forms and set a default image for all posts.
+* The sign up allauth template is showing warnings in the HTML validator but I could not locate where to fix it in the allauth templates. Does not affect the ability to sign up.
+* The password requirements for the signup template is showing at all times instead of only popping up when a user does not meet the requirements. Seems to be related to the validation warnings mentioned above.
+
 
 Go back to the README documentation **[here](README.md)**
