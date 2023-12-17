@@ -51,8 +51,8 @@ This project was created using HTML, CSS, JavaScript, Python, and Django, and is
 |  | #2F  | Social Media Links: As a site user, I can find the fitness community’s social media links, so that I can learn more about their business. |
 |  | #2G  | Wish List: As a site user, I can add products to a wish list, so that I can save my favorites for later. |
 | Registration and Account Management |     |     |
-|  | #3A  | Create Account: As an unregistered user, I can create an account, so that I can make purchases and take part of blog posts.  |
-|  | #3B  | 3B. Login: As a registered user, I can easily login to my account, so that I can access my profile and the content for registered users.  |
+|  | #3A  | Create Account: As an unregistered user, I can create an account, so that I can take part of blog posts.  |
+|  | #3B  | 3B. Login: As a registered user, I can easily login to my account, so that I can access the content for registered users.  |
 |  | #3C  | Logout: As a registered user, I can easily logout from my account, so that I can protect my personal information |
 |  | #3D  | Reset Password: As a registered user, I can reset my password, so that I can access my information and keep my account safe.  |
 |  | #3E  | Update Profile: As a registered user, I can change my profile information, so that I can ensure it is up to date.  |
@@ -62,7 +62,7 @@ This project was created using HTML, CSS, JavaScript, Python, and Django, and is
 |  | #4B  | Search for Products: As a site user, I can search for products by category or name, so that I can find what I am looking for.  |
 |  | #4C  | Add to Shopping Cart: As a site user, I can add products to my shopping cart, so that I can prepare for making a purchase. |
 |  | #4D  | Edit Shopping Cart: As a site user, I can delete the products in my shopping cart, so that I can easily make changes if needed. |
-|  | #4E  | Checkout: As a registered user, I can fill out my contact and payment information, so that I can complete the purchase.  |
+|  | #4E  | Checkout: As a site user, I can fill out my contact and payment information, so that I can complete the purchase.  |
 | Blog Posts |     |     |
 |  | #5A  | Make Blog Post: As a registered user, I can make a blog post, so that I can share content with the community. |
 |  | #5B  | Edit/Delete Blog Post: As a registered user, I can edit or delete my blog post, so that it is possible to make changes if needed. |
@@ -77,9 +77,9 @@ This project was created using HTML, CSS, JavaScript, Python, and Django, and is
 
 **Project Goals:**
 
-* The goal is to create an online fitness community that inspires and helps people take control over their own fitness journey. The name "You Made You Fitness Community" is meant to reflect this.
+* The goal is to create an online fitness community that inspires and helps people take control over their own fitness journey. The name "You Made You Fitness Community" is meant to reflec this.
 
-* The community will offer different science based meal plans and workout plans for all levels of fitness, in addition to community specific merchandise. Quality is key and all plans have to be proven to work. The community site needs to reflect a business that values high quality.
+* The community will initially offer workout guides for all levels of fitness, but more products could be added in the future. Quality is key and all plans have to be proven to work. The community site needs to reflect a business that values high quality.
 
 * The target audicence is people who are looking for tools to take charge of their fitness journey while also sharing the experience with a community. Previous fitness level does not matter as different plans for different goals are offered. Everyone is welcome.
 
@@ -96,8 +96,6 @@ This project was created using HTML, CSS, JavaScript, Python, and Django, and is
 ### Scope
 
 **Contet Requirements and Functional Specification:**
-
-Requirements:
 
 * Authentication: Functionality to register and manage an account. 
 * Web Shop: Functionality to complete a purchase.
@@ -132,13 +130,13 @@ Pages marked with ** are the same for unregistered and registered users.
 
 * Sign Up Page: Contains a sign up form.
 
-* Contact Page**: Contains contact information and newletter signup.
+* Contact Page**: Contains contact information and newsletter signup.
 
 **View for Registered Users:**
 
 * Home Page**: Contains a hero image with text, in addition to sections with information and buttons linking to the most important pages of the site.
 
-* Community Pages (blog): Built by different pages related to the sites blog functionality. Contains pages for viewing, adding, editing and deleting blog posts within each category.
+* Community Pages (blog): Built by different pages related to the site's blog functionality. Contains pages for viewing, adding, editing and deleting blog posts within each category.
 
 * Webshop Page**: Page for all products in the webshop.
 
@@ -150,9 +148,9 @@ Pages marked with ** are the same for unregistered and registered users.
 
 * Checkout Success Page**: Displays an order summary when a purchase is successful.
 
-* Logout Page: Contains button for loggin out.
+* Logout Page: Contains button for logging out.
 
-* Contact Page**: Contains contact information and newletter signup.
+* Contact Page**: Contains contact information and newsletter signup.
 
 **Additional Pages:**
 
@@ -160,7 +158,7 @@ Pages marked with ** are the same for unregistered and registered users.
 
 **Elements of Navigation:**
 
-* A navigation bar with icons and links to its relevant content is visible at all times while navigation through the site.
+* A navigation bar with icons and links to its relevant content is visible at all times while navigating through the site.
 
 * The business logo in the navigation bar is linked to the home page.
 
@@ -355,21 +353,21 @@ The home landing page contains a hero image with a text box containing the busin
 
 ![screenshot of hero container](/documentation/images/home-page-hero.png)
 
-Below the home page, there are three sections. The "About Us" section contatins more information about the business (and this could be improved further in the future). The "Need Some Guidance" section links to the webshop and is avaliable for both registered and unregistered user. The "Share Your Favorites" section links to the community page for either unregistered and registered users depending on if they are logged in or not.
+Below the home page, there are three sections. The "About Us" section contains more information about the business (and this could be improved further in the future). The "Need Some Guidance" section links to the webshop and is avaliable for both registered and unregistered user. The "Share Your Favorites" section links to the community page for either unregistered and registered users depending on if they are logged in or not.
 
 ![screenshot of home page content](/documentation/images/home-page-content.png)
 
 <h3>Authentication</h3>
 
-The register page (sign up) is where the user can create an account to join the community. It contains a form where user input is required in the form of username and password in order to sign up. Email is optional. There is also a link to the sign in page in case the user is already registered.
+The register page (sign up) is where the user can create an account to join the community. It contains a form where username and password are required in order to sign up. Email is optional. There is also a link to the sign in page in case the user is already registered.
 
 ![screenshot of signup](/documentation/images/signup.png)
 
-The login page contains a form where user input is required in the form of username and password in order to log in. There is also a link to the sign up page in case the user is not registered yet.
+The login page contains a form where the user is required to fill out username and password in order to log in. There is also a link to the sign up page in case the user is not registered yet.
 
 ![screenshot of signin](/documentation/images/signin.png)
 
-If the user clicks the "logout" navbar item they will relocate to the logout page. On the log out page they are asked if they are sure they want to log out If the answer is yes, they can click the button to log out.
+If the user clicks the "logout" navbar item they will relocate to the logout page. On the log out page they are asked if they are sure they want to log out. If the answer is yes, they can click the button to log out.
 
 ![screenshot of logout](/documentation/images/logout.png)
 
@@ -379,7 +377,7 @@ In the webshop the products are evenly displayed with a product image, title and
 
 ![screenshot of webshop overview](/documentation/images/webshop.png)
 
-The product detail page contains of the product image, title, description and price. The user can click "add to cart" if they want to purchase an item and "keep shopping" to go back to the webshop.
+The product detail page consists of the product image, title, description and price. The user can click "add to cart" if they want to purchase an item and "keep shopping" to go back to the webshop.
 
 ![screenshot of product detail page](/documentation/images/product-detail.png)
 
@@ -395,7 +393,7 @@ If there are no items in the shopping cart, a "your cart is empty" message is di
 
 <h3>Checkout</h3>
 
-The checkout page is where the user completes a purchase. An order summary is displayed and the user is prompted to fill out their information to complete the purchase. Since there are no physical products (digital only) available the user does not have to fill out their address. Name, number, email and card information is enough.
+The checkout page is where the user completes a purchase. An order summary is displayed and the user is prompted to fill out their information to complete the purchase. Since there are no physical products available (digital only) the user does not have to fill out their address. Name, number, email and card information is enough.
 
 ![screenshot of checkout view](/documentation/images/checkout-view.png)
 
@@ -445,7 +443,7 @@ On the contact page the user can find the business email address. They can also 
 
 <h3>Footer</h3>
 
-The footer sticks to the bottom of the page on all sites and contains links to different social medias. 
+The footer sticks to the bottom of the site on all pages and contains links to different social medias. 
 
 ![screenshot of footer](/documentation/images/footer.png)
 
@@ -596,6 +594,8 @@ The testing documentation contains validation of HTML, CSS, Python, and JavaScri
 * I used **[this StudyGyaan article](https://studygyaan.com/django/django-custom-404-error-template-page?utm_content=cmp-true&expand_article=1)** as a guide to create a 404 page.
 
 * The sitemap was created using **[XML Sitemaps](https://www.xml-sitemaps.com/)**.
+
+* I used the deployment steps from my 4th portfolio project ["The Swede Restaurant"](https://github.com/gustafsson96/the-swede-restaurant) as a guide when creating this project. 
 
 * In addition to the more specific credits, I want to credit the Django Documentation, Stack Overflow, and the CI community on Slack as they have been helpful in solving problems along the way.
 
