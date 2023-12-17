@@ -358,25 +358,25 @@ Mobile
 | ❌ Not implemented | #4B Search for Products: As a site user, I can search for products by category or name, so that I can find what I am looking for.  |    |
 | ✅  | #4C Add to Shopping Cart: As a site user, I can add products to my shopping cart, so that I can prepare for making a purchase. |  Given that a user has decided to add something to their shopping cart, when they click an add to cart button, then the product is added to the shopping cart.  |
 | ✅ | #4D Edit Shopping Cart: As a site user, I can delete the products in my shopping cart, so that I can easily make changes if needed. |  Given that a user wants to update their shopping cart, when clicking the trash can next to an item, then the item is removed from the shopping cart. |
-|  | #4E Checkout: As a registered user, I can fill out my contact and payment information, so that I can complete the purchase.  |  Given that a user wants to go through with their purchase, when clicking checkout, then they can fill out their information to complete the purchase.  |
-|  | #5A Make Blog Post: As a registered user, I can make a blog post, so that I can share content with the community. |    |
-|  | #5B Edit/Delete Blog Post: As a registered user, I can edit or delete my blog post, so that it is possible to make changes if needed. |  Given that a user wants to share a blog post, when clicking an add post button, then they can fill out a form to create their blog post.  |
+| ✅ | #4E Checkout: As a registered user, I can fill out my contact and payment information, so that I can complete the purchase.  |  Given that a user wants to go through with their purchase, when clicking checkout, then they can fill out their information to complete the purchase.  |
+| ✅ | #5A Make Blog Post: As a registered user, I can make a blog post, so that I can share content with the community. |  Given that a registered user wants to make a blog post, when clicking "add recipe/workout/other post", then they can fill out a form to create their blog post.  |
+| ✅ | #5B Edit/Delete Blog Post: As a registered user, I can edit or delete my blog post, so that it is possible to make changes if needed. |  Given that a user wants to edit/delete their blog post, when clicking edit or delete on the "your blog posts" page, then they can perform their desired action.   |
 | ❌ Not implemented | #5C Like Blog Post: As a registered user, I can like or unlike other user’s blog posts, so that I can interact with their content. |    |
-|  | #5D Search for Blog Posts: As a registered user, I can search for blog posts using key words, so that I can find specific content. | Given that a user is looking for a specific blog post, when entering a word to the search bar, then the search results are displayed.   |
-|  | #6A Add Products: As a site admin, I can add, edit, and delete products to/in/from the web shop, so that I can ensure it is up to date with the latest news. | Given that a site admin is logged in, when viewing the webshop from the the admin panel, then they can add, edit and delete products.   |
-|  | #6B Manage Blog Posts: As a site admin, I can delete blog posts made by users, so that I can ensure that available content is appropriate and following community guidelines. |  Given that a site admin is logged in, when viewing the blog posts from the admin panel, then they can delete posts if they are not in line with the communitys guidelines.  |
+| ✅ | #5D Search for Blog Posts: As a registered user, I can search for blog posts using key words, so that I can find specific content. | Given that a user is looking for a specific blog post, when entering a word to the search bar, then the search results are displayed.   |
+| ✅ | #6A Add Products: As a site admin, I can add, edit, and delete products to/in/from the web shop, so that I can ensure it is up to date with the latest news. | Given that a site admin is logged in, when viewing the webshop from the the admin panel, then they can add, edit and delete products.   |
+| ✅ | #6B Manage Blog Posts: As a site admin, I can delete blog posts made by users, so that I can ensure that available content is appropriate and following community guidelines. |  Given that a site admin is logged in, when viewing the blog posts from the admin panel, then they can delete posts if they are not in line with the communitys guidelines.  |
 
 ## Additional Testing
 
 | TEST PASS | TEST |
 | ------- | -------- |
-|  | Links and buttons take the user to its intended pages  |
-|  | Social media links open in a new window  |
-|  | The different sections of the site are responsive and work on different screen sizes  |
-|  | There is a page where the user can show the blog posts they have made  |
-|  | A 404 page is displayed when the user is trying to view a page that does not exist  |
-|  | User feedback is displayed in the for of messages when actions are made  |
-|  | The user is taken to a thank you page when completing a purchase  |
+| ✅ | Links and buttons take the user to its intended pages  |
+| ✅ | Social media links open in a new window  |
+| ✅ | The different sections of the site are responsive and work on different screen sizes  |
+| ✅ | There is a page where the user can show/edit/delete the blog posts they have made  |
+| ✅ | A 404 page is displayed when the user is trying to view a page that does not exist  |
+| ✅ | User feedback is displayed in the form of messages when actions are made  |
+| ✅ | The user is taken to a thank you page when completing a purchase  |
 
 ## Browsers
 
