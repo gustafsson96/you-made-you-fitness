@@ -552,17 +552,21 @@ The testing documentation contains validation of HTML, CSS, Python, and JavaScri
 
 <h3>Content</h3>
 
-To better understand and implement search bar functionality (in combination with Code Institue's Boutique Ado): 
-https://learndjango.com/tutorials/django-search-tutorial
+* All functionality required for a user to complete a purchase (Stripe included) has been copied from the Code Institue's walkthrough "Boutique Ado" videos.
 
-To create 404 page:
-https://studygyaan.com/django/django-custom-404-error-template-page?utm_content=cmp-true&expand_article=1
+* The Code Institue walkthrough "I Think Therefore I Blog" was helpful when creating the Community blog functionality.
+
+* To better understand and implement search bar functionality I read **[this LearnDjango article](https://learndjango.com/tutorials/django-search-tutorial)** in addition to the Code Institue's walkthrough "Boutique Ado" videos.
+
+* I used **[this StudyGyaan article](https://studygyaan.com/django/django-custom-404-error-template-page?utm_content=cmp-true&expand_article=1)** as a guide to create a 404 page.
+
+* The sitemap was created using **[XML Sitemaps](https://www.xml-sitemaps.com/)**.
+
 
 <h3>Media</h3>
 
-- I used https://new.express.adobe.com/ to design the covers for the workout guides.
+* I used **[Adobe Express](https://new.express.adobe.com/)** to design the covers for the workout guides.
 
-<h3>Other</h3>
+* The default post images were taken from **[Pexels](https://www.pexels.com/)**.
 
-* Find an article to improve my commit messages. Insert here together with date. 
-  (Article from previously submitted project?)
+* The hero image was taken from **[Unsplash](https://unsplash.com/)**.
