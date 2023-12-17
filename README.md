@@ -182,6 +182,12 @@ Additional Pages:
 
 ## Business Model
 
+![screenshot of business model](/documentation/images/BusinessModel-YMYFitness.png)
+
+* To create the business model for this project I used **[creately](https://creately.com/)**.
+
+* For tables of data and database planning, see the **[data model](#data-model)** section below.
+
 ## Data Model
 
 ERD for models related to the Webshop functionality:
@@ -206,13 +212,32 @@ ERD for models related to the Community blog posts:
 
 ## Agile Methodology
 
-This project was planned and created by the use of an agile approach. By the use of a GitHub project including issues (user stories), milestones and MoSCoW labels I kept track of the progress. For future projects, I will also plan and document the development process in sprints, to get a better overview of the timeframe.
+This project was planned and created by the use of an agile approach. A GitHub project including issues (user stories), milestones and MoSCoW labels was created to keep track of the development process and progress.
+
+**GitHub Project Board**
+
+Issues were moved between Todo, In Progress, and Done as the work progressed. All items left in the "Todo" column when the project is submitted are labeled "won't have" for this release.
 
 ![screenshot of github project board](/documentation/images/github-project-board.png)
 
+**Epics**
+
+The epics were created as GitHub milestones. The user stories for each epic were then linked to its relevant milestone.
+
+An additional milestone was included to keep track of the project set up. It only contains steps for setting up the project, no user stories.
+
 ![screenshot of github milestones](/documentation/images/github-milestones.png)
 
+**User Stories**
+
+The user stories were created as GitHub issues and contain related acceptance criterias and tasks (with the exepction of a few labeled "won't have" for this release). These were checked off continuously as the requirements were met.
+
 ![screenshot of github issues](/documentation/images/github-issues.png)
+
+
+**MoSCoW Labels**
+
+MoSCoW labels were created to prioritize the GitHub issues with user stories. An additional setup label for the intial setup steps was also included. I also kept the default documentations label, but ended up not using it.
 
 ![screenshot of labels](/documentation/images/github-labels.png)
 
