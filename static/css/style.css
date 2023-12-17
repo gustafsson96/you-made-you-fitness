@@ -269,9 +269,6 @@ body {
     text-transform: uppercase;
 }
 
-/* cart.html css */
-
-
 /* allauth login, signup, and logout */
 
 .allauth-container {
@@ -339,6 +336,7 @@ body {
 }
 
 /* contact */
+
 .background-pink {
     background-color: var(--light-pink);
 }

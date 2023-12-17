@@ -4,11 +4,30 @@ The live application can be found: **here**
 
 ![screenshot of amiresponsive](/documentation/images/amiresponsive-ymyfitness.png)
 
-**Table of contents:**
+## Table Of Contents
+- [You Made You Fitness Community](#you-made-you-fitness-community)
+  - [Table Of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [User Experience(UX)](#user-experienceux)
+    - [Epics and User Stories](#epics-and-user-stories)
+    - [Strategy](#strategy)
+    - [Scope](#scope)
+    - [Structure](#structure)
+    - [Skeleton](#skeleton)
+    - [Surface](#surface)
+  - [Business Model](#business-model)
+  - [Data Model](#data-model)
+  - [Agile Methodology](#agile-methodology)
+  - [Search Engine Optimization](#search-engine-optimization)
+  - [Web Marketing](#web-marketing)
+  - [Features](#features)
+  - [Testing](#testing)
+  - [Deployment](#deployment)
+  - [Credits](#credits)
 
 ## Introduction
 
-## User Experience
+## User Experience(UX)
 
 ### Epics and User Stories
 
@@ -77,13 +96,9 @@ Requirements:
 * Authentication: Functionality to register and manage an account. 
 * Web Shop: Functionality to complete a purchase.
 * Products: Images and descriptions.
+* Community Blog Page: For users to read and share blog posts.
 * Functional Design: Responsiveness throughout the site.
 
-Initially Not Included:
-
-* The blog and its functionality will only be implemented if the time limit allows it, and is therefore not a priority. User stories related to the blog are therefore labeled "could have". The developer's lack of experience with ecommerce projects makes it difficult to ensure that the time will be enough.
-
-**Content Requirements:**
 
 ### Structure
 
@@ -91,35 +106,67 @@ Initially Not Included:
 
 Pages marked with ** are the same for unregistered and registered users.
 
-View for Unregistered Users:
+**View for Unregistered Users:**
 
-* Home Page**:
-* Community Page:
-* Webshop Page**:
-* Product Detail Page**:
-* Sign In Page
-* Sign Up Page
+* Home Page**: Contains a hero image with text, in addition to sections with information and buttons linking to the most important pages of the site.
 
-View for Registered Users:
+* Community Page: Contains links to login and signup for unregistered users.
 
-* Home Page**:
-* Community Page (blog):
-* Webshop Page**:
-* Product Detail Page**:
-* Checkout Page:
-* Profile Page:
-* Logout Page:
+* Webshop Page**: Page for all products in the webshop.
 
-Additional Pages:
+* Product Detail Page**: Contains product image, product details and add to cart button.
 
-* 404 Page
+- Shopping Cart**: A view for products added to the shopping cart.
+
+* Checkout Page**: Contains an order summary and form for user to fill out to complete a purchase.
+
+* Checkout Success Page**: Displays an order summary when a purchase is successful.
+
+* Sign In Page: Contains a log in form. 
+
+* Sign Up Page: Contains a sign up form.
+
+* Contact Page**: Contains contact information and newletter signup.
+
+**View for Registered Users:**
+
+* Home Page**: Contains a hero image with text, in addition to sections with information and buttons linking to the most important pages of the site.
+
+* Community Pages (blog): Built by different pages related to the sites blog functionality. Contains pages for viewing, adding, editing and deleting blog posts within each category.
+
+* Webshop Page**: Page for all products in the webshop.
+
+* Product Detail Page**: Contains product image, product details and add to cart button.
+
+* Shopping Cart**: A view for products added to the shopping cart. 
+
+* Checkout Page**: Contains an order summary and form for user to fill out to complete a purchase.
+
+* Checkout Success Page**: Displays an order summary when a purchase is successful.
+
+* Logout Page: Contains button for loggin out.
+
+* Contact Page**: Contains contact information and newletter signup.
+
+**Additional Pages:**
+
+- 404 Page: Contains "page not found" message and link back to home page.
 
 **Elements of Navigation:**
 
+* A navigation bar with icons and links to its relevant content is visible at all times while navigation through the site.
+
+* The business logo in the navigation bar is linked to the home page.
+
+* The home page contains links to the most important content of the site.
+
+* The footer contains links to relevant social media sites.
 
 ### Skeleton
 
-#### Wireframes
+<h4>Wireframes</h4>
+
+Wireframes were created using **[Balsamiq](https://balsamiq.com/)**.
 
 <details>
 <summary>Home</summary>
@@ -177,8 +224,11 @@ Additional Pages:
 
 ### Surface
 
-- Color Scheme
-- Fonts
+**Color Scheme**
+
+The colos scheme was created using **[Coolors](https://coolors.co/)** and follows a pink scheme that matches the hero image.
+
+
 
 ## Business Model
 
@@ -500,7 +550,7 @@ The testing documentation contains validation of HTML, CSS, Python, and JavaScri
 
 ## Credits
 
-### Content
+<h3>Content</h3>
 
 To better understand and implement search bar functionality (in combination with Code Institue's Boutique Ado): 
 https://learndjango.com/tutorials/django-search-tutorial
@@ -508,11 +558,11 @@ https://learndjango.com/tutorials/django-search-tutorial
 To create 404 page:
 https://studygyaan.com/django/django-custom-404-error-template-page?utm_content=cmp-true&expand_article=1
 
-### Media
+<h3>Media</h3>
 
 - I used https://new.express.adobe.com/ to design the covers for the workout guides.
 
-### Other 
+<h3>Other</h3>
 
 * Find an article to improve my commit messages. Insert here together with date. 
   (Article from previously submitted project?)
