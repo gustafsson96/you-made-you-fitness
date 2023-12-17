@@ -190,13 +190,17 @@ ERD for models related to the Webshop functionality:
 ERD for models related to the Community blog posts:
 ![screenshot of ERD for the community app](/documentation/images/ERD-community.png)
 
-* To create the entity relationship diagrams (ERD) for this project, I used **[creately](https://creately.com/)**.
+* To create the entity relationship diagrams (ERD) for this project I used **[creately](https://creately.com/)**.
 
 * The Webshop models were taken from Code Institute's walkthrough "Boutique Ado" and customized to fit an online business with digital products only.
 
-* The Community blog post models (Recipe, Workout and OtherPost) were created by me to fit each category. 
+* The Community blog post models (Recipe, Workout and OtherPost) were created by me to fit each category.
 
 * The User model was provided by Django for a one to many relationship to the blog post models. Find more information about Django's default user model in the Django documentation **[here](https://docs.djangoproject.com/en/3.2/ref/contrib/auth/)**.
+
+* In the future, it would be beneficial to create a one to many relationship between the User model and webshop functionality models, so that a registered user can autofill their checkout information and view their order history. The webshop checkout process is the same for both unregistered and registered users at the moment.
+
+* A UserProfile model was created as the idea was to give users the ability to view both their own and other members profiles (in addition to editing their own). However, this functionality is yet to be implemented on the site due to lack of time before the submission date. Will be implemented in the future.
 
 * This project uses a PostgreSQL database via **[ElephantSQL](https://www.elephantsql.com/)**.
 
@@ -233,7 +237,6 @@ This project includes implemantations that have been made from a Search Engine O
 
 
 ## Features
-
 
 ### Navigation Bar
 
