@@ -4,7 +4,7 @@ The live application can be found: **here**
 
 ![screenshot of amiresponsive](/documentation/images/amiresponsive-ymyfitness.png)
 
-Table of contents.
+**Table of contents:**
 
 ## Introduction
 
@@ -214,6 +214,8 @@ ERD for models related to the Community blog posts:
 
 This project was planned and created by the use of an agile approach. A GitHub project including issues (user stories), milestones and MoSCoW labels was created to keep track of the development process and progress.
 
+View the GitHub project **[here](https://github.com/users/gustafsson96/projects/7/views/1)**.
+
 **GitHub Project Board**
 
 Issues were moved between Todo, In Progress, and Done as the work progressed. All items left in the "Todo" column when the project is submitted are labeled "won't have" for this release.
@@ -262,10 +264,9 @@ This project includes implemantations that have been made from a Search Engine O
 
 ![screenshot of facebook business page 2](/documentation/images/facebook-business-page-2.png)
 
-
 ## Features
 
-### Navigation Bar
+<h3>Navigation Bar</h3>
 
 The navigation bar for unauthorized users contains 7 nav items: Home, Community (view for unauthorized users), Webshop, Login, Join Us, Contact and Shopping Cart. The shopping cart amount is updated when product is added/deleted from the cart.
 
@@ -275,7 +276,7 @@ The navigation bar for authorized users contains 6 nav items: Home, Community (v
 
 ![screenshot of navbar authorized user](/documentation/images/navbar-authorized-user.png)
 
-### Home Page
+<h3>Home Page</h3>
 
 The home landing page contains a hero image with a text box containing the business name and a button linking to the sign up page (for unauthorized users) or the community page (for authorized, logged in users).
 
@@ -285,7 +286,7 @@ Below the home page, there are three sections. The "About Us" section contatins 
 
 ![screenshot of home page content](/documentation/images/home-page-content.png)
 
-### Authentication
+<h3>Authentication</h3>
 
 The register page (sign up) is where the user can create an account to join the community. It contains a form where user input is required in the form of username and password in order to sign up. Email is optional. There is also a link to the sign in page in case the user is already registered.
 
@@ -299,7 +300,7 @@ If the user clicks the "logout" navbar item they will relocate to the logout pag
 
 ![screenshot of logout](/documentation/images/logout.png)
 
-### Webshop
+<h3>Webshop</h3>
 
 In the webshop the products are evenly displayed with a product image, title and price. The user can click the image to get to the product detail page with more information and an "add to cart" button. The webshop is available for both unregistered and registered users.
 
@@ -309,7 +310,7 @@ The product detail page contains of the product image, title, description and pr
 
 ![screenshot of product detail page](/documentation/images/product-detail.png)
 
-### Shopping Cart
+<h3>Shopping Cart</h3>
 
 If there are items in the shopping cart, an overview of what is in the cart is displayed together with the cart total (the "bag" has been changed to "cart" since the screenshot was taken to keep it consitent). If the user wants to delete an item from the cart they can click the trash can icon. In addition to the order overview there are two buttons: one linking back to the webshop and one linking to the checkout page.
 
@@ -319,7 +320,7 @@ If there are no items in the shopping cart, a "your cart is empty" message is di
 
 ![screenshot of empty cart](/documentation/images/cart-empty.png)
 
-### Checkout
+<h3>Checkout</h3>
 
 The checkout page is where the user completes a purchase. An order summary is displayed and the user is prompted to fill out their information to complete the purchase. Since there are no physical products (digital only) available the user does not have to fill out their address. Name, number, email and card information is enough.
 
@@ -329,7 +330,7 @@ When an order has been completed, a checkout success page is displayed with an o
 
 ![screenshot of checkout success page](/documentation/images/checkout-success.png)
 
-### Community
+<h3>Community</h3>
 
 The community page for an unregistered user links to login and signup.
 
@@ -363,19 +364,19 @@ The search results page displayed the search results for each category.
 
 ![screenshot of search results page](/documentation/images/community-search-result.png)
 
-### Contact
+<h3>Contact</h3>
 
 On the contact page the user can find the business email address. They can also sign up to the fitness community's newsletter (section created using mailchimp).
 
 ![screenshot of contact page](/documentation/images/contact.png)
 
-### Footer
+<h3>Footer</h3>
 
 The footer sticks to the bottom of the page on all sites and contains links to different social medias. 
 
 ![screenshot of footer](/documentation/images/footer.png)
 
-### Messages
+<h3>Messages</h3>
 
 When a user perfoms an action on the site, a message is displayed at the top of the screen. The messages disappear by themselves but the user can click the X if they want it to disappear faster. A few message examples are presented below.
 
@@ -387,7 +388,21 @@ When a user perfoms an action on the site, a message is displayed at the top of 
 
 ![screenshot of a bootstrap message](/documentation/images/bootstrap-message-2.png)
 
+<h3>Admin Panel</h3>
+
+An admin can from the admin panel:
+
+* Add, edit and delete products.
+* Add, edit and delete blog posts. 
+* View orders.
+
+![screenshot of admin panel](/documentation/images/admin-panel.png)
+
 ## Testing
+
+Find the complete documentation for testing here: **[TESTING.md](TESTING.md)**
+
+The testing documentation contains validation of HTML, CSS, Python, and JavaScript, Lighthouse Reports, accessibility testing, and manual testing.
 
 ## Deployment
 
