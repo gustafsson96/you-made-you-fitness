@@ -3,8 +3,6 @@
 
 {% block content %}
 
-{% if user.is_authenticated %}
-
 <div class="overlay"></div>
 <div class="container mb-2">
 
@@ -80,15 +78,8 @@
                 <div class="smaller-btn"><i class="fas fa-chevron-left"></i> Keep Shopping</div>
             </a>
         </div>
-    {% endif %}
-</div>
-
-{% else %}
-
-<h2 class="m-4 purple-text">Please sign in or sign up to view this content.</h2>
-
-{% endif %}
-
+        {% endif %}
+    </div>
 </div>
 
 {% block postloadjs %}

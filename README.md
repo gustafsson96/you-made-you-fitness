@@ -1,6 +1,6 @@
 # You Made You Fitness Community
 
-The live application can be found: **here**
+The live application can be found here: **[You Made You Fitness Community](https://you-made-you-fitness-e606c79e6b9a.herokuapp.com/)**
 
 ![screenshot of amiresponsive](/documentation/images/amiresponsive-ymyfitness.png)
 
@@ -17,9 +17,11 @@ The live application can be found: **here**
     - [Surface](#surface)
   - [Business Model](#business-model)
   - [Data Model](#data-model)
-  - [Agile Methodology](#agile-methodology)
-  - [Search Engine Optimization](#search-engine-optimization)
   - [Web Marketing](#web-marketing)
+    - [Facebook Business Page (Social Media Marketing)](#facebook-business-page-social-media-marketing)
+    - [Search Engine Optimization (SEO)](#search-engine-optimization-seo)
+    - [Newsletter Signup (Email Marketing)](#newsletter-signup-email-marketing)
+  - [Agile Methodology](#agile-methodology)
   - [Features](#features)
   - [Testing](#testing)
   - [Deployment](#deployment)
@@ -264,6 +266,44 @@ ERD for models related to the Community blog posts:
 
 * This project uses a PostgreSQL database via **[ElephantSQL](https://www.elephantsql.com/)**.
 
+## Web Marketing
+
+### Facebook Business Page (Social Media Marketing)
+
+A Facebook business page was created for You Made You Fitness Community.
+
+![screenshot of facebook business page](/documentation/images/facebook-business-page-1.png)
+
+![screenshot of facebook business page 2](/documentation/images/facebook-business-page-2.png)
+
+Organic social media marketing would be a priority for further web marketing of this business. The interaction with users, free workouts, recipes and tips, competitions, offers on workout guides, and even in person events could all be beneficial marketing strategies for this type of business.
+
+### Search Engine Optimization (SEO)
+
+For this project, implemantations have been made from a Search Engine Optimization (SEO) perspective in order to ensure that potential customers can find "You Made You Fitness Community". The process is documented below.
+
+**Keyword Research:**
+
+1. Pen and paper were used to brainstorm general topics and possible keywords.
+![screenshot of keyword brainstorm](/documentation/images/SEO-keywords-brainstorm.png)
+
+2. A Google search was made for each keyword and the relevant results were documented in tables. Some of the keywords from the brainstorming were deleted/modified as they were too general.
+
+![google search result presented in table](/documentation/images/SEO-google-search-1.png)
+![google search result presented in table](/documentation/images/SEO-google-search-2.png)
+![google search result presented in table](/documentation/images/SEO-google-search-3.png)
+
+3. A mix of 10 short and long-tail keywords were selected based on the Google search results.
+
+4. The relevance and authoritativeness was checked for some keywords using **[wordtracker](https://www.wordtracker.com/)** (I checked as many as I could before running out of free searches).
+
+### Newsletter Signup (Email Marketing)
+
+As part of a marketing strategy, the users can sign up to the community's monthly newsletter.
+(As this is a fictional business the user can sign up, but no actual emails will be sent).
+
+![screenshot of newsletter signup](/documentation/images/contact.png)
+
 ## Agile Methodology
 
 This project was planned and created by the use of an agile approach. A GitHub project including issues (user stories), milestones and MoSCoW labels was created to keep track of the development process and progress.
@@ -296,27 +336,6 @@ The user stories were created as GitHub issues and contain related acceptance cr
 MoSCoW labels were created to prioritize the GitHub issues with user stories. An additional setup label for the intial setup steps was also included. I also kept the default documentations label, but ended up not using it.
 
 ![screenshot of labels](/documentation/images/github-labels.png)
-
-## Search Engine Optimization
-
-This project includes implemantations that have been made from a Search Engine Optimization (SEO) perspective, in order to ensure that potential customers can find "You Made You Fitness Community". The process is documented below.
-
-**Keyword Research:**
-
-1. Pen and paper were used to brainstorm general topics and possible keywords.
-![screenshot of keyword brainstorm](/documentation/images/SEO-keywords-brainstorm.png)
-2. A Google search was made for each keyword and the relevant results were documented in tables. Some of the keywords from the brainstorming were deleted/modified as they were too general.
-![google search result presented in table](/documentation/images/SEO-google-search-1.png)
-![google search result presented in table](/documentation/images/SEO-google-search-2.png)
-![google search result presented in table](/documentation/images/SEO-google-search-3.png)
-3. A mix of 10 short and long-tail keywords were selected based on the Google search results.
-4. The relevance and authoritativeness was checked for some keywords using **[wordtracker](https://www.wordtracker.com/)** (I checked as many as I could before running out of free searches).
-
-## Web Marketing
-
-![screenshot of facebook business page](/documentation/images/facebook-business-page-1.png)
-
-![screenshot of facebook business page 2](/documentation/images/facebook-business-page-2.png)
 
 ## Features
 
