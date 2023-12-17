@@ -27,6 +27,10 @@ The live application can be found: **here**
 
 ## Introduction
 
+You Made You Fitness Community is an online e-commerce application that sells digital workout guides. The goal of the site is to offer a place of inspiration, support and fellowship for those interested in fitness and health on all levels. Users can sign up to take part of and share blog posts while the workout guides are available to purchase for everyone.
+
+This project was created using HTML, CSS, JavaScript, Python, and Django, and is my 5th and final Portfolio Project for Code Institute's Diploma in Full Stack Software Development.
+
 ## User Experience(UX)
 
 ### Epics and User Stories
